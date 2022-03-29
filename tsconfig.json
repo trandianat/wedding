@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "baseUrl": "src",
         "target": "es5",
         "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true,
@@ -15,7 +14,13 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": false,
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
+        "baseUrl": "src", // for importing absolute paths
+        "allowUnreachableCode": false,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true
     },
     "include": ["src"]
 }
