@@ -8,9 +8,7 @@ export const App = () => (
     <Link to="/pre">Pre</Link>
     <Link to="/post">Post</Link>
     <Routes>
-      <Route element={<p>homeee</p>} path="/">
-        qwer
-      </Route>
+      <Route element={<p>Home</p>} path="/" />
       <Route element={<Pre />} path="/pre" />
       <Route element={<Post />} path="/post" />
     </Routes>
