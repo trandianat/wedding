@@ -1,0 +1,14 @@
+/* @font-face {
+    font-family: 'Millerstone';
+    src: url('/assets/millerstone.woff2') format('woff2'),
+         url('/assets/millerstone.woff') format('woff');
+} */
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+a, h1, h2, h3, p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
