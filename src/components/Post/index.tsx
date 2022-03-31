@@ -1,1 +1,1 @@
-export const Post = (): JSX.Element => <h1>Post-Wedding</h1>;
+export const Post = (): JSX.Element => <h2>Post-Wedding</h2>;
