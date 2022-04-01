@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import './styles.css';
+import { nav } from 'components/Pre/Main/styles';
 
 export const Main = (): JSX.Element => (
   <Fragment>
     <h2>Pre-Wedding</h2>
-    <nav>
+    <nav css={nav}>
       <Link to="">Pre-Wedding Home</Link>
       <Link to="story">Our Story</Link>
       <Link to="party">Wedding Party</Link>

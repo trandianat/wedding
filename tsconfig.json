@@ -18,9 +18,10 @@
         "baseUrl": "src", // for importing absolute paths
         "allowUnreachableCode": false,
         "noImplicitReturns": true,
-        "noUnusedLocals": true,
+        "noUnusedLocals": false,
         "noUnusedParameters": true,
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "jsxImportSource": "@emotion/react",
     },
     "include": ["src"]
 }
