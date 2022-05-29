@@ -1,16 +1,15 @@
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { After } from 'components/After';
 import { App } from 'components/App';
-import { Post } from 'components/Post';
-import { Pre } from 'components/Pre';
+import { Before } from 'components/Before';
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route element={<App />} path="/">
-        <Route element={<Pre />} path="/pre/*" />
-        <Route element={<Post />} path="/post/*" />
-      </Route>
+      <Route element={<App />} path="/" />
+      <Route element={<Before />} path="/before/*" />
+      <Route element={<After />} path="/after/*" />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

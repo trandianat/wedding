@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import { Main } from 'components/Pre/Main';
-import { Party } from 'components/Pre/Party';
-import { Story } from 'components/Pre/Story';
+import { Main } from 'components/Before/Main';
+import { Party } from 'components/Before/Party';
+import { Story } from 'components/Before/Story';
 
-export const Pre = (): JSX.Element => (
+export const Before = (): JSX.Element => (
   <Routes>
     <Route element={<Main />} path="">
       <Route element={<Party />} path="do" />
