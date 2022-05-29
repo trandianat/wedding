@@ -17,3 +17,18 @@ body {
     --tablet: 768px;
     --desktop: 1024px;
 }
+
+button {
+    background-color: var(--green);
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+}
+
+button:hover {
+    background-color: var(--brown);
+}
+
+h1 {
+    margin: 0;
+}

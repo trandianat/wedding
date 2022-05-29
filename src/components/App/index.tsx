@@ -10,7 +10,7 @@ export const App = (): JSX.Element => (
       </div>
     </div>
     <nav css={nav}>
-      <Link css={before} to="/before">
+      <Link css={before} to="/before/logistics">
         <div>
           <span>before the wedding</span>
         </div>

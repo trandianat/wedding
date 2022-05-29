@@ -8,10 +8,13 @@ export const Main = (): JSX.Element => (
       <Link to="/">
         <h1>Brendan & Diana</h1>
       </Link>
-      <Link to="story">Logistics</Link>
-      <Link to="party">Wedding Party</Link>
-      <Link to="travel">Our Story</Link>
-      <Link to="travel">RSVP</Link>
+      <hr />
+      <Link to="logistics">LOGISTICS</Link>
+      <Link to="party">WEDDING PARTY</Link>
+      <Link to="story">OUR STORY</Link>
+      <Link to="rsvp">
+        <button>RSVP</button>
+      </Link>
     </nav>
     <Outlet />
   </Fragment>
