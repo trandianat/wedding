@@ -1,52 +1,51 @@
 import { css } from '@emotion/react';
 
-const app = css({
+const nav = css({
+    display: 'flex',
     height: '100%',
+    width: '100%',
     a: {
+        alignItems: 'center',
+        display: 'flex',
+        flex: 1,
+        justifyContent: 'center',
         textDecoration: 'none',
-        div: {
-            fontSize: '1.5rem',
-            position: 'relative',
-            textAlign: 'center',
-            top: '50%',
-        },
-    }
+        div: { fontSize: '2rem' },
+    },
+    ['@media screen and (max-width: 1200px)']: { flexDirection: 'column' }
 });
 
 const before = css({
     backgroundColor: 'var(--green)',
     color: 'white',
-    float: 'left',
-    height: '100%',
-    width: '50%',
     [':hover']: { span: { borderBottom: '1px solid var(--beige)', paddingBottom: 4 } },
 });
 
 const after = css({
     backgroundColor: 'var(--beige)',
     color: 'black',
-    float: 'right',
-    height: '100%',
-    width: '50%',
     [':hover']: { span: { borderBottom: '1px solid black', paddingBottom: 4 } },
 });
 
 const logo = css({
     backgroundColor: 'var(--brown)',
-    color: 'white',
     height: 220,
     left: 'calc(50% - 122px)',
     padding: 12,
     position: 'absolute',
     top: 'calc(50% - 122px)',
     width: 220,
+    div: {
+        border: '1px solid white',
+        height: '100%',
+        textAlign: 'center',
+        span: {
+            color: 'white',
+            fontSize: '5rem',
+            position: 'relative',
+            top: 'calc(50% - 45px)'
+        }
+    }
 });
 
-const inner = css({
-    border: '1px solid white',
-    height: '100%',
-    textAlign: 'center',
-    span: { fontSize: '5rem', position: 'relative', top: '30%' }
-});
-
-export { after, app, before, inner, logo };
+export { after, before, logo, nav };

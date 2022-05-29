@@ -13,4 +13,7 @@ body {
     --beige: #F0E9E4;
     --brown: #44350C;
     --green: #11302A;
+    --mobile: 480px;
+    --tablet: 768px;
+    --desktop: 1024px;
 }

@@ -4,14 +4,14 @@ import { nav } from 'components/Before/Main/styles';
 
 export const Main = (): JSX.Element => (
   <Fragment>
-    <h2>Pre-Wedding</h2>
     <nav css={nav}>
-      <Link to="">Pre-Wedding Home</Link>
-      <Link to="story">Our Story</Link>
+      <Link to="/">
+        <h1>Brendan & Diana</h1>
+      </Link>
+      <Link to="story">Logistics</Link>
       <Link to="party">Wedding Party</Link>
-      <Link to="travel">Hotels & Travel</Link>
-      <Link to="do">Things to Do</Link>
-      <Link to="registry">Registry</Link>
+      <Link to="travel">Our Story</Link>
+      <Link to="travel">RSVP</Link>
     </nav>
     <Outlet />
   </Fragment>

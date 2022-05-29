@@ -1,10 +1,15 @@
 import { Fragment } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { after, app, before, inner, logo } from 'components/App/styles';
+import { after, before, logo, nav } from 'components/App/styles';
 
 export const App = (): JSX.Element => (
   <Fragment>
-    <nav css={app}>
+    <div css={logo}>
+      <div>
+        <span>B+D</span>
+      </div>
+    </div>
+    <nav css={nav}>
       <Link css={before} to="/before">
         <div>
           <span>before the wedding</span>
@@ -15,9 +20,6 @@ export const App = (): JSX.Element => (
           <span>after the wedding</span>
         </div>
       </Link>
-      <div css={logo}>
-        <div css={inner}><span>B+D</span></div>
-      </div>
     </nav>
     <Outlet />
   </Fragment>
