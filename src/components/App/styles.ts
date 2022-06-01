@@ -8,6 +8,8 @@ const nav = css({
         alignItems: 'center',
         display: 'flex',
         flex: 1,
+        fontFamily: 'EB Garamond',
+        letterSpacing: 1,
         justifyContent: 'center',
         textDecoration: 'none',
         div: { fontSize: '2rem' },
@@ -41,7 +43,9 @@ const logo = css({
         textAlign: 'center',
         span: {
             color: 'white',
+            fontFamily: 'EB Garamond',
             fontSize: '5rem',
+            lineHeight: '5rem',
             position: 'relative',
             top: 'calc(50% - 45px)'
         }

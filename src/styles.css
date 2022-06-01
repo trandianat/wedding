@@ -1,9 +1,24 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/fonts/Karla.ttf');
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('assets/fonts/EB\ Garamond.ttf');
+}
+
+@font-face {
+    font-family: 'Parisienne';
+    src: url('assets/fonts/Parisienne.ttf');
+}
+
 html {
     height: 100%;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
     height: 100%;
     margin: 0;
 }
@@ -22,6 +37,9 @@ button {
     background-color: var(--green);
     color: white;
     cursor: pointer;
+    font-family: 'EB Garamond', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
     padding: 12px;
 }
 
@@ -30,5 +48,24 @@ button:hover {
 }
 
 h1 {
+    font-family: 'Parisienne', Arial, Helvetica, sans-serif;
+    font-size: 2.2rem;
     margin: 0;
+}
+
+h2 {
+    font-family: 'EB Garamond', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+p {
+    margin: 4px 0;
+}
+
+.divider {
+    border-bottom: 1px solid var(--brown);
+    border-top: 1px solid var(--brown);
+    height: 2px;
+    margin: 12px 0;
 }
