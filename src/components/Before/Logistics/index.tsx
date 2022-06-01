@@ -8,7 +8,10 @@ import {
   introImg,
   introText,
   reception,
-} from 'components/Before/Logistics/styles';
+} from 'components/before/logistics/styles';
+import Ceremony from 'assets/icons/ceremony';
+import Drinks from 'assets/icons/drinks';
+import Reception from 'assets/icons/reception';
 
 export const Logistics = (): JSX.Element => (
   <main>
@@ -26,9 +29,24 @@ export const Logistics = (): JSX.Element => (
     </section>
     <section css={events}>
       <div css={eventsContent}>
-        <div css={ceremony}>Ceremony</div>
-        <div css={cocktails}>Cocktails</div>
-        <div css={reception}>Reception</div>
+        <div css={ceremony}>
+          <Ceremony />
+          <h2>Ceremony</h2>
+          <p>Time</p>
+          <p>Location</p>
+        </div>
+        <div css={cocktails}>
+          <Drinks />
+          <h2>Cocktail Hour</h2>
+          <p>Time</p>
+          <p>Location</p>
+        </div>
+        <div css={reception}>
+          <Reception />
+          <h2>Reception</h2>
+          <p>Time</p>
+          <p>Location</p>
+        </div>
       </div>
     </section>
   </main>

@@ -34,10 +34,15 @@ const events = css({
 const eventsContent = css({
     color: 'white',
     display: 'flex',
+    gap: 24,
+    margin: '0 auto',
     padding: '48px 0',
+    textAlign: 'center',
+    width: 800,
     div: {
-        border: '1px solid white',
-        flex: 1
+        flex: 1,
+        svg: { display: 'block', height: 150, margin: '0 auto' },
+        h2: { padding: '24px 0' }
     }
 });
 

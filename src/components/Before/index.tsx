@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import { Logistics } from 'components/Before/Logistics';
-import { Main } from 'components/Before/Main';
-import { Party } from 'components/Before/Party';
-import { RSVP } from 'components/Before/RSVP';
-import { Story } from 'components/Before/Story';
+import { Logistics } from 'components/before/logistics';
+import { Main } from 'components/before/main';
+import { Party } from 'components/before/party';
+import { RSVP } from 'components/before/rsvp';
+import { Story } from 'components/before/story';
 
 export const Before = (): JSX.Element => (
   <Routes>

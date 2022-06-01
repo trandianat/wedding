@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { nav } from 'components/Before/Main/styles';
+import { nav } from 'components/before/main/styles';
 
 export const Main = (): JSX.Element => (
   <Fragment>

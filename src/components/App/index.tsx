@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { after, before, logo, nav } from 'components/App/styles';
+import { after, before, logo, nav } from 'components/app/styles';
 
 export const App = (): JSX.Element => (
   <Fragment>

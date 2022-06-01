@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { After } from 'components/After';
-import { App } from 'components/App';
-import { Before } from 'components/Before';
+import { After } from 'components/after';
+import { App } from 'components/app';
+import { Before } from 'components/before';
 
 ReactDOM.render(
   <BrowserRouter>
