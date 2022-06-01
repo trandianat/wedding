@@ -2,6 +2,7 @@ import {
   ceremony,
   cocktails,
   events,
+  eventsBorder,
   eventsContent,
   intro,
   introContent,
@@ -28,24 +29,26 @@ export const Logistics = (): JSX.Element => (
       </div>
     </section>
     <section css={events}>
-      <div css={eventsContent}>
-        <div css={ceremony}>
-          <Ceremony />
-          <h2>Ceremony</h2>
-          <p>Time</p>
-          <p>Location</p>
-        </div>
-        <div css={cocktails}>
-          <Drinks />
-          <h2>Cocktail Hour</h2>
-          <p>Time</p>
-          <p>Location</p>
-        </div>
-        <div css={reception}>
-          <Reception />
-          <h2>Reception</h2>
-          <p>Time</p>
-          <p>Location</p>
+      <div css={eventsBorder}>
+        <div css={eventsContent}>
+          <div css={ceremony}>
+            <Ceremony />
+            <h2>Ceremony</h2>
+            <p>Time</p>
+            <p>Location</p>
+          </div>
+          <div css={cocktails}>
+            <Drinks />
+            <h2>Cocktail Hour</h2>
+            <p>Time</p>
+            <p>Location</p>
+          </div>
+          <div css={reception}>
+            <Reception />
+            <h2>Reception</h2>
+            <p>Time</p>
+            <p>Location</p>
+          </div>
         </div>
       </div>
     </section>

@@ -29,6 +29,12 @@ const introText = css({
 
 const events = css({
     backgroundColor: 'var(--green)',
+    padding: '12px 0'
+});
+
+const eventsBorder = css({
+    borderBottom: '1px solid white',
+    borderTop: '1px solid white',
 });
 
 const eventsContent = css({
@@ -46,11 +52,10 @@ const eventsContent = css({
     }
 });
 
-const ceremony = css({
-});
+const ceremony = css({});
 
 const cocktails = css({});
 
 const reception = css({});
 
-export { ceremony, cocktails, events, eventsContent, intro, introContent, introImg, introText, reception };
+export { ceremony, cocktails, events, eventsBorder, eventsContent, intro, introContent, introImg, introText, reception };
