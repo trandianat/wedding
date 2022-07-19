@@ -8,25 +8,27 @@ const nav = css({
         alignItems: 'center',
         display: 'flex',
         flex: 1,
-        fontFamily: 'EB Garamond',
+        fontFamily: 'var(--serif)',
         letterSpacing: 1,
         justifyContent: 'center',
         textDecoration: 'none',
         div: { fontSize: '2rem' },
     },
-    ['@media screen and (max-width: 1200px)']: { flexDirection: 'column' }
+    ['@media screen and (max-width: 1200px)']: { flexDirection: 'column' },
 });
 
 const before = css({
     backgroundColor: 'var(--green)',
     color: 'white',
-    [':hover']: { span: { borderBottom: '1px solid var(--beige)', paddingBottom: 4 } },
+    fontWeight: 'normal',
+    ':hover': { span: { borderBottom: '1px solid var(--beige)', paddingBottom: 4 } },
 });
 
 const after = css({
     backgroundColor: 'var(--beige)',
     color: 'black',
-    [':hover']: { span: { borderBottom: '1px solid black', paddingBottom: 4 } },
+    fontWeight: 'normal',
+    ':hover': { span: { borderBottom: '1px solid black', paddingBottom: 4 } },
 });
 
 const logo = css({
@@ -43,13 +45,20 @@ const logo = css({
         textAlign: 'center',
         span: {
             color: 'white',
-            fontFamily: 'EB Garamond',
+            fontFamily: 'var(--serif)',
             fontSize: '5rem',
             lineHeight: '5rem',
             position: 'relative',
-            top: 'calc(50% - 45px)'
+            top: 'calc(50% - 2.5rem)'
         }
-    }
+    },
+    ['@media screen and (max-width: 1000px)']: {
+        height: 110,
+        left: 'calc(50% - 67px)',
+        top: 'calc(50% - 67px)',
+        width: 110,
+        div: { span: { fontSize: '2rem', lineHeight: '2rem', top: 'calc(50% - 1rem)' }}
+    },
 });
 
 export { after, before, logo, nav };

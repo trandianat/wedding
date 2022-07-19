@@ -1,29 +1,34 @@
 import { Fragment } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
 import { nav } from 'components/before/main/styles';
 
-export const Main = (): JSX.Element => (
-  <Fragment>
-    <nav css={nav}>
-      <Link to="/">
-        <div>
+export const Main = (): JSX.Element => {
+  const { '*': path } = useParams();
+  const pages = [
+    { name: 'LOGISTICS', path: 'logistics' },
+    { name: 'WEDDING PARTY', path: 'party' },
+    { name: 'OUR STORY', path: 'story' },
+  ];
+  return (
+    <Fragment>
+      <nav css={nav}>
+        <Link to="/">
           <h1>Brendan & Diana</h1>
+        </Link>
+        <div className="pages">
+          {pages.map(page => (
+            <Link key={page.path} to={page.path}>
+              <div {...(path === page.path && { className: 'active' })}>
+                {page.name}
+              </div>
+            </Link>
+          ))}
+          <Link to="rsvp">
+            <button>RSVP</button>
+          </Link>
         </div>
-      </Link>
-      <hr />
-      <Link to="logistics">
-        <div>LOGISTICS</div>
-      </Link>
-      <Link to="party">
-        <div>WEDDING PARTY</div>
-      </Link>
-      <Link to="story">
-        <div>OUR STORY</div>
-      </Link>
-      <Link to="rsvp">
-        <button>RSVP</button>
-      </Link>
-    </nav>
-    <Outlet />
-  </Fragment>
-);
+      </nav>
+      <Outlet />
+    </Fragment>
+  );
+};
