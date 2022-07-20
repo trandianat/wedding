@@ -19,9 +19,11 @@ import {
   roomDivider,
   rooms,
 } from 'components/before/logistics/styles';
+import Cake from 'assets/icons/cake';
 import Ceremony from 'assets/icons/ceremony';
-import Drinks from 'assets/icons/drinks';
-import Reception from 'assets/icons/reception';
+import Champagne from 'assets/icons/champagne';
+import Gift from 'assets/icons/gift';
+import List from 'assets/icons/list';
 
 export const Logistics = (): JSX.Element => (
   <main>
@@ -36,11 +38,9 @@ export const Logistics = (): JSX.Element => (
             with us!
           </p>
           <div css={introDetails}>
-            <p>
-              <strong>
-                Saturday, July 8<sup>th</sup>, 2023
-              </strong>
-            </p>
+            <h3>
+              Saturday, July 8<sup>th</sup>, 2023
+            </h3>
             <p>Bedford Village Inn</p>
             <p>2 Olde Bedford Way, Bedford, NH 03110</p>
           </div>
@@ -57,13 +57,13 @@ export const Logistics = (): JSX.Element => (
             <p>Courtyard Gardens</p>
           </div>
           <div>
-            <Drinks />
+            <Champagne />
             <h2>Cocktail Hour</h2>
             <p>5:30pm - 6:30pm</p>
             <p>Barn Gardens</p>
           </div>
           <div>
-            <Reception />
+            <Cake />
             <h2>Reception</h2>
             <p>6:30pm - 11pm</p>
             <p>Great Hall</p>
@@ -76,13 +76,14 @@ export const Logistics = (): JSX.Element => (
         <h2>On-site hotels</h2>
         <div className="divider" />
         <p>
+          Rooms are available at (
           <a
             href="https://www.bedfordvillageinn.com/bvi-property-map"
             target="_blank"
           >
-            Map of the property.
-          </a>{' '}
-          Rooms are available at:
+            map of the property
+          </a>
+          ):
         </p>
         <ul>
           <li>
@@ -127,11 +128,13 @@ export const Logistics = (): JSX.Element => (
         <div css={faqTitle}>
           <h2>FAQs</h2>
           <div className="divider" />
-          <Ceremony />
+          <List />
         </div>
         <div css={faqText}>
           <div>Attire</div>
           <div>Semi-formal</div>
+          <div>Bar</div>
+          <div>Open all night. Please bring cash to tip the bartenders!</div>
           <div>Kids</div>
           <div>
             We love your kids, but we'd like this to be a night off for you!
@@ -165,12 +168,21 @@ export const Logistics = (): JSX.Element => (
             />
             <p>
               Please do not get us any gifts! Your presence at our wedding is
-              the greatest gift of all. If you really want to, here are a few
-              ideas:
+              the greatest gift of all. Here's what you can do to make us the
+              happiest:
             </p>
+            <ul>
+              <li>Write us a card</li>
+              <li>Eat, drink, and dance all night</li>
+              <li>Take some flowers home with you</li>
+              <li>
+                Introduce yourself to someone new amongst our friends and
+                families
+              </li>
+            </ul>
           </div>
           <div>
-            <Ceremony />
+            <Gift />
           </div>
         </div>
       </div>

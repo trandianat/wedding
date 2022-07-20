@@ -27,9 +27,12 @@ const introText = css({
 });
 
 const introDetails = css({
+    border: '1px dotted var(--brown)',
+    borderRadius: 12,
     fontSize: '18px',
-    marginTop: 14,
-    'p:first-of-type': { marginBottom: 2 }
+    marginTop: 16,
+    padding: '10px 24px 12px',
+    'p:first-of-type': { marginTop: 8 }
 });
 
 const events = css({
@@ -101,7 +104,7 @@ const faqText = css({
     'div:nth-of-type(odd)': {
         fontFamily: 'var(--serif)',
         fontSize: '22px',
-        fontStyle: 'italic',
+        // fontStyle: 'italic',
         textAlign: 'right'
     }
 });
