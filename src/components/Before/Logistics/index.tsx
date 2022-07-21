@@ -2,6 +2,7 @@ import {
   events,
   eventsBorder,
   eventsContent,
+  eventsFooter,
   faqContent,
   faqs,
   faqText,
@@ -68,6 +69,10 @@ export const Logistics = (): JSX.Element => (
             <p>6:30pm - 11pm</p>
             <p>Great Hall</p>
           </div>
+        </div>
+        <div css={eventsFooter}>
+          In case of inclement weather, these events will all take place in the
+          Great Hall.
         </div>
       </div>
     </section>
@@ -145,11 +150,6 @@ export const Logistics = (): JSX.Element => (
           <div>
             1-hour drive from Boston and 10-minute drive from Manchester-Boston
             Regional Airport (MHT)
-          </div>
-          <div>Weather</div>
-          <div>
-            In case of inclement weather, the ceremony, cocktail hour, and
-            reception will take place in the Great Hall.
           </div>
         </div>
       </div>

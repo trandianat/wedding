@@ -37,6 +37,7 @@ const introDetails = css({
 
 const events = css({
     backgroundColor: 'var(--green)',
+    color: 'white',
     padding: '12px 0'
 });
 
@@ -46,11 +47,10 @@ const eventsBorder = css({
 });
 
 const eventsContent = css({
-    color: 'white',
     display: 'flex',
     gap: 24,
     margin: '0 auto',
-    padding: '48px 0',
+    paddingTop: 48,
     textAlign: 'center',
     width: 800,
     div: {
@@ -59,6 +59,8 @@ const eventsContent = css({
         h2: { padding: '24px 0 12px' }
     }
 });
+
+const eventsFooter = css({ padding: '36px 0 48px', textAlign: 'center' });
 
 const rooms = css({
     display: 'flex',
@@ -104,13 +106,13 @@ const faqText = css({
     'div:nth-of-type(odd)': {
         fontFamily: 'var(--serif)',
         fontSize: '22px',
-        // fontStyle: 'italic',
         textAlign: 'right'
     }
 });
 
 const green = css({
     backgroundColor: 'var(--green)',
+    color: 'white',
     padding: '12px 0'
 });
 
@@ -120,7 +122,6 @@ const greenBorder = css({
 });
 
 const greenContent = css({
-    color: 'white',
     display: 'flex',
     gap: 72,
     margin: '0 auto',
@@ -135,6 +136,7 @@ export {
     events,
     eventsBorder,
     eventsContent,
+    eventsFooter,
     faqContent,
     faqs,
     faqText,
