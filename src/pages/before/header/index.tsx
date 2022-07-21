@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { Link, Outlet, useParams } from 'react-router-dom';
-import { nav } from 'pages/before/main/styles';
+import { nav } from 'pages/before/header/styles';
 
-export const Main = (): JSX.Element => {
+export const Header = (): JSX.Element => {
   const { '*': path } = useParams();
   const pages = [
     { name: 'LOGISTICS', path: 'logistics' },
