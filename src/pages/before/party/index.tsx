@@ -4,7 +4,7 @@ import {
   primaryBorder,
   secondary,
   secondaryContent,
-} from 'components/before/party/styles';
+} from 'pages/before/party/styles';
 import { css } from '@emotion/react';
 
 const Cards = ({ children }: { children: React.ReactNode }): JSX.Element => (

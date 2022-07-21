@@ -19,7 +19,7 @@ import {
   roomBlock,
   roomDivider,
   rooms,
-} from 'components/before/logistics/styles';
+} from 'pages/before/logistics/styles';
 import Cake from 'assets/icons/cake';
 import Ceremony from 'assets/icons/ceremony';
 import Champagne from 'assets/icons/champagne';

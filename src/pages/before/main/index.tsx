@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link, Outlet, useParams } from 'react-router-dom';
-import { nav } from 'components/before/main/styles';
+import { nav } from 'pages/before/main/styles';
 
 export const Main = (): JSX.Element => {
   const { '*': path } = useParams();
