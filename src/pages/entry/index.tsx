@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { after, before, logo, nav } from 'pages/app/styles';
+import { after, before, logo, nav } from 'pages/entry/styles';
 
-export const App = (): JSX.Element => (
+export const Entry = (): JSX.Element => (
   <Fragment>
     <div css={logo}>
       <div>
