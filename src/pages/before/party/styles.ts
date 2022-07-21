@@ -6,8 +6,8 @@ const primary = css({
 });
 
 const primaryBorder = css({
-    borderBottom: '1px solid white',
-    borderTop: '1px solid white',
+    borderBottom: '1px solid var(--white)',
+    borderTop: '1px solid var(--white)',
 });
 
 const secondary = css({

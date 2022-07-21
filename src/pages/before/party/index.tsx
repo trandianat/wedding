@@ -24,9 +24,15 @@ const Card = ({
   name: string;
   description: string;
 }): JSX.Element => (
-  <div css={{ border: '1px solid white', height: 'min-content', width: 350 }}>
+  <div
+    css={{
+      border: '1px solid var(--white)',
+      height: 'min-content',
+      width: 350,
+    }}
+  >
     <div css={{ height: 250 }}>image</div>
-    <div css={{ backgroundColor: 'white', padding: 24 }}>
+    <div css={{ backgroundColor: 'var(--white)', padding: 24 }}>
       <p css={{ fontSize: '1.2rem' }}>{role}</p>
       <h3>{name}</h3>
       <div className="divider" />

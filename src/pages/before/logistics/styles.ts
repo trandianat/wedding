@@ -1,15 +1,6 @@
 import { css } from '@emotion/react';
 
-const intro = css({
-    backgroundColor: 'var(--beige)',
-    padding: '48px 0',
-});
-
-const introContent = css({
-    margin: '0 auto',
-    position: 'relative',
-    width: 800
-});
+const intro = css({ position: 'relative' });
 
 const introImg = css({
     backgroundColor: '#F6F6F6',
@@ -18,7 +9,7 @@ const introImg = css({
 });
 
 const introText = css({
-    backgroundColor: 'white',
+    backgroundColor: 'var(--white)',
     left: 350,
     padding: 24,
     position: 'absolute',
@@ -36,23 +27,9 @@ const introDetails = css({
 });
 
 const events = css({
-    backgroundColor: 'var(--green)',
-    color: 'white',
-    padding: '12px 0'
-});
-
-const eventsBorder = css({
-    borderBottom: '1px solid white',
-    borderTop: '1px solid white',
-});
-
-const eventsContent = css({
     display: 'flex',
     gap: 24,
-    margin: '0 auto',
-    paddingTop: 48,
     textAlign: 'center',
-    width: 800,
     div: {
         flex: 1,
         svg: { display: 'block', height: 100, margin: '0 auto' },
@@ -60,36 +37,17 @@ const eventsContent = css({
     }
 });
 
-const eventsFooter = css({ padding: '36px 0 48px', textAlign: 'center' });
+const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'center' });
 
-const rooms = css({
-    display: 'flex',
-    gap: 32,
-    padding: '48px 0',
-    margin: '0 auto',
-    width: 800,
-});
+const hotel = css({ display: 'flex', gap: 32 });
 
-const roomBlock = css({ flex: 2 });
+const hotelOnSite = css({ flex: 2 });
 
-const roomAlternatives = css({ flex: 1 });
+const hotelAlternatives = css({ flex: 1 });
 
-const roomDivider = css({
-    backgroundColor: 'var(--brown)',
-    width: 1
-});
+const hotelDivider = css({ backgroundColor: 'var(--brown)', width: 1 });
 
-const faqs = css({
-    backgroundColor: 'var(--beige)',
-    padding: '48px 0',
-});
-
-const faqContent = css({
-    display: 'flex',
-    gap: 48,
-    margin: '0 auto',
-    width: 800
-});
+const faqs = css({ display: 'flex', gap: 48 });
 
 const faqTitle = css({
     flexBasis: 0,
@@ -110,47 +68,25 @@ const faqText = css({
     }
 });
 
-const green = css({
-    backgroundColor: 'var(--green)',
-    color: 'white',
-    padding: '12px 0'
-});
-
-const greenBorder = css({
-    borderBottom: '1px solid white',
-    borderTop: '1px solid white',
-});
-
-const greenContent = css({
+const registry = css({
     display: 'flex',
     gap: 72,
-    margin: '0 auto',
-    padding: '48px 0',
-    width: 800,
-    div: {
-        svg: { height: 175 },
-    }
+    svg: { height: 175 }
 });
 
 export {
     events,
-    eventsBorder,
-    eventsContent,
     eventsFooter,
-    faqContent,
     faqs,
     faqText,
     faqTitle,
-    green,
-    greenBorder,
-    greenContent,
+    hotel,
+    hotelAlternatives,
+    hotelDivider,
+    hotelOnSite,
     intro,
-    introContent,
     introDetails,
     introImg,
     introText,
-    roomAlternatives,
-    roomBlock,
-    roomDivider,
-    rooms
+    registry,
 };

@@ -19,7 +19,7 @@ const nav = css({
 
 const before = css({
     backgroundColor: 'var(--green)',
-    color: 'white',
+    color: 'var(--white)',
     fontWeight: 'normal',
     ':hover': { span: { borderBottom: '1px solid var(--beige)', paddingBottom: 4 } },
 });
@@ -40,11 +40,11 @@ const logo = css({
     top: 'calc(50% - 122px)',
     width: 220,
     div: {
-        border: '1px solid white',
+        border: '1px solid var(--white)',
         height: '100%',
         textAlign: 'center',
         span: {
-            color: 'white',
+            color: 'var(--white)',
             fontFamily: 'var(--serif)',
             fontSize: '5rem',
             lineHeight: '5rem',

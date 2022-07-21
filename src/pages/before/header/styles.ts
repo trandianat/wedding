@@ -15,7 +15,7 @@ const nav = css({
         '.active': { fontWeight: 'bold' },
         a: { fontWeight: 'normal', letterSpacing: 1 },
         div: {
-            borderBottom: '1px solid white',
+            borderBottom: '1px solid var(--white)',
             paddingBottom: 3,
             ':hover': { borderBottom: '1px solid var(--green)', color: 'var(--green)' },
         },
