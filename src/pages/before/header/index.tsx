@@ -6,6 +6,7 @@ export const Header = (): JSX.Element => {
   const { '*': path } = useParams();
   const pages = [
     { name: 'LOGISTICS', path: 'logistics' },
+    { name: 'THINGS TO DO', path: 'activities' },
     { name: 'WEDDING PARTY', path: 'party' },
     { name: 'OUR STORY', path: 'story' },
   ];
@@ -13,7 +14,9 @@ export const Header = (): JSX.Element => {
     <Fragment>
       <nav css={nav}>
         <Link to="/">
-          <h1>Brendan & Diana</h1>
+          <h1>
+            <b>B&D</b>
+          </h1>
         </Link>
         <div className="pages">
           {pages.map(page => (

@@ -6,7 +6,7 @@ export const Entry = (): JSX.Element => (
   <Fragment>
     <div css={logo}>
       <div>
-        <span>B+D</span>
+        <span>B&D</span>
       </div>
     </div>
     <nav css={nav}>

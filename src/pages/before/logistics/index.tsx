@@ -1,3 +1,9 @@
+import Cake from 'assets/icons/cake';
+import Ceremony from 'assets/icons/ceremony';
+import Champagne from 'assets/icons/champagne';
+import Gift from 'assets/icons/gift';
+import List from 'assets/icons/list';
+import { Background, Variant } from 'components/background';
 import {
   events,
   eventsFooter,
@@ -14,12 +20,6 @@ import {
   introText,
   registry,
 } from 'pages/before/logistics/styles';
-import Cake from 'assets/icons/cake';
-import Ceremony from 'assets/icons/ceremony';
-import Champagne from 'assets/icons/champagne';
-import Gift from 'assets/icons/gift';
-import List from 'assets/icons/list';
-import { Background, Variant } from 'components/background';
 
 export const Logistics = (): JSX.Element => (
   <main>
