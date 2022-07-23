@@ -2,18 +2,20 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreateDetailsInput = {
+export type CreateLogisticsInput = {
   date: string,
-  location?: string | null,
+  location: string,
+  address: string,
   id?: string | null,
 };
 
-export type ModelDetailsConditionInput = {
+export type ModelLogisticsConditionInput = {
   date?: ModelStringInput | null,
   location?: ModelStringInput | null,
-  and?: Array< ModelDetailsConditionInput | null > | null,
-  or?: Array< ModelDetailsConditionInput | null > | null,
-  not?: ModelDetailsConditionInput | null,
+  address?: ModelStringInput | null,
+  and?: Array< ModelLogisticsConditionInput | null > | null,
+  or?: Array< ModelLogisticsConditionInput | null > | null,
+  not?: ModelLogisticsConditionInput | null,
 };
 
 export type ModelStringInput = {
@@ -56,115 +58,272 @@ export type ModelSizeInput = {
   between?: Array< number | null > | null,
 };
 
-export type Details = {
-  __typename: "Details",
+export type Logistics = {
+  __typename: "Logistics",
   date: string,
-  location?: string | null,
+  location: string,
+  address: string,
+  events:  Array<Event | null >,
   id: string,
   createdAt: string,
   updatedAt: string,
 };
 
-export type UpdateDetailsInput = {
+export type Event = {
+  __typename: "Event",
+  name: string,
+  time: string,
+  location: string,
+  id: string,
+  createdAt: string,
+  updatedAt: string,
+};
+
+export type UpdateLogisticsInput = {
   date?: string | null,
+  location?: string | null,
+  address?: string | null,
+  id: string,
+};
+
+export type DeleteLogisticsInput = {
+  id: string,
+};
+
+export type CreateEventInput = {
+  name: string,
+  time: string,
+  location: string,
+  id?: string | null,
+};
+
+export type ModelEventConditionInput = {
+  name?: ModelStringInput | null,
+  time?: ModelStringInput | null,
+  location?: ModelStringInput | null,
+  and?: Array< ModelEventConditionInput | null > | null,
+  or?: Array< ModelEventConditionInput | null > | null,
+  not?: ModelEventConditionInput | null,
+};
+
+export type UpdateEventInput = {
+  name?: string | null,
+  time?: string | null,
   location?: string | null,
   id: string,
 };
 
-export type DeleteDetailsInput = {
+export type DeleteEventInput = {
   id: string,
 };
 
-export type ModelDetailsFilterInput = {
+export type ModelLogisticsFilterInput = {
   date?: ModelStringInput | null,
   location?: ModelStringInput | null,
-  and?: Array< ModelDetailsFilterInput | null > | null,
-  or?: Array< ModelDetailsFilterInput | null > | null,
-  not?: ModelDetailsFilterInput | null,
+  address?: ModelStringInput | null,
+  and?: Array< ModelLogisticsFilterInput | null > | null,
+  or?: Array< ModelLogisticsFilterInput | null > | null,
+  not?: ModelLogisticsFilterInput | null,
 };
 
-export type ModelDetailsConnection = {
-  __typename: "ModelDetailsConnection",
-  items:  Array<Details | null >,
+export type ModelLogisticsConnection = {
+  __typename: "ModelLogisticsConnection",
+  items:  Array<Logistics | null >,
   nextToken?: string | null,
 };
 
-export type CreateDetailsMutationVariables = {
-  input: CreateDetailsInput,
-  condition?: ModelDetailsConditionInput | null,
+export type ModelEventFilterInput = {
+  name?: ModelStringInput | null,
+  time?: ModelStringInput | null,
+  location?: ModelStringInput | null,
+  and?: Array< ModelEventFilterInput | null > | null,
+  or?: Array< ModelEventFilterInput | null > | null,
+  not?: ModelEventFilterInput | null,
 };
 
-export type CreateDetailsMutation = {
-  createDetails?:  {
-    __typename: "Details",
+export type ModelEventConnection = {
+  __typename: "ModelEventConnection",
+  items:  Array<Event | null >,
+  nextToken?: string | null,
+};
+
+export type CreateLogisticsMutationVariables = {
+  input: CreateLogisticsInput,
+  condition?: ModelLogisticsConditionInput | null,
+};
+
+export type CreateLogisticsMutation = {
+  createLogistics?:  {
+    __typename: "Logistics",
     date: string,
-    location?: string | null,
+    location: string,
+    address: string,
+    events:  Array< {
+      __typename: "Event",
+      name: string,
+      time: string,
+      location: string,
+      id: string,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
     id: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type UpdateDetailsMutationVariables = {
-  input: UpdateDetailsInput,
-  condition?: ModelDetailsConditionInput | null,
+export type UpdateLogisticsMutationVariables = {
+  input: UpdateLogisticsInput,
+  condition?: ModelLogisticsConditionInput | null,
 };
 
-export type UpdateDetailsMutation = {
-  updateDetails?:  {
-    __typename: "Details",
+export type UpdateLogisticsMutation = {
+  updateLogistics?:  {
+    __typename: "Logistics",
     date: string,
-    location?: string | null,
+    location: string,
+    address: string,
+    events:  Array< {
+      __typename: "Event",
+      name: string,
+      time: string,
+      location: string,
+      id: string,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
     id: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type DeleteDetailsMutationVariables = {
-  input: DeleteDetailsInput,
-  condition?: ModelDetailsConditionInput | null,
+export type DeleteLogisticsMutationVariables = {
+  input: DeleteLogisticsInput,
+  condition?: ModelLogisticsConditionInput | null,
 };
 
-export type DeleteDetailsMutation = {
-  deleteDetails?:  {
-    __typename: "Details",
+export type DeleteLogisticsMutation = {
+  deleteLogistics?:  {
+    __typename: "Logistics",
     date: string,
-    location?: string | null,
+    location: string,
+    address: string,
+    events:  Array< {
+      __typename: "Event",
+      name: string,
+      time: string,
+      location: string,
+      id: string,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
     id: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type GetDetailsQueryVariables = {
+export type CreateEventMutationVariables = {
+  input: CreateEventInput,
+  condition?: ModelEventConditionInput | null,
+};
+
+export type CreateEventMutation = {
+  createEvent?:  {
+    __typename: "Event",
+    name: string,
+    time: string,
+    location: string,
+    id: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdateEventMutationVariables = {
+  input: UpdateEventInput,
+  condition?: ModelEventConditionInput | null,
+};
+
+export type UpdateEventMutation = {
+  updateEvent?:  {
+    __typename: "Event",
+    name: string,
+    time: string,
+    location: string,
+    id: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteEventMutationVariables = {
+  input: DeleteEventInput,
+  condition?: ModelEventConditionInput | null,
+};
+
+export type DeleteEventMutation = {
+  deleteEvent?:  {
+    __typename: "Event",
+    name: string,
+    time: string,
+    location: string,
+    id: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type GetLogisticsQueryVariables = {
   id: string,
 };
 
-export type GetDetailsQuery = {
-  getDetails?:  {
-    __typename: "Details",
+export type GetLogisticsQuery = {
+  getLogistics?:  {
+    __typename: "Logistics",
     date: string,
-    location?: string | null,
+    location: string,
+    address: string,
+    events:  Array< {
+      __typename: "Event",
+      name: string,
+      time: string,
+      location: string,
+      id: string,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
     id: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type ListDetailsQueryVariables = {
-  filter?: ModelDetailsFilterInput | null,
+export type ListLogisticsQueryVariables = {
+  filter?: ModelLogisticsFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type ListDetailsQuery = {
-  listDetails?:  {
-    __typename: "ModelDetailsConnection",
+export type ListLogisticsQuery = {
+  listLogistics?:  {
+    __typename: "ModelLogisticsConnection",
     items:  Array< {
-      __typename: "Details",
+      __typename: "Logistics",
       date: string,
-      location?: string | null,
+      location: string,
+      address: string,
+      events:  Array< {
+        __typename: "Event",
+        name: string,
+        time: string,
+        location: string,
+        id: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null >,
       id: string,
       createdAt: string,
       updatedAt: string,
@@ -173,33 +332,137 @@ export type ListDetailsQuery = {
   } | null,
 };
 
-export type OnCreateDetailsSubscription = {
-  onCreateDetails?:  {
-    __typename: "Details",
-    date: string,
-    location?: string | null,
+export type GetEventQueryVariables = {
+  id: string,
+};
+
+export type GetEventQuery = {
+  getEvent?:  {
+    __typename: "Event",
+    name: string,
+    time: string,
+    location: string,
     id: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnUpdateDetailsSubscription = {
-  onUpdateDetails?:  {
-    __typename: "Details",
+export type ListEventsQueryVariables = {
+  filter?: ModelEventFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListEventsQuery = {
+  listEvents?:  {
+    __typename: "ModelEventConnection",
+    items:  Array< {
+      __typename: "Event",
+      name: string,
+      time: string,
+      location: string,
+      id: string,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
+    nextToken?: string | null,
+  } | null,
+};
+
+export type OnCreateLogisticsSubscription = {
+  onCreateLogistics?:  {
+    __typename: "Logistics",
     date: string,
-    location?: string | null,
+    location: string,
+    address: string,
+    events:  Array< {
+      __typename: "Event",
+      name: string,
+      time: string,
+      location: string,
+      id: string,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
     id: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnDeleteDetailsSubscription = {
-  onDeleteDetails?:  {
-    __typename: "Details",
+export type OnUpdateLogisticsSubscription = {
+  onUpdateLogistics?:  {
+    __typename: "Logistics",
     date: string,
-    location?: string | null,
+    location: string,
+    address: string,
+    events:  Array< {
+      __typename: "Event",
+      name: string,
+      time: string,
+      location: string,
+      id: string,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
+    id: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteLogisticsSubscription = {
+  onDeleteLogistics?:  {
+    __typename: "Logistics",
+    date: string,
+    location: string,
+    address: string,
+    events:  Array< {
+      __typename: "Event",
+      name: string,
+      time: string,
+      location: string,
+      id: string,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
+    id: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateEventSubscription = {
+  onCreateEvent?:  {
+    __typename: "Event",
+    name: string,
+    time: string,
+    location: string,
+    id: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateEventSubscription = {
+  onUpdateEvent?:  {
+    __typename: "Event",
+    name: string,
+    time: string,
+    location: string,
+    id: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteEventSubscription = {
+  onDeleteEvent?:  {
+    __typename: "Event",
+    name: string,
+    time: string,
+    location: string,
     id: string,
     createdAt: string,
     updatedAt: string,

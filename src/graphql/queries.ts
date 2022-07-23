@@ -2,10 +2,58 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getDetails = /* GraphQL */ `
-  query GetDetails($id: ID!) {
-    getDetails(id: $id) {
+export const getLogistics = /* GraphQL */ `
+  query GetLogistics($id: ID!) {
+    getLogistics(id: $id) {
       date
+      location
+      address
+      events {
+        name
+        time
+        location
+        id
+        createdAt
+        updatedAt
+      }
+      id
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listLogistics = /* GraphQL */ `
+  query ListLogistics(
+    $filter: ModelLogisticsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listLogistics(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        date
+        location
+        address
+        events {
+          name
+          time
+          location
+          id
+          createdAt
+          updatedAt
+        }
+        id
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getEvent = /* GraphQL */ `
+  query GetEvent($id: ID!) {
+    getEvent(id: $id) {
+      name
+      time
       location
       id
       createdAt
@@ -13,15 +61,16 @@ export const getDetails = /* GraphQL */ `
     }
   }
 `;
-export const listDetails = /* GraphQL */ `
-  query ListDetails(
-    $filter: ModelDetailsFilterInput
+export const listEvents = /* GraphQL */ `
+  query ListEvents(
+    $filter: ModelEventFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listDetails(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listEvents(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
-        date
+        name
+        time
         location
         id
         createdAt

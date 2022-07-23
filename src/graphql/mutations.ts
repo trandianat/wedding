@@ -2,13 +2,83 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createDetails = /* GraphQL */ `
-  mutation CreateDetails(
-    $input: CreateDetailsInput!
-    $condition: ModelDetailsConditionInput
+export const createLogistics = /* GraphQL */ `
+  mutation CreateLogistics(
+    $input: CreateLogisticsInput!
+    $condition: ModelLogisticsConditionInput
   ) {
-    createDetails(input: $input, condition: $condition) {
+    createLogistics(input: $input, condition: $condition) {
       date
+      location
+      address
+      events {
+        name
+        time
+        location
+        id
+        createdAt
+        updatedAt
+      }
+      id
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateLogistics = /* GraphQL */ `
+  mutation UpdateLogistics(
+    $input: UpdateLogisticsInput!
+    $condition: ModelLogisticsConditionInput
+  ) {
+    updateLogistics(input: $input, condition: $condition) {
+      date
+      location
+      address
+      events {
+        name
+        time
+        location
+        id
+        createdAt
+        updatedAt
+      }
+      id
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteLogistics = /* GraphQL */ `
+  mutation DeleteLogistics(
+    $input: DeleteLogisticsInput!
+    $condition: ModelLogisticsConditionInput
+  ) {
+    deleteLogistics(input: $input, condition: $condition) {
+      date
+      location
+      address
+      events {
+        name
+        time
+        location
+        id
+        createdAt
+        updatedAt
+      }
+      id
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createEvent = /* GraphQL */ `
+  mutation CreateEvent(
+    $input: CreateEventInput!
+    $condition: ModelEventConditionInput
+  ) {
+    createEvent(input: $input, condition: $condition) {
+      name
+      time
       location
       id
       createdAt
@@ -16,13 +86,14 @@ export const createDetails = /* GraphQL */ `
     }
   }
 `;
-export const updateDetails = /* GraphQL */ `
-  mutation UpdateDetails(
-    $input: UpdateDetailsInput!
-    $condition: ModelDetailsConditionInput
+export const updateEvent = /* GraphQL */ `
+  mutation UpdateEvent(
+    $input: UpdateEventInput!
+    $condition: ModelEventConditionInput
   ) {
-    updateDetails(input: $input, condition: $condition) {
-      date
+    updateEvent(input: $input, condition: $condition) {
+      name
+      time
       location
       id
       createdAt
@@ -30,13 +101,14 @@ export const updateDetails = /* GraphQL */ `
     }
   }
 `;
-export const deleteDetails = /* GraphQL */ `
-  mutation DeleteDetails(
-    $input: DeleteDetailsInput!
-    $condition: ModelDetailsConditionInput
+export const deleteEvent = /* GraphQL */ `
+  mutation DeleteEvent(
+    $input: DeleteEventInput!
+    $condition: ModelEventConditionInput
   ) {
-    deleteDetails(input: $input, condition: $condition) {
-      date
+    deleteEvent(input: $input, condition: $condition) {
+      name
+      time
       location
       id
       createdAt
