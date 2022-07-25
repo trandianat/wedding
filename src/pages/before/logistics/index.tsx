@@ -4,36 +4,21 @@ import Champagne from 'assets/icons/champagne';
 import Gift from 'assets/icons/gift';
 import List from 'assets/icons/list';
 import { Background, Variant } from 'components/background';
-import {
-  events,
-  eventsFooter,
-  faqs,
-  faqText,
-  faqTitle,
-  hotel,
-  hotelDivider,
-  hotelAlternatives,
-  hotelOnSite,
-  intro,
-  introDetails,
-  introImg,
-  introText,
-  registry,
-} from 'pages/before/logistics/styles';
+import * as styles from 'pages/before/logistics/styles';
 
 export const Logistics = (): JSX.Element => (
   <main>
     <Background variant={Variant.SECONDARY}>
-      <div css={intro}>
-        <div css={introImg}>asdf</div>
-        <div css={introText}>
+      <div css={styles.intro}>
+        <div css={styles.introImg}>asdf</div>
+        <div css={styles.introText}>
           <h2>The Beans are getting married!</h2>
           <div className="divider" />
           <p>
             Whoa, marriage? YES! And we'd love for you to be there to celebrate
             with us!
           </p>
-          <div css={introDetails}>
+          <div css={styles.introDetails}>
             <h3>
               Saturday, July 8<sup>th</sup>, 2023
             </h3>
@@ -44,7 +29,7 @@ export const Logistics = (): JSX.Element => (
       </div>
     </Background>
     <Background variant={Variant.PRIMARY}>
-      <div css={events}>
+      <div css={styles.events}>
         <div>
           <Ceremony />
           <h2>Ceremony</h2>
@@ -64,14 +49,14 @@ export const Logistics = (): JSX.Element => (
           <p>Great Hall</p>
         </div>
       </div>
-      <p css={eventsFooter}>
+      <p css={styles.eventsFooter}>
         In case of inclement weather, these events will all take place in the
         Great Hall.
       </p>
     </Background>
     <Background>
-      <div css={hotel}>
-        <div css={hotelOnSite}>
+      <div css={styles.hotel}>
+        <div css={styles.hotelOnSite}>
           <h2>On-site hotels</h2>
           <div className="divider" />
           <p>
@@ -112,8 +97,8 @@ export const Logistics = (): JSX.Element => (
             the Grand.
           </p>
         </div>
-        <div css={hotelDivider} />
-        <div css={hotelAlternatives}>
+        <div css={styles.hotelDivider} />
+        <div css={styles.hotelAlternatives}>
           <h2>Alternatives</h2>
           <div className="divider" />
           <p>
@@ -124,13 +109,13 @@ export const Logistics = (): JSX.Element => (
       </div>
     </Background>
     <Background variant={Variant.SECONDARY}>
-      <div css={faqs}>
-        <div css={faqTitle}>
+      <div css={styles.faqs}>
+        <div css={styles.faqTitle}>
           <h2>FAQs</h2>
           <div className="divider" />
           <List />
         </div>
-        <div css={faqText}>
+        <div css={styles.faqText}>
           <div>Attire</div>
           <div>Semi-formal</div>
           <div>Bar</div>
@@ -150,7 +135,7 @@ export const Logistics = (): JSX.Element => (
       </div>
     </Background>
     <Background variant={Variant.PRIMARY}>
-      <div css={registry}>
+      <div css={styles.registry}>
         <div>
           <h2>No registry</h2>
           <div

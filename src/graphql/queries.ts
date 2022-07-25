@@ -10,8 +10,9 @@ export const getLogistics = /* GraphQL */ `
       address
       events {
         name
-        time
         location
+        start
+        end
         id
         createdAt
         updatedAt
@@ -35,8 +36,9 @@ export const listLogistics = /* GraphQL */ `
         address
         events {
           name
-          time
           location
+          start
+          end
           id
           createdAt
           updatedAt
@@ -53,8 +55,9 @@ export const getEvent = /* GraphQL */ `
   query GetEvent($id: ID!) {
     getEvent(id: $id) {
       name
-      time
       location
+      start
+      end
       id
       createdAt
       updatedAt
@@ -70,8 +73,9 @@ export const listEvents = /* GraphQL */ `
     listEvents(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         name
-        time
         location
+        start
+        end
         id
         createdAt
         updatedAt

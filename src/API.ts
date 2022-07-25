@@ -72,8 +72,9 @@ export type Logistics = {
 export type Event = {
   __typename: "Event",
   name: string,
-  time: string,
   location: string,
+  start: string,
+  end: string,
   id: string,
   createdAt: string,
   updatedAt: string,
@@ -92,15 +93,17 @@ export type DeleteLogisticsInput = {
 
 export type CreateEventInput = {
   name: string,
-  time: string,
   location: string,
+  start: string,
+  end: string,
   id?: string | null,
 };
 
 export type ModelEventConditionInput = {
   name?: ModelStringInput | null,
-  time?: ModelStringInput | null,
   location?: ModelStringInput | null,
+  start?: ModelStringInput | null,
+  end?: ModelStringInput | null,
   and?: Array< ModelEventConditionInput | null > | null,
   or?: Array< ModelEventConditionInput | null > | null,
   not?: ModelEventConditionInput | null,
@@ -108,8 +111,9 @@ export type ModelEventConditionInput = {
 
 export type UpdateEventInput = {
   name?: string | null,
-  time?: string | null,
   location?: string | null,
+  start?: string | null,
+  end?: string | null,
   id: string,
 };
 
@@ -134,8 +138,9 @@ export type ModelLogisticsConnection = {
 
 export type ModelEventFilterInput = {
   name?: ModelStringInput | null,
-  time?: ModelStringInput | null,
   location?: ModelStringInput | null,
+  start?: ModelStringInput | null,
+  end?: ModelStringInput | null,
   and?: Array< ModelEventFilterInput | null > | null,
   or?: Array< ModelEventFilterInput | null > | null,
   not?: ModelEventFilterInput | null,
@@ -161,8 +166,9 @@ export type CreateLogisticsMutation = {
     events:  Array< {
       __typename: "Event",
       name: string,
-      time: string,
       location: string,
+      start: string,
+      end: string,
       id: string,
       createdAt: string,
       updatedAt: string,
@@ -187,8 +193,9 @@ export type UpdateLogisticsMutation = {
     events:  Array< {
       __typename: "Event",
       name: string,
-      time: string,
       location: string,
+      start: string,
+      end: string,
       id: string,
       createdAt: string,
       updatedAt: string,
@@ -213,8 +220,9 @@ export type DeleteLogisticsMutation = {
     events:  Array< {
       __typename: "Event",
       name: string,
-      time: string,
       location: string,
+      start: string,
+      end: string,
       id: string,
       createdAt: string,
       updatedAt: string,
@@ -234,8 +242,9 @@ export type CreateEventMutation = {
   createEvent?:  {
     __typename: "Event",
     name: string,
-    time: string,
     location: string,
+    start: string,
+    end: string,
     id: string,
     createdAt: string,
     updatedAt: string,
@@ -251,8 +260,9 @@ export type UpdateEventMutation = {
   updateEvent?:  {
     __typename: "Event",
     name: string,
-    time: string,
     location: string,
+    start: string,
+    end: string,
     id: string,
     createdAt: string,
     updatedAt: string,
@@ -268,8 +278,9 @@ export type DeleteEventMutation = {
   deleteEvent?:  {
     __typename: "Event",
     name: string,
-    time: string,
     location: string,
+    start: string,
+    end: string,
     id: string,
     createdAt: string,
     updatedAt: string,
@@ -289,8 +300,9 @@ export type GetLogisticsQuery = {
     events:  Array< {
       __typename: "Event",
       name: string,
-      time: string,
       location: string,
+      start: string,
+      end: string,
       id: string,
       createdAt: string,
       updatedAt: string,
@@ -318,8 +330,9 @@ export type ListLogisticsQuery = {
       events:  Array< {
         __typename: "Event",
         name: string,
-        time: string,
         location: string,
+        start: string,
+        end: string,
         id: string,
         createdAt: string,
         updatedAt: string,
@@ -340,8 +353,9 @@ export type GetEventQuery = {
   getEvent?:  {
     __typename: "Event",
     name: string,
-    time: string,
     location: string,
+    start: string,
+    end: string,
     id: string,
     createdAt: string,
     updatedAt: string,
@@ -360,8 +374,9 @@ export type ListEventsQuery = {
     items:  Array< {
       __typename: "Event",
       name: string,
-      time: string,
       location: string,
+      start: string,
+      end: string,
       id: string,
       createdAt: string,
       updatedAt: string,
@@ -379,8 +394,9 @@ export type OnCreateLogisticsSubscription = {
     events:  Array< {
       __typename: "Event",
       name: string,
-      time: string,
       location: string,
+      start: string,
+      end: string,
       id: string,
       createdAt: string,
       updatedAt: string,
@@ -400,8 +416,9 @@ export type OnUpdateLogisticsSubscription = {
     events:  Array< {
       __typename: "Event",
       name: string,
-      time: string,
       location: string,
+      start: string,
+      end: string,
       id: string,
       createdAt: string,
       updatedAt: string,
@@ -421,8 +438,9 @@ export type OnDeleteLogisticsSubscription = {
     events:  Array< {
       __typename: "Event",
       name: string,
-      time: string,
       location: string,
+      start: string,
+      end: string,
       id: string,
       createdAt: string,
       updatedAt: string,
@@ -437,8 +455,9 @@ export type OnCreateEventSubscription = {
   onCreateEvent?:  {
     __typename: "Event",
     name: string,
-    time: string,
     location: string,
+    start: string,
+    end: string,
     id: string,
     createdAt: string,
     updatedAt: string,
@@ -449,8 +468,9 @@ export type OnUpdateEventSubscription = {
   onUpdateEvent?:  {
     __typename: "Event",
     name: string,
-    time: string,
     location: string,
+    start: string,
+    end: string,
     id: string,
     createdAt: string,
     updatedAt: string,
@@ -461,8 +481,9 @@ export type OnDeleteEventSubscription = {
   onDeleteEvent?:  {
     __typename: "Event",
     name: string,
-    time: string,
     location: string,
+    start: string,
+    end: string,
     id: string,
     createdAt: string,
     updatedAt: string,

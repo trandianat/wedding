@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-const nav = css({
+export const nav = css({
     alignItems: 'center',
     display: 'flex',
     justifyContent: 'space-between',
@@ -21,5 +21,3 @@ const nav = css({
         },
     }
 });
-
-export { nav };

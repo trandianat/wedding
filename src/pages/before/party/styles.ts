@@ -1,19 +1,7 @@
-import { css } from '@emotion/react';
+export const background = { margin: '0 auto', padding: '48px 0', width: 600 };
 
-const primary = css({
-    backgroundColor: 'var(--green)',
-    padding: '12px 0',
-});
+export const container = { display: 'flex', gap: 24 };
 
-const primaryBorder = css({
-    borderBottom: '1px solid var(--white)',
-    borderTop: '1px solid var(--white)',
-});
+export const image = { border: '1px solid black', width: 200 };
 
-const secondary = css({
-    backgroundColor: 'var(--beige)',
-});
-
-const secondaryContent = css({ margin: '0 auto', width: 800 });
-
-export { primary, primaryBorder, secondary, secondaryContent };
+export const role = { fontSize: '1.2rem' };

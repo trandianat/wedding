@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link, Outlet, useParams } from 'react-router-dom';
-import { nav } from 'pages/before/header/styles';
+import * as styles from 'pages/before/header/styles';
 
 export const Header = (): JSX.Element => {
   const { '*': path } = useParams();
@@ -12,7 +12,7 @@ export const Header = (): JSX.Element => {
   ];
   return (
     <Fragment>
-      <nav css={nav}>
+      <nav css={styles.nav}>
         <Link to="/">
           <h1>
             <b>B&D</b>

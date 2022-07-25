@@ -13,8 +13,9 @@ export const createLogistics = /* GraphQL */ `
       address
       events {
         name
-        time
         location
+        start
+        end
         id
         createdAt
         updatedAt
@@ -36,8 +37,9 @@ export const updateLogistics = /* GraphQL */ `
       address
       events {
         name
-        time
         location
+        start
+        end
         id
         createdAt
         updatedAt
@@ -59,8 +61,9 @@ export const deleteLogistics = /* GraphQL */ `
       address
       events {
         name
-        time
         location
+        start
+        end
         id
         createdAt
         updatedAt
@@ -78,8 +81,9 @@ export const createEvent = /* GraphQL */ `
   ) {
     createEvent(input: $input, condition: $condition) {
       name
-      time
       location
+      start
+      end
       id
       createdAt
       updatedAt
@@ -93,8 +97,9 @@ export const updateEvent = /* GraphQL */ `
   ) {
     updateEvent(input: $input, condition: $condition) {
       name
-      time
       location
+      start
+      end
       id
       createdAt
       updatedAt
@@ -108,8 +113,9 @@ export const deleteEvent = /* GraphQL */ `
   ) {
     deleteEvent(input: $input, condition: $condition) {
       name
-      time
       location
+      start
+      end
       id
       createdAt
       updatedAt

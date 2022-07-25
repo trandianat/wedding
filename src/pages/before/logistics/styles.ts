@@ -1,14 +1,14 @@
 import { css } from '@emotion/react';
 
-const intro = css({ position: 'relative' });
+export const intro = css({ position: 'relative' });
 
-const introImg = css({
+export const introImg = {
     backgroundColor: '#F6F6F6',
     height: 400,
     width: 400
-});
+};
 
-const introText = css({
+export const introText = css({
     backgroundColor: 'var(--white)',
     left: 350,
     padding: 24,
@@ -17,16 +17,16 @@ const introText = css({
     width: 400
 });
 
-const introDetails = css({
+export const introDetails = {
     border: '1px dotted var(--brown)',
     borderRadius: 12,
     fontSize: '18px',
     marginTop: 16,
     padding: '10px 24px 12px',
     'p:first-of-type': { marginTop: 8 }
-});
+};
 
-const events = css({
+export const events = css({
     display: 'flex',
     gap: 24,
     textAlign: 'center',
@@ -37,25 +37,25 @@ const events = css({
     }
 });
 
-const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'center' });
+export const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'center' });
 
-const hotel = css({ display: 'flex', gap: 32 });
+export const hotel = { display: 'flex', gap: 32 };
 
-const hotelOnSite = css({ flex: 2 });
+export const hotelOnSite = { flex: 2 };
 
-const hotelAlternatives = css({ flex: 1 });
+export const hotelAlternatives = { flex: 1 };
 
-const hotelDivider = css({ backgroundColor: 'var(--brown)', width: 1 });
+export const hotelDivider = { backgroundColor: 'var(--brown)', width: 1 };
 
-const faqs = css({ display: 'flex', gap: 48 });
+export const faqs = { display: 'flex', gap: 48 };
 
-const faqTitle = css({
+export const faqTitle = css({
     flexBasis: 0,
     textAlign: 'center',
     svg: { height: 135, marginTop: 12 }
 });
 
-const faqText = css({
+export const faqText = css({
     display: 'grid',
     gridColumnGap: 32,
     gridRowGap: 16,
@@ -68,25 +68,8 @@ const faqText = css({
     }
 });
 
-const registry = css({
+export const registry = {
     display: 'flex',
     gap: 72,
     svg: { height: 175 }
-});
-
-export {
-    events,
-    eventsFooter,
-    faqs,
-    faqText,
-    faqTitle,
-    hotel,
-    hotelAlternatives,
-    hotelDivider,
-    hotelOnSite,
-    intro,
-    introDetails,
-    introImg,
-    introText,
-    registry,
 };

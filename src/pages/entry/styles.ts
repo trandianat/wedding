@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-const nav = css({
+export const nav = css({
     display: 'flex',
     height: '100%',
     width: '100%',
@@ -17,21 +17,21 @@ const nav = css({
     ['@media screen and (max-width: 1200px)']: { flexDirection: 'column' },
 });
 
-const before = css({
+export const before = {
     backgroundColor: 'var(--green)',
     color: 'var(--white)',
     fontWeight: 'normal',
     ':hover': { span: { borderBottom: '1px solid var(--beige)', paddingBottom: 4 } },
-});
+};
 
-const after = css({
+export const after = {
     backgroundColor: 'var(--beige)',
     color: 'black',
     fontWeight: 'normal',
     ':hover': { span: { borderBottom: '1px solid black', paddingBottom: 4 } },
-});
+};
 
-const logo = css({
+export const logo = css({
     backgroundColor: 'var(--brown)',
     height: 220,
     left: 'calc(50% - 122px)',
@@ -60,5 +60,3 @@ const logo = css({
         div: { span: { fontSize: '2rem', lineHeight: '2rem', top: 'calc(50% - 1rem)' }}
     },
 });
-
-export { after, before, logo, nav };

@@ -11,6 +11,7 @@ type Logistics @model {
 
 type Event @model {
     name: String!
-    time: String!
     location: String!
+    start: AWSDateTime!
+    end: AWSDateTime!
 }
