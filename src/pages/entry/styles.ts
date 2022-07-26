@@ -14,7 +14,7 @@ export const nav = css({
         textDecoration: 'none',
         div: { fontSize: '2rem' },
     },
-    ['@media screen and (max-width: 1200px)']: { flexDirection: 'column' },
+    ['@media screen and (max-width: 1000px)']: { flexDirection: 'column' },
 });
 
 export const before = {
@@ -26,9 +26,9 @@ export const before = {
 
 export const after = {
     backgroundColor: 'var(--beige)',
-    color: 'black',
+    color: 'var(--black)',
     fontWeight: 'normal',
-    ':hover': { span: { borderBottom: '1px solid black', paddingBottom: 4 } },
+    ':hover': { span: { borderBottom: '1px solid var(--black)', paddingBottom: 4 } },
 };
 
 export const logo = css({
@@ -52,11 +52,12 @@ export const logo = css({
             top: 'calc(50% - 2.5rem)'
         }
     },
-    ['@media screen and (max-width: 1000px)']: {
+    ['@media screen and (max-width: 1200px), (max-height: 600px)']: {
         height: 110,
         left: 'calc(50% - 67px)',
         top: 'calc(50% - 67px)',
         width: 110,
         div: { span: { fontSize: '2rem', lineHeight: '2rem', top: 'calc(50% - 1rem)' }}
     },
+    ['@media screen and (max-width: 1000px) and (max-height: 450px)']: { display: 'none' }
 });
