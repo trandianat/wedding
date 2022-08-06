@@ -1,20 +1,32 @@
 import { css } from '@emotion/react';
 
-export const intro = css({ position: 'relative' });
+export const intro = css({
+    '@media screen and (min-width: 951px)': { position: 'relative' }
+});
 
 export const introImg = {
     backgroundColor: '#F6F6F6',
-    height: 400,
-    width: 400
+    height: 300,
+    width: 500,
+    '@media screen and (max-width: 950px)': {
+        margin: '0 auto',
+    },
+    '@media screen and (min-width: 951px)': {
+        height: 400,
+        width: 400,
+    }
 };
 
 export const introText = css({
     backgroundColor: 'var(--white)',
-    left: 350,
     padding: 24,
-    position: 'absolute',
-    top: 50,
-    width: 400
+    margin: '0 auto',
+    width: 400,
+    '@media screen and (min-width: 951px)': {
+        left: 350,
+        position: 'absolute',
+        top: 50,
+    }
 });
 
 export const introDetails = {
