@@ -52,7 +52,11 @@ export const events = css({
 
 export const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'center' });
 
-export const hotel = { display: 'flex', gap: 32 };
+export const hotel = css({
+    display: 'flex',
+    gap: 32,
+    '@media screen and (max-width: 700px)': { flexDirection: 'column', gap: 24 }
+});
 
 export const hotelOnSite = { flex: 2 };
 
