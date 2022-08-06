@@ -17,4 +17,8 @@ export const border = {
     padding: '48px 0',
   };
 
-export const width = { margin: '0 auto', width: 800 };
+export const width = {
+  margin: '0 auto',
+  width: 800,
+  '@media screen and (max-width: 950px)': { width: 650 }
+};

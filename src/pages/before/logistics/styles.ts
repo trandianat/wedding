@@ -34,7 +34,8 @@ export const events = css({
         flex: 1,
         svg: { display: 'block', height: 100, margin: '0 auto' },
         h2: { padding: '24px 0 12px' }
-    }
+    },
+    '@media screen and (max-width: 700px)': { flexDirection: 'column', gap: 48 }
 });
 
 export const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'center' });
