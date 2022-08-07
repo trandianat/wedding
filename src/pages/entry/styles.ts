@@ -52,7 +52,7 @@ export const logo = css({
             top: 'calc(50% - 2.5rem)'
         }
     },
-    '@media (max-width: 1200px) and (max-height: 600px)': {
+    '@media (max-width: 1200px), (max-height: 500px)': {
         height: 110,
         left: 'calc(50% - 67px)',
         top: 'calc(50% - 67px)',
