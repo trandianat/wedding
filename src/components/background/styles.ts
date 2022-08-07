@@ -20,5 +20,6 @@ export const border = {
 export const width = {
   margin: '0 auto',
   width: 800,
-  '@media screen and (max-width: 950px)': { width: 650 }
+  '@media (max-width: 950px)': { width: 650 },
+  '@media (max-width: 700px)': { width: 400 }
 };

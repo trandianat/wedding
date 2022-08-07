@@ -1,17 +1,17 @@
 import { css } from '@emotion/react';
 
 export const intro = css({
-    '@media screen and (min-width: 951px)': { position: 'relative' }
+    '@media (min-width: 951px)': { position: 'relative' }
 });
 
 export const introImg = {
     backgroundColor: '#F6F6F6',
     height: 300,
-    width: 500,
-    '@media screen and (max-width: 950px)': {
+    width: 400,
+    '@media (max-width: 950px)': {
         margin: '0 auto',
     },
-    '@media screen and (min-width: 951px)': {
+    '@media (min-width: 951px)': {
         height: 400,
         width: 400,
     }
@@ -22,7 +22,7 @@ export const introText = css({
     padding: 24,
     margin: '0 auto',
     width: 400,
-    '@media screen and (min-width: 951px)': {
+    '@media (min-width: 951px)': {
         left: 350,
         position: 'absolute',
         top: 50,
@@ -47,7 +47,7 @@ export const events = css({
         svg: { display: 'block', height: 100, margin: '0 auto' },
         h2: { padding: '24px 0 12px' }
     },
-    '@media screen and (max-width: 700px)': { flexDirection: 'column', gap: 48 }
+    '@media (max-width: 700px)': { flexDirection: 'column', gap: 48 }
 });
 
 export const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'center' });
@@ -55,7 +55,7 @@ export const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'cent
 export const hotel = css({
     display: 'flex',
     gap: 32,
-    '@media screen and (max-width: 700px)': { flexDirection: 'column', gap: 24 }
+    '@media (max-width: 700px)': { flexDirection: 'column', gap: 24 }
 });
 
 export const hotelOnSite = { flex: 2 };
@@ -64,12 +64,25 @@ export const hotelAlternatives = { flex: 1 };
 
 export const hotelDivider = { backgroundColor: 'var(--brown)', width: 1 };
 
-export const faqs = { display: 'flex', gap: 48 };
+export const faqs = css({
+    display: 'flex',
+    gap: 48,
+    '@media (max-width: 700px)': {
+        flexDirection: 'column',
+        gap: 12
+    }
+});
 
 export const faqTitle = css({
     flexBasis: 0,
-    textAlign: 'center',
-    svg: { height: 135, marginTop: 12 }
+    svg: {
+        height: 135,
+        marginTop: 12,
+        '@media (max-width: 700px)': {
+            display: 'none'
+        }
+    },
+    '@media (min-width: 701px)': { textAlign: 'center' }
 });
 
 export const faqText = css({
@@ -80,7 +93,7 @@ export const faqText = css({
     div: { alignSelf: 'center' },
     'div:nth-of-type(odd)': {
         fontFamily: 'var(--serif)',
-        fontSize: '22px',
+        fontSize: 22,
         textAlign: 'right'
     }
 });
@@ -88,5 +101,9 @@ export const faqText = css({
 export const registry = {
     display: 'flex',
     gap: 72,
-    svg: { height: 175 }
+    svg: {
+        height: 175,
+        '@media (max-width: 700px)': { display: 'none' }
+    },
+    '@media (max-width: 700px)': { gap: 0 }
 };

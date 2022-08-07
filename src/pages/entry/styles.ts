@@ -14,7 +14,7 @@ export const nav = css({
         textDecoration: 'none',
         div: { fontSize: '2rem' },
     },
-    '@media screen and (max-width: 1000px)': { flexDirection: 'column' },
+    '@media (max-width: 1000px)': { flexDirection: 'column' },
 });
 
 export const before = {
@@ -52,12 +52,12 @@ export const logo = css({
             top: 'calc(50% - 2.5rem)'
         }
     },
-    '@media screen and (max-width: 1200px), (max-height: 600px)': {
+    '@media (max-width: 1200px) and (max-height: 600px)': {
         height: 110,
         left: 'calc(50% - 67px)',
         top: 'calc(50% - 67px)',
         width: 110,
         div: { span: { fontSize: '2rem', lineHeight: '2rem', top: 'calc(50% - 1rem)' }}
     },
-    '@media screen and (max-width: 1000px) and (max-height: 450px)': { display: 'none' }
+    '@media (max-width: 1000px) and (max-height: 450px)': { display: 'none' }
 });

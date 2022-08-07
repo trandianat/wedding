@@ -20,11 +20,13 @@ export const nav = css({
             paddingBottom: 3,
             ':hover': { borderBottom: '1px solid var(--green)', color: 'var(--green)' },
         },
+        '@media (max-width: 600px)': { flexDirection: 'column', gap: 8 }
     },
-    '@media screen and (max-width: 950px)': {
+    '@media (max-width: 950px)': {
         flexDirection: 'column',
         gap: 12,
-        width: 'min-content',
+        width: 650,
         'h1::before': { content: '"Brendan & Diana"' },
-        '.main': { display: 'none' } }
+        '.main': { display: 'none' } },
+        '@media (max-width: 700px)': { width: 400 }
 });
