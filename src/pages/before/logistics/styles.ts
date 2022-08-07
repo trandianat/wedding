@@ -7,9 +7,10 @@ export const intro = css({
 export const introImg = {
     backgroundColor: '#F6F6F6',
     height: 300,
-    width: 400,
+    width: '90%',
     '@media (max-width: 950px)': {
         margin: '0 auto',
+        padding: 24,
     },
     '@media (min-width: 951px)': {
         height: 400,
@@ -21,12 +22,12 @@ export const introText = css({
     backgroundColor: 'var(--white)',
     padding: 24,
     margin: '0 auto',
-    width: 400,
     '@media (min-width: 951px)': {
         left: 350,
         position: 'absolute',
         top: 50,
-    }
+    },
+    '@media (max-width: 950px)': { width: '90%' }
 });
 
 export const introDetails = {
