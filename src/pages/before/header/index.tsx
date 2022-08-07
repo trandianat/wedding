@@ -13,9 +13,13 @@ export const Header = (): JSX.Element => {
   return (
     <Fragment>
       <nav css={styles.nav}>
-        <Link to="/">
-          <h1 />
-        </Link>
+        <div className="entry">
+          <div className="display" />
+          <Link to="/">
+            <h1 />
+          </Link>
+          <div className="display" />
+        </div>
         <div className="pages">
           {pages.map(page => (
             <Link key={page.path} to={page.path}>
@@ -24,7 +28,7 @@ export const Header = (): JSX.Element => {
               </div>
             </Link>
           ))}
-          <Link className="main" to="rsvp">
+          <Link className="rsvp" to="rsvp">
             <button>RSVP</button>
           </Link>
         </div>

@@ -32,7 +32,7 @@ export const introText = css({
 export const introDetails = {
     border: '1px dotted var(--brown)',
     borderRadius: 12,
-    fontSize: '18px',
+    fontSize: 18,
     marginTop: 16,
     padding: '10px 24px 12px',
     'p:first-of-type': { marginTop: 8 }
@@ -44,8 +44,8 @@ export const events = css({
     textAlign: 'center',
     div: {
         flex: 1,
+        h2: { padding: '24px 0 12px' },
         svg: { display: 'block', height: 100, margin: '0 auto' },
-        h2: { padding: '24px 0 12px' }
     },
     '@media (max-width: 700px)': { flexDirection: 'column', gap: 48 }
 });
@@ -55,7 +55,7 @@ export const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'cent
 export const hotel = css({
     display: 'flex',
     gap: 32,
-    '@media (max-width: 700px)': { flexDirection: 'column', gap: 24 }
+    '@media (max-width: 700px)': { flexDirection: 'column', gap: 18 }
 });
 
 export const hotelOnSite = { flex: 2 };
