@@ -14,9 +14,7 @@ export const Header = (): JSX.Element => {
     <Fragment>
       <nav css={styles.nav}>
         <Link to="/">
-          <h1>
-            <b>B&D</b>
-          </h1>
+          <h1 />
         </Link>
         <div className="pages">
           {pages.map(page => (
@@ -26,7 +24,7 @@ export const Header = (): JSX.Element => {
               </div>
             </Link>
           ))}
-          <Link to="rsvp">
+          <Link className="main" to="rsvp">
             <button>RSVP</button>
           </Link>
         </div>

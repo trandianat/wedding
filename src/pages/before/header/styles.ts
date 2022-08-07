@@ -8,6 +8,7 @@ export const nav = css({
     padding: 12,
     width: 800,
     a: { textDecoration: 'none', whiteSpace: 'nowrap', ':hover': { color: 'var(--brown)' } },
+    h1: { fontWeight: 'bold', '::before': { content: '"B&D"' } },
     '.pages': {
         alignItems: 'center',
         display: 'flex',
@@ -19,5 +20,11 @@ export const nav = css({
             paddingBottom: 3,
             ':hover': { borderBottom: '1px solid var(--green)', color: 'var(--green)' },
         },
-    }
+    },
+    '@media screen and (max-width: 950px)': {
+        flexDirection: 'column',
+        gap: 12,
+        width: 'min-content',
+        'h1::before': { content: '"Brendan & Diana"' },
+        '.main': { display: 'none' } }
 });
