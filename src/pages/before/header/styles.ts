@@ -5,7 +5,7 @@ export const nav = css({
     display: 'flex',
     justifyContent: 'space-between',
     margin: '0 auto',
-    padding: 12,
+    padding: '12px 0',
     width: 800,
     a: { textDecoration: 'none', whiteSpace: 'nowrap', ':hover': { color: 'var(--brown)' } },
     h1: { fontWeight: 'bold', '::before': { content: '"B&D"' } },
@@ -35,6 +35,7 @@ export const nav = css({
     '@media (max-width: 950px)': {
         flexDirection: 'column',
         gap: 12,
+        padding: '12px 0 20px',
         width: 650,
         'h1::before': { content: '"Brendan & Diana"' },
         '.rsvp': { display: 'none' }
