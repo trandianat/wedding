@@ -3,6 +3,8 @@ export const outline = {
     color: 'var(--black)',
     height: 'min-content',
     width: 350,
+    '@media (max-width: 950px)': { width: '75%', margin: '0 auto' },
+    '@media (max-width: 700px)': { width: '100%' }
   };
 
 export const image = { height: 250 };
