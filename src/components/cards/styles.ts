@@ -1,9 +1,5 @@
 import { css } from '@emotion/react';
 
-export const centered = {
-    margin: '0 auto',
-};
-
 export const container = css({
     display: 'flex',
     justifyContent: 'space-between',

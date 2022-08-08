@@ -4,8 +4,4 @@ export const Cards = ({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element => (
-  <div css={styles.centered}>
-    <div css={styles.container}>{children}</div>
-  </div>
-);
+}): JSX.Element => <div css={styles.container}>{children}</div>;
