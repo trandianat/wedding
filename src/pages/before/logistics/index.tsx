@@ -94,7 +94,7 @@ export const Logistics = (): JSX.Element => (
             If you would prefer to book over the phone, call{' '}
             <a href="tel:6034722001">(603) 472-2001</a> and use group code{' '}
             <strong>10068B</strong> for the Inn or <strong>1006GX</strong> for
-            the Grand.
+            the Grand. Check-in is after 3pm and check-out before 11am.
           </p>
         </div>
         <div css={styles.hotelDivider} />
@@ -153,10 +153,14 @@ export const Logistics = (): JSX.Element => (
           <ul>
             <li>Write us a card</li>
             <li>Eat, drink, and dance all night</li>
-            <li>Take some flowers home with you</li>
+            <li>
+              Take lots of pictures at the photo booths, and leave one of the
+              printouts for our guestbook
+            </li>
             <li>
               Introduce yourself to someone new amongst our friends and families
             </li>
+            <li>Take some flowers home with you</li>
           </ul>
         </div>
         <div>
