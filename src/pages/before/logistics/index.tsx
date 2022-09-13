@@ -60,14 +60,13 @@ export const Logistics = (): JSX.Element => (
           <h2>On-site hotels</h2>
           <div className="divider" />
           <p>
-            Rooms are available at (
             <a
               href="https://www.bedfordvillageinn.com/bvi-property-map"
               target="_blank"
             >
-              map of the property
+              Map of the property
             </a>
-            ):
+            . Rooms are available at:
           </p>
           <ul>
             <li>
@@ -94,7 +93,7 @@ export const Logistics = (): JSX.Element => (
             If you would prefer to book over the phone, call{' '}
             <a href="tel:6034722001">(603) 472-2001</a> and use group code{' '}
             <strong>10068B</strong> for the Inn or <strong>1006GX</strong> for
-            the Grand. Check-in is after 3pm and check-out before 11am.
+            the Grand. Check-in is after 3pm and check-out by 11am.
           </p>
         </div>
         <div css={styles.hotelDivider} />
@@ -155,7 +154,7 @@ export const Logistics = (): JSX.Element => (
             <li>Eat, drink, and dance all night</li>
             <li>
               Take lots of pictures at the photo booths, and leave one of the
-              printouts for our guestbook
+              printouts in our guestbook
             </li>
             <li>
               Introduce yourself to someone new amongst our friends and families
