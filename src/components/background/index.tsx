@@ -1,10 +1,5 @@
 import * as styles from 'components/background/styles';
-
-export enum Variant {
-  DEFAULT = 'default',
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
-}
+import { BackgroundVariant, Variant } from 'types';
 
 export const background: Record<
   string,
@@ -18,7 +13,7 @@ export const background: Record<
 export const Background = ({
   children,
   variant = Variant.DEFAULT,
-}: React.PropsWithChildren<{ variant?: string }>): JSX.Element => (
+}: React.PropsWithChildren<{ variant?: BackgroundVariant }>): JSX.Element => (
   <section
     css={{
       ...(variant === Variant.DEFAULT && styles.width),

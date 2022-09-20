@@ -1,10 +1,11 @@
 import { Background } from 'components/background';
-import { Card, Variant } from 'components/card';
+import { Card } from 'components/card';
 import { Cards } from 'components/cards';
+import { Variant } from 'types';
 
 export const Party = (): JSX.Element => (
   <main>
-    <Background variant="primary">
+    <Background variant={Variant.PRIMARY}>
       <Cards>
         <Card
           role="MATRON OF HONOR"
@@ -24,7 +25,7 @@ export const Party = (): JSX.Element => (
         />
       </Cards>
     </Background>
-    <Background variant="secondary">
+    <Background variant={Variant.SECONDARY}>
       <Cards>
         <Card
           role="OFFICIANT"

@@ -99,10 +99,3 @@ li {
     line-height: 1.5;
     margin: 4px 0;
 }
-
-.divider {
-    border-bottom: 1px solid var(--brown);
-    border-top: 1px solid var(--brown);
-    height: 2px;
-    margin: 16px 0;
-}

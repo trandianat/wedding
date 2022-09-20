@@ -3,8 +3,10 @@ import Ceremony from 'assets/icons/ceremony';
 import Champagne from 'assets/icons/champagne';
 import Gift from 'assets/icons/gift';
 import List from 'assets/icons/list';
-import { Background, Variant } from 'components/background';
+import { Background } from 'components/background';
+import { Divider } from 'components/divider';
 import * as styles from 'pages/before/logistics/styles';
+import { Variant } from 'types';
 
 export const Logistics = (): JSX.Element => (
   <main>
@@ -13,7 +15,7 @@ export const Logistics = (): JSX.Element => (
         <div css={styles.introImg}>asdf</div>
         <div css={styles.introText}>
           <h2>The Beans are getting married!</h2>
-          <div className="divider" />
+          <Divider />
           <p>
             Whoa, marriage? YES! And we'd love for you to be there to celebrate
             with us!
@@ -58,7 +60,7 @@ export const Logistics = (): JSX.Element => (
       <div css={styles.hotel}>
         <div css={styles.hotelOnSite}>
           <h2>On-site hotels</h2>
-          <div className="divider" />
+          <Divider />
           <p>
             <a
               href="https://www.bedfordvillageinn.com/bvi-property-map"
@@ -99,7 +101,7 @@ export const Logistics = (): JSX.Element => (
         <div css={styles.hotelDivider} />
         <div css={styles.hotelAlternatives}>
           <h2>Alternatives</h2>
-          <div className="divider" />
+          <Divider />
           <p>
             Manchester, NH is a 10-minute drive away from the Bedford Village
             Inn and has plenty of lodging options.
@@ -111,7 +113,7 @@ export const Logistics = (): JSX.Element => (
       <div css={styles.faqs}>
         <div css={styles.faqTitle}>
           <h2>FAQs</h2>
-          <div className="divider" />
+          <Divider />
           <List />
         </div>
         <div css={styles.faqText}>
@@ -137,13 +139,7 @@ export const Logistics = (): JSX.Element => (
       <div css={styles.registry}>
         <div>
           <h2>No registry</h2>
-          <div
-            className="divider"
-            css={{
-              borderBottom: '1px solid var(--white)',
-              borderTop: '1px solid var(--white)',
-            }}
-          />
+          <Divider variant={Variant.SECONDARY} />
           <p>
             Please do not get us any gifts! Your presence at our wedding is the
             greatest gift of all. Here's what you can do to make us the

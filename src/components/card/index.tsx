@@ -1,9 +1,6 @@
 import * as styles from 'components/card/styles';
-
-export enum Variant {
-  DEFAULT = 'default',
-  SIDE = 'side',
-}
+import { Divider } from 'components/divider';
+import { CardVariant, Variant } from 'types';
 
 export const Card = ({
   role,
@@ -14,14 +11,14 @@ export const Card = ({
   role: string;
   name: string;
   description: string;
-  variant?: string;
+  variant?: CardVariant;
 }): JSX.Element => (
   <div css={variant === Variant.SIDE ? styles.side : styles.stack}>
     <div css={styles.image}>image</div>
     <div css={styles.description}>
       <p css={styles.role}>{role}</p>
       <h3>{name}</h3>
-      <div className="divider" />
+      <Divider />
       <p>{description}</p>
     </div>
   </div>
