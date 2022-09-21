@@ -1,7 +1,7 @@
 import { Background } from 'components/background';
 import { Card } from 'components/card';
 import { Cards } from 'components/cards';
-import { Variant } from 'types';
+import { Variant } from 'utils/types';
 
 export const Party = (): JSX.Element => (
   <main>

@@ -1,5 +1,5 @@
 import * as styles from 'components/divider/styles';
-import { DividerVariant, Variant } from 'types';
+import { DividerVariant, Variant } from 'utils/types';
 
 export const Divider = ({
   variant = Variant.PRIMARY,

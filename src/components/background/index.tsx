@@ -1,5 +1,5 @@
 import * as styles from 'components/background/styles';
-import { BackgroundVariant, Variant } from 'types';
+import { BackgroundVariant, Variant } from 'utils/types';
 
 export const background: Record<
   string,

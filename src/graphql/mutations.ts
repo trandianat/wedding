@@ -2,120 +2,42 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createLogistics = /* GraphQL */ `
-  mutation CreateLogistics(
-    $input: CreateLogisticsInput!
-    $condition: ModelLogisticsConditionInput
+export const createContent = /* GraphQL */ `
+  mutation CreateContent(
+    $input: CreateContentInput!
+    $condition: ModelContentConditionInput
   ) {
-    createLogistics(input: $input, condition: $condition) {
-      date
-      location
-      address
-      events {
-        name
-        location
-        start
-        end
-        id
-        createdAt
-        updatedAt
-      }
+    createContent(input: $input, condition: $condition) {
+      category
+      content
       id
       createdAt
       updatedAt
     }
   }
 `;
-export const updateLogistics = /* GraphQL */ `
-  mutation UpdateLogistics(
-    $input: UpdateLogisticsInput!
-    $condition: ModelLogisticsConditionInput
+export const updateContent = /* GraphQL */ `
+  mutation UpdateContent(
+    $input: UpdateContentInput!
+    $condition: ModelContentConditionInput
   ) {
-    updateLogistics(input: $input, condition: $condition) {
-      date
-      location
-      address
-      events {
-        name
-        location
-        start
-        end
-        id
-        createdAt
-        updatedAt
-      }
+    updateContent(input: $input, condition: $condition) {
+      category
+      content
       id
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteLogistics = /* GraphQL */ `
-  mutation DeleteLogistics(
-    $input: DeleteLogisticsInput!
-    $condition: ModelLogisticsConditionInput
+export const deleteContent = /* GraphQL */ `
+  mutation DeleteContent(
+    $input: DeleteContentInput!
+    $condition: ModelContentConditionInput
   ) {
-    deleteLogistics(input: $input, condition: $condition) {
-      date
-      location
-      address
-      events {
-        name
-        location
-        start
-        end
-        id
-        createdAt
-        updatedAt
-      }
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const createEvent = /* GraphQL */ `
-  mutation CreateEvent(
-    $input: CreateEventInput!
-    $condition: ModelEventConditionInput
-  ) {
-    createEvent(input: $input, condition: $condition) {
-      name
-      location
-      start
-      end
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateEvent = /* GraphQL */ `
-  mutation UpdateEvent(
-    $input: UpdateEventInput!
-    $condition: ModelEventConditionInput
-  ) {
-    updateEvent(input: $input, condition: $condition) {
-      name
-      location
-      start
-      end
-      id
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteEvent = /* GraphQL */ `
-  mutation DeleteEvent(
-    $input: DeleteEventInput!
-    $condition: ModelEventConditionInput
-  ) {
-    deleteEvent(input: $input, condition: $condition) {
-      name
-      location
-      start
-      end
+    deleteContent(input: $input, condition: $condition) {
+      category
+      content
       id
       createdAt
       updatedAt

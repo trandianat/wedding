@@ -1,6 +1,6 @@
 import * as styles from 'components/card/styles';
 import { Divider } from 'components/divider';
-import { CardVariant, Variant } from 'types';
+import { CardVariant, Variant } from 'utils/types';
 
 export const Card = ({
   role,

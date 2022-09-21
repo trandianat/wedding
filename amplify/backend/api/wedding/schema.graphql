@@ -2,16 +2,15 @@
 # all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
 input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
 
-type Logistics @model {
-  date: AWSDate!
-  location: String!
-  address: String!
-  events: [Event]!
+enum Category {
+  LOGISTICS
+  PARTY
+  RSVP
+  STORY
+  THINGS
 }
 
-type Event @model {
-    name: String!
-    location: String!
-    start: AWSDateTime!
-    end: AWSDateTime!
+type Content @model {
+  category: Category
+  content: AWSJSON
 }
