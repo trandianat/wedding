@@ -9,11 +9,11 @@ export type CreateContentInput = {
 };
 
 export enum Category {
+  ACTIVITIES = "ACTIVITIES",
   LOGISTICS = "LOGISTICS",
   PARTY = "PARTY",
   RSVP = "RSVP",
   STORY = "STORY",
-  THINGS = "THINGS",
 }
 
 
