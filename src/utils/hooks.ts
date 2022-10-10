@@ -16,7 +16,7 @@ export const useData = (category: Category) => {
             // if (result.data.listContents.items.length > 0) {
             //     setData(JSON.parse(result.data.listContents.items[0].content));
             // }
-            return JSON.parse(result.data.listContents.items[0].content);
+            return JSON.parse(result.data.listContents.items[0]?.content);
         };
         getData().then(response => {
             console.log('response', response);
