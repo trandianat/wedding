@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { After } from 'pages/after';
 import { Before } from 'pages/before';
 import { Entry } from 'pages/entry';
+import 'styles.css';
 
 Amplify.configure(awsconfig);
 
