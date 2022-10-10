@@ -12,14 +12,18 @@ export const useData = (category: Category) => {
                 query: listContents,
                 variables: { filter: { category: { eq: category } } },
             });
-            console.log('result', result);
-            if (result.data.listContents.items.length > 0) {
-                setData(JSON.parse(result.data.listContents.items[0].content));
-            }
+            console.log('API', result);
+            // if (result.data.listContents.items.length > 0) {
+            //     setData(JSON.parse(result.data.listContents.items[0].content));
+            // }
+            return JSON.parse(result.data.listContents.items[0].content);
         };
-        if (!data) getData();
+        getData().then(response => {
+            console.log('response', response);
+            setData(response);
+        });
         console.log('data', data);
-    }, [data]);
+    }, []);
 
     return data;
 };

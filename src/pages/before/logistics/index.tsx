@@ -11,6 +11,7 @@ import { Category, Variant } from 'utils/types';
 
 export const Logistics = (): JSX.Element => {
   const data = useData(Category.LOGISTICS);
+  console.log('logistics', data);
   return (
     data && (
       <main>
