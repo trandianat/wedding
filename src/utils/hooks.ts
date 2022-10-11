@@ -24,6 +24,5 @@ export const useData = (category: Category) => {
         });
         console.log('data', data);
     }, []);
-
     return data;
 };
