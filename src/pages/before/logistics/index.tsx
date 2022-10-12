@@ -3,6 +3,7 @@ import Ceremony from 'assets/icons/ceremony';
 import Champagne from 'assets/icons/champagne';
 import Gift from 'assets/icons/gift';
 import List from 'assets/icons/list';
+import Engagement1 from 'assets/images/engagement-1.jpg';
 import { Background } from 'components/background';
 import { Divider } from 'components/divider';
 import * as styles from 'pages/before/logistics/styles';
@@ -11,27 +12,19 @@ import { Category, Variant } from 'utils/types';
 
 export const Logistics = (): JSX.Element => {
   const data = useData(Category.LOGISTICS);
-  console.log('logistics', data);
   return (
     data && (
       <main>
         <Background variant={Variant.SECONDARY}>
           <div css={styles.intro}>
-            <div css={styles.introImg}>asdf</div>
+            <img src={Engagement1} />
             <div css={styles.introText}>
-              <h2>The Beans are getting married!</h2>
+              <h2>
+                {data.weekDay}, {data.month} {data.day}, {data.year}
+              </h2>
               <Divider />
-              <p>
-                Whoa, marriage? YES! And we'd love for you to be there to
-                celebrate with us!
-              </p>
-              <div css={styles.introDetails}>
-                <h3>
-                  {data.weekDay}, {data.month} {data.day}, {data.year}
-                </h3>
-                <p>{data.venue}</p>
-                <p>{data.address}</p>
-              </div>
+              <p>{data.venue}</p>
+              <p>{data.address}</p>
             </div>
           </div>
         </Background>

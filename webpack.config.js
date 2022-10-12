@@ -31,8 +31,8 @@ module.exports = {
                 use: ["@svgr/webpack"]
             },
             { 
-                test: /\.(jpg|jpeg|png|gif)$/,
-                use: ["file-loader"] 
+                test: /\.(jpg|ttf)$/,
+                type: "asset/resource"
             },
         ],
     },

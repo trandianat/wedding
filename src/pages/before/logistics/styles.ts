@@ -1,43 +1,27 @@
 import { css } from '@emotion/react';
 
 export const intro = css({
-    '@media (min-width: 951px)': { position: 'relative' }
-});
-
-export const introImg = {
-    backgroundColor: '#F6F6F6',
-    height: 300,
-    width: '90%',
-    '@media (max-width: 950px)': {
-        margin: '0 auto',
-        padding: 24,
+    img: {
+        height: 650,
+        objectFit: 'cover',
+        objectPosition: 'right bottom',
+        width: '100%',
+        '@media (max-width: 700px)': { height: 300 },
     },
-    '@media (min-width: 951px)': {
-        height: 400,
-        width: 400,
-    }
-};
+    '@media (min-width: 701px)': { position: 'relative' }
+});
 
 export const introText = css({
     backgroundColor: 'var(--white)',
-    padding: 24,
-    margin: '0 auto',
-    '@media (min-width: 951px)': {
-        left: 350,
-        position: 'absolute',
-        top: 50,
-    },
-    '@media (max-width: 950px)': { width: '90%' }
-});
-
-export const introDetails = {
-    border: '1px dotted var(--brown)',
-    borderRadius: 12,
     fontSize: 18,
-    marginTop: 16,
-    padding: '10px 24px 12px',
-    'p:first-of-type': { marginTop: 8 }
-};
+    padding: 24,
+    '@media (min-width: 701px)': {
+        backgroundColor: 'rgba(255, 255, 255, .6)',
+        position: 'absolute',
+        '@media (min-width: 951px)': { left: 64, top: 120 },
+        '@media (max-width: 950px)': { left: 48, top: 48 },
+    },
+});
 
 export const events = css({
     display: 'flex',
