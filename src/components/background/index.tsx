@@ -14,12 +14,7 @@ export const Background = ({
   children,
   variant = Variant.DEFAULT,
 }: React.PropsWithChildren<{ variant?: BackgroundVariant }>): JSX.Element => (
-  <section
-    css={{
-      ...(variant === Variant.DEFAULT && styles.width),
-      ...background[variant],
-    }}
-  >
+  <section css={background[variant]}>
     <div css={variant === Variant.PRIMARY ? styles.border : styles.width}>
       {variant === Variant.PRIMARY ? (
         <div css={styles.width}>{children}</div>

@@ -6,7 +6,7 @@ export const intro = css({
         objectFit: 'cover',
         objectPosition: 'right bottom',
         width: '100%',
-        '@media (max-width: 700px)': { height: 300 },
+        '@media (max-width: 700px)': { height: 375 },
     },
     '@media (min-width: 701px)': { position: 'relative' }
 });

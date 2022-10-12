@@ -8,7 +8,7 @@ export const nav = css({
     padding: '12px 0',
     width: 800,
     a: { textDecoration: 'none', whiteSpace: 'nowrap', ':hover': { color: 'var(--brown)' } },
-    h1: { fontWeight: 'bold', '::before': { content: '"B&D"' } },
+    h1: { '::before': { content: '"B&D"' } },
     '.entry': {
         alignItems: 'center',
         display: 'flex',
@@ -37,8 +37,8 @@ export const nav = css({
         gap: 12,
         padding: '12px 0 20px',
         width: 650,
-        'h1::before': { content: '"Brendan & Diana"' },
-        '.rsvp': { display: 'none' }
+        '.rsvp': { display: 'none' },
+        '@media (min-width: 350px)': { 'h1::before': { content: '"Brendan & Diana"' } },
     },
     '@media (max-width: 700px)': { width: 'auto' },
     '@media (max-width: 600px)': {
