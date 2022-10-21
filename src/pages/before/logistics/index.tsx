@@ -3,21 +3,21 @@ import Ceremony from 'assets/icons/ceremony';
 import Champagne from 'assets/icons/champagne';
 import Gift from 'assets/icons/gift';
 import List from 'assets/icons/list';
-import Engagement1 from 'assets/images/engagement-1.jpg';
 import { Background } from 'components/background';
 import { Divider } from 'components/divider';
 import * as styles from 'pages/before/logistics/styles';
-import { useData } from 'utils/hooks';
+import { useData, useImages } from 'utils/hooks';
 import { Category, Variant } from 'utils/types';
 
 export const Logistics = (): JSX.Element => {
   const data = useData(Category.LOGISTICS);
+  const [engagement] = useImages(Category.LOGISTICS);
   return (
     data && (
       <main>
         <Background variant={Variant.SECONDARY}>
           <div css={styles.intro}>
-            <img src={Engagement1} />
+            <img src={engagement} />
             <div css={styles.introText}>
               <h2>
                 {data.weekDay}, {data.month} {data.day}, {data.year}

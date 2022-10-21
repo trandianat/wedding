@@ -31,13 +31,14 @@ module.exports = {
                 use: ["@svgr/webpack"]
             },
             { 
-                test: /\.(jpg|ttf)$/,
+                test: /\.ttf$/,
                 type: "asset/resource"
             },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
+            favicon: "./src/assets/favicon.ico",
             template: path.join(__dirname, "src", "index.html"),
         }),
     ],

@@ -1,4 +1,4 @@
-import { API } from 'aws-amplify';
+import { API, Storage } from 'aws-amplify';
 import { listContents } from 'graphql/queries';
 import { useEffect, useState } from 'react';
 import { Category } from 'utils/types';
@@ -12,17 +12,32 @@ export const useData = (category: Category) => {
                 query: listContents,
                 variables: { filter: { category: { eq: category } } },
             });
-            console.log('API', result);
-            // if (result.data.listContents.items.length > 0) {
-            //     setData(JSON.parse(result.data.listContents.items[0].content));
-            // }
             return JSON.parse(result.data.listContents.items[0]?.content);
         };
         getData().then(response => {
-            console.log('response', response);
+            console.log('data', response);
             setData(response);
         });
-        console.log('data', data);
     }, []);
+
     return data;
+};
+
+export const useImages = (category: Category) => {
+    const [images, setImages] = useState<string[]>([]);
+
+    useEffect(() => {
+        const getImages = async () => {
+            const results = await Storage.list(`${category}/`);
+            results.forEach(async (result: any, index: number) => {
+                if (index) {
+                    const image = await Storage.get(result.key);
+                    setImages((current) => [...current, image]);
+                }
+            });
+        };
+        getImages();
+    }, []);
+
+    return images;
 };
