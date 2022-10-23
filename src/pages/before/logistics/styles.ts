@@ -13,7 +13,7 @@ export const intro = css({
 
 export const introText = css({
     backgroundColor: 'var(--white)',
-    fontSize: 18,
+    fontSize: '1.125rem',
     padding: 24,
     '@media (min-width: 701px)': {
         backgroundColor: 'rgba(255, 255, 255, .6)',
@@ -35,9 +35,9 @@ export const events = css({
     '@media (max-width: 700px)': { flexDirection: 'column', gap: 48 }
 });
 
-export const eventsSubtext = { fontSize: 14, paddingTop: 12 };
+export const eventsSubtext = { fontSize: '.875rem', paddingTop: 12 };
 
-export const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'center' });
+export const eventsFooter = css({ fontSize: '.875rem', paddingTop: 28, textAlign: 'center' });
 
 export const hotel = css({
     display: 'flex',
@@ -80,7 +80,7 @@ export const faqText = css({
     div: { alignSelf: 'center' },
     'div:nth-of-type(odd)': {
         fontFamily: 'var(--serif)',
-        fontSize: 22,
+        fontSize: '1.375rem',
         textAlign: 'right'
     }
 });
