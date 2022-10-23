@@ -80,12 +80,6 @@ h3 {
     font-size: 1.5rem;
 }
 
-hr {
-    border: 0;
-    border-top: 1px solid var(--brown);
-    width: 100%;
-}
-
 p {
     line-height: 1.5;
     margin: 0;

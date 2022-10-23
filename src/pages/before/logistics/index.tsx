@@ -23,7 +23,13 @@ export const Logistics = (): JSX.Element => {
                 {data.weekDay}, {data.month} {data.day}, {data.year}
               </h2>
               <Divider />
-              <p>{data.venue}</p>
+              <p>
+                {data.venue} (
+                <a href={data.map} target="_blank">
+                  map
+                </a>
+                )
+              </p>
               <p>{data.address}</p>
             </div>
           </div>
@@ -35,18 +41,30 @@ export const Logistics = (): JSX.Element => {
               <h2>Ceremony</h2>
               <p>{data.ceremonyTime}</p>
               <p>{data.ceremonyLocation}</p>
+              <div css={styles.eventsSubtext}>
+                <p>Outdoor (on grass)</p>
+                <p>
+                  <em>No phones please</em>
+                </p>
+              </div>
             </div>
             <div>
               <Champagne />
               <h2>Cocktail Hour</h2>
               <p>{data.cocktailTime}</p>
               <p>{data.cocktailLocation}</p>
+              <div css={styles.eventsSubtext}>
+                <p>Outdoor (on grass)</p>
+              </div>
             </div>
             <div>
               <Cake />
               <h2>Reception</h2>
               <p>{data.receptionTime}</p>
               <p>{data.receptionLocation}</p>
+              <div css={styles.eventsSubtext}>
+                <p>Indoor</p>
+              </div>
             </div>
           </div>
           <p css={styles.eventsFooter}>
@@ -59,35 +77,41 @@ export const Logistics = (): JSX.Element => {
             <div css={styles.hotelOnSite}>
               <h2>On-site hotels</h2>
               <Divider />
-              <p>
-                <a href={data.map} target="_blank">
-                  Map of the property
-                </a>
-                . Rooms are available at:
-              </p>
+              <p>Rooms are available at:</p>
               <ul>
                 <li>
                   <a href={data.primaryHotelLink} target="_blank">
                     The {data.primaryHotel}
                   </a>
                   , in the same building where the reception will be
+                  <ul>
+                    {data.primaryHotelDetails.map((item: string) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </li>
                 <li>
                   <a href={data.secondaryHotelLink} target="_blank">
                     The {data.secondaryHotel}
                   </a>
                   , about a two-minute walk away from the {data.primaryHotel}
+                  <ul>
+                    {data.secondaryHotelDetails.map((item: string) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </li>
               </ul>
               <p>
-                Please book a room as soon as possible as availability may run
-                out. If you would prefer to book over the phone, call{' '}
-                <a href={`tel:${data.phone}`}>{data.formattedPhone}</a> and use
-                group code <strong>{data.primaryHotelCode}</strong> for the{' '}
-                {data.primaryHotel} or{' '}
+                If you would prefer to book over the phone, call{' '}
+                <a href={`tel:${data.phone}`}>{data.formattedPhone}</a> and
+                mention group code <strong>{data.primaryHotelCode}</strong> for
+                the {data.primaryHotel} or{' '}
                 <strong>{data.secondaryHotelCode}</strong> for the{' '}
-                {data.secondaryHotel}. Check-in is after {data.checkIn} and
-                check-out by {data.checkOut}.
+                {data.secondaryHotel}; you can also request complimentary
+                shuttle service to and from {data.airport} with 24-hours notice.
+                Check-in is after {data.checkIn} and check-out by{' '}
+                {data.checkOut}.
               </p>
             </div>
             <div css={styles.hotelDivider} />
@@ -113,7 +137,13 @@ export const Logistics = (): JSX.Element => {
               <div>Kids</div>
               <div>{data.kids}</div>
               <div>Parking</div>
-              <div>{data.parking}</div>
+              <div>
+                {data.parking} (
+                <a href={data.map} target="_blank">
+                  map
+                </a>
+                )
+              </div>
               <div>Travel</div>
               <div>{data.travel}</div>
             </div>
@@ -133,8 +163,8 @@ export const Logistics = (): JSX.Element => {
                 <li>Write us a card</li>
                 <li>Eat, drink, and dance all night</li>
                 <li>
-                  Take lots of pictures at the photo booths, and leave one of
-                  the printouts in our guestbook
+                  Take lots of pictures at the photo booth, and leave one of the
+                  printouts in our guestbook
                 </li>
                 <li>
                   Introduce yourself to someone new amongst our friends and

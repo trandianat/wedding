@@ -35,6 +35,8 @@ export const events = css({
     '@media (max-width: 700px)': { flexDirection: 'column', gap: 48 }
 });
 
+export const eventsSubtext = { fontSize: 14, paddingTop: 12 };
+
 export const eventsFooter = css({ fontSize: 14, paddingTop: 28, textAlign: 'center' });
 
 export const hotel = css({
