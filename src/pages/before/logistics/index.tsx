@@ -5,6 +5,7 @@ import Gift from 'assets/icons/gift';
 import List from 'assets/icons/list';
 import { Background } from 'components/background';
 import { Divider } from 'components/divider';
+import { Footer } from 'components/footer';
 import * as styles from 'pages/before/logistics/styles';
 import { useData, useImages } from 'utils/hooks';
 import { Category, Variant } from 'utils/types';
@@ -178,6 +179,7 @@ export const Logistics = (): JSX.Element => {
             </div>
           </div>
         </Background>
+        <Footer />
       </main>
     )
   );
