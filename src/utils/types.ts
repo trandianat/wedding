@@ -14,6 +14,11 @@ export enum Variant {
     SIDE = 'SIDE',
 }
 
+export enum When {
+    AFTER = 'after',
+    BEFORE = 'before'
+}
+
 export type BackgroundVariant = Variant.DEFAULT | Variant.PRIMARY | Variant.SECONDARY;
 export type CardVariant = Variant.DEFAULT | Variant.SIDE;
 export type DividerVariant = Variant.PRIMARY | Variant.SECONDARY;

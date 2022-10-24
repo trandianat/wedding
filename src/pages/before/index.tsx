@@ -1,7 +1,7 @@
+import { Header } from 'components/header';
 import { Route, Routes } from 'react-router-dom';
 import { Activities } from 'pages/before/activities';
 import { Logistics } from 'pages/before/logistics';
-import { Header } from 'pages/before/header';
 import { Party } from 'pages/before/party';
 import { RSVP } from 'pages/before/rsvp';
 import { Story } from 'pages/before/story';

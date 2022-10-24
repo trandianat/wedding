@@ -15,7 +15,7 @@ export const Entry = (): JSX.Element => (
           <span>before the wedding</span>
         </div>
       </Link>
-      <Link css={styles.after} to="/after">
+      <Link css={styles.after} to="/after/thanks">
         <div>
           <span>after the wedding</span>
         </div>
