@@ -15,6 +15,7 @@ export enum Category {
   PARTY = "PARTY",
   RSVP = "RSVP",
   STORY = "STORY",
+  VENDORS = "VENDORS",
 }
 
 

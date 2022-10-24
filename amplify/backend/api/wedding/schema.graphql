@@ -9,6 +9,7 @@ enum Category {
   PARTY
   RSVP
   STORY
+  VENDORS
 }
 
 type Content @model {
