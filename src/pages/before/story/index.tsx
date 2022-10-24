@@ -13,7 +13,7 @@ export const Story = (): JSX.Element => {
         <Background variant={Variant.PRIMARY}>
           <h2>The beginning</h2>
           <Divider variant={Variant.SECONDARY} />
-          <div css={styles.content}>
+          <div css={styles.beginning}>
             <div>
               {data.beginning.map((paragraph: string) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -38,8 +38,8 @@ export const Story = (): JSX.Element => {
         <Background>
           <h2>The engagement</h2>
           <Divider />
-          <div css={{ display: 'flex', gap: 16 }}>
-            <img css={{ height: 350 }} src={engagement} />
+          <div css={styles.engagement}>
+            <img src={engagement} />
             <div>
               {data.engagement.map((paragraph: string) => (
                 <p key={paragraph}>{paragraph}</p>
