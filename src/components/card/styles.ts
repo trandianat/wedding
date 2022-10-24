@@ -17,7 +17,15 @@ export const side = css({
   '@media (min-width: 951px)': { flexDirection: 'row' }
 });
 
-export const image = { height: 250 };
+export const image = (position: string) => css({
+  height: 350,
+  img: {
+    height: 350,
+    objectFit: 'cover',
+    objectPosition: position,
+    width: '100%',
+  }
+});
 
 export const description = { backgroundColor: 'var(--white)', padding: 24 };
 

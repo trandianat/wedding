@@ -6,6 +6,7 @@ import List from 'assets/icons/list';
 import { Background } from 'components/background';
 import { Divider } from 'components/divider';
 import { Footer } from 'components/footer';
+import { Link } from 'components/link';
 import * as styles from 'pages/before/logistics/styles';
 import { useData, useImages } from 'utils/hooks';
 import { Category, Variant } from 'utils/types';
@@ -25,11 +26,7 @@ export const Logistics = (): JSX.Element => {
               </h2>
               <Divider />
               <p>
-                {data.venue} (
-                <a href={data.map} target="_blank">
-                  map
-                </a>
-                )
+                {data.venue} (<Link url={data.map}>map</Link>)
               </p>
               <p>{data.address}</p>
             </div>
@@ -81,9 +78,9 @@ export const Logistics = (): JSX.Element => {
               <p>Rooms are available at:</p>
               <ul>
                 <li>
-                  <a href={data.primaryHotelLink} target="_blank">
+                  <Link url={data.primaryHotelLink}>
                     The {data.primaryHotel}
-                  </a>
+                  </Link>
                   , in the same building where the reception will be
                   <ul>
                     {data.primaryHotelDetails.map((item: string) => (
@@ -92,9 +89,9 @@ export const Logistics = (): JSX.Element => {
                   </ul>
                 </li>
                 <li>
-                  <a href={data.secondaryHotelLink} target="_blank">
+                  <Link url={data.secondaryHotelLink}>
                     The {data.secondaryHotel}
-                  </a>
+                  </Link>
                   , about a two-minute walk away from the {data.primaryHotel}
                   <ul>
                     {data.secondaryHotelDetails.map((item: string) => (
@@ -105,7 +102,7 @@ export const Logistics = (): JSX.Element => {
               </ul>
               <p>
                 If you would prefer to book over the phone, call{' '}
-                <a href={`tel:${data.phone}`}>{data.formattedPhone}</a> and
+                <Link url={`tel:${data.phone}`}>{data.formattedPhone}</Link> and
                 mention group code <strong>{data.primaryHotelCode}</strong> for
                 the {data.primaryHotel} or{' '}
                 <strong>{data.secondaryHotelCode}</strong> for the{' '}
@@ -139,11 +136,7 @@ export const Logistics = (): JSX.Element => {
               <div>{data.kids}</div>
               <div>Parking</div>
               <div>
-                {data.parking} (
-                <a href={data.map} target="_blank">
-                  map
-                </a>
-                )
+                {data.parking} (<Link url={data.map}>map</Link>)
               </div>
               <div>Travel</div>
               <div>{data.travel}</div>

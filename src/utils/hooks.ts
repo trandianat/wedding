@@ -15,7 +15,6 @@ export const useData = (category: Category) => {
             return JSON.parse(result.data.listContents.items[0]?.content);
         };
         getData().then(response => {
-            console.log('data', response);
             setData(response);
         });
     }, []);

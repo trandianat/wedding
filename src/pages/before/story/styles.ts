@@ -36,8 +36,15 @@ export const polaroid = css({
 
 export const engagement = css({
     display: 'flex',
-    gap: 16,
+    gap: 24,
+    '@media (max-width: 950px)': { gap: 16 },
     '@media (max-width: 700px)': { flexDirection: 'column' },
-    img: { height: 300, objectFit: 'cover' },
     div: { alignSelf: 'center' },
+    img: {
+        border: '1px solid var(--gray)',
+        boxShadow: '1px 1px 3px var(--gray)',
+        height: 300,
+        objectFit: 'cover',
+        padding: 18
+    },
 });

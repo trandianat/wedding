@@ -1,64 +1,58 @@
 import { Background } from 'components/background';
 import { Card } from 'components/card';
 import { Cards } from 'components/cards';
-import { useData } from 'utils/hooks';
+import { useData, useImages } from 'utils/hooks';
 import { Category, Variant } from 'utils/types';
 
 export const Party = (): JSX.Element => {
   const data = useData(Category.PARTY);
+  const [matronOfHonor, bestMan, officiant, flowerGirl] = useImages(
+    Category.PARTY
+  );
   return (
     data && (
       <main>
         <Background variant={Variant.PRIMARY}>
           <Cards>
             <Card
-              role="MATRON OF HONOR"
+              image={matronOfHonor}
               name={data.matronOfHonor}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur nec ligula pellentesque, condimentum nulla eget,
-                  aliquam turpis. Nullam id turpis sit amet metus tincidunt
-                  mattis. Ut nec mauris ac augue dictum mollis."
-            />
+              role="MATRON OF HONOR"
+            >
+              {data.matronOfHonorDescription}
+            </Card>
             <Card
-              role="BEST MAN"
+              image={bestMan}
               name={data.bestMan}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur nec ligula pellentesque, condimentum nulla eget,
-                  aliquam turpis. Nullam id turpis sit amet metus tincidunt
-                  mattis. Ut nec mauris ac augue dictum mollis."
-            />
+              position="top"
+              role="BEST MAN"
+            >
+              {data.bestManDescription}
+            </Card>
           </Cards>
         </Background>
         <Background variant={Variant.SECONDARY}>
           <Cards>
-            <Card
-              role="OFFICIANT"
-              name={data.officiant}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur nec ligula pellentesque, condimentum nulla eget,
-                    aliquam turpis. Nullam id turpis sit amet metus tincidunt
-                    mattis. Ut nec mauris ac augue dictum mollis."
-            />
-            <Card
-              role="FLOWER GIRL"
-              name={data.flowerGirl}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur nec ligula pellentesque, condimentum nulla eget,
-                    aliquam turpis. Nullam id turpis sit amet metus tincidunt
-                    mattis. Ut nec mauris ac augue dictum mollis."
-            />
+            <Card image={officiant} name={data.officiant} role="OFFICIANT">
+              {data.officiantDescription}
+            </Card>
+            <Card image={flowerGirl} name={data.flowerGirl} role="FLOWER GIRL">
+              {data.flowerGirlDescription}
+            </Card>
           </Cards>
         </Background>
         <Background>
           <Card
-            role="BOUNCER"
+            image={officiant}
             name={data.bouncer}
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur nec ligula pellentesque, condimentum nulla eget,
-                    aliquam turpis. Nullam id turpis sit amet metus tincidunt
-                    mattis. Ut nec mauris ac augue dictum mollis."
+            role="BOUNCER"
             variant={Variant.SIDE}
-          />
+          >
+            Margo has a lengthy history of dealing with intoxicated persons,
+            aggressive behavior, and noncompliance. THough not at liberty to
+            dsicuss which members of the group, let's just say she knows when
+            certain members of the party should call it a night.
+          </Card>
         </Background>
       </main>
     )

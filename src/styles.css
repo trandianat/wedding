@@ -19,6 +19,7 @@ html {
     --black: #000;
     --brown: #3C2E08;
     --dark-green: #0B241F;
+    --gray: #C7C7C7;
     --green: #11302A;
     --white: #FFF;
     --mobile: 480px;
@@ -41,6 +42,11 @@ body {
 a {
     color: var(--green);
     font-weight: bold;
+    letter-spacing: .5px;
+}
+
+a.secondary {
+    color: var(--white);
 }
 
 a:hover {
@@ -86,7 +92,7 @@ p {
 }
 
 ul {
-    margin: 8px 0;
+    margin: 4px 0;
 }
 
 li {
