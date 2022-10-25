@@ -5,6 +5,7 @@ export enum Category {
     PARTY = 'PARTY',
     RSVP = 'RSVP',
     STORY = 'STORY',
+    VENDORS = 'VENDORS',
 }
 
 export enum Variant {
@@ -16,7 +17,7 @@ export enum Variant {
 
 export enum When {
     AFTER = 'after',
-    BEFORE = 'before'
+    BEFORE = 'before',
 }
 
 export type BackgroundVariant = Variant.DEFAULT | Variant.PRIMARY | Variant.SECONDARY;

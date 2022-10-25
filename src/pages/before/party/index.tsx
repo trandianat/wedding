@@ -55,20 +55,17 @@ export const Party = (): JSX.Element => {
               )}
             </button>
             {bonus && (
-              <div css={{ marginTop: 36 }}>
-                <Card
-                  image={flowerGirl}
-                  name={data.bouncer}
-                  role="BOUNCER"
-                  variant={Variant.SIDE}
-                >
-                  Margo has a lengthy history of dealing with intoxicated
-                  persons, aggressive behavior, and noncompliance. THough not at
-                  liberty to dsicuss which members of the group, let's just say
-                  she knows when certain members of the party should call it a
-                  night.
-                </Card>
-              </div>
+              <Card
+                image={flowerGirl}
+                name={data.bouncer}
+                role="BOUNCER"
+                variant={Variant.SIDE}
+              >
+                Margo has a lengthy history of dealing with intoxicated persons,
+                aggressive behavior, and noncompliance. THough not at liberty to
+                dsicuss which members of the group, let's just say she knows
+                when certain members of the party should call it a night.
+              </Card>
             )}
           </div>
         </Background>

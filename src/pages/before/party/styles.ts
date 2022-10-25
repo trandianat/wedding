@@ -4,6 +4,7 @@ export const bonus = css({
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
+    gap: 36,
     button: {
         backgroundColor: 'var(--green)',
         borderRadius: 24,
