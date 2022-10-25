@@ -10,7 +10,7 @@ export const Grid = ({
 }): JSX.Element => (
   <div css={styles.grid(spacing)}>
     {items.map(item => (
-      <Fragment>
+      <Fragment key={item.category}>
         <div>{item.category}</div>
         <div>{item.description}</div>
       </Fragment>
