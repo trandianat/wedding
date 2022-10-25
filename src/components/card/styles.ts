@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { Variant } from 'utils/types';
 
 const common = {
   border: '1px solid var(--white)',
@@ -17,13 +18,14 @@ export const side = css({
   '@media (min-width: 951px)': { flexDirection: 'row' }
 });
 
-export const image = (position: string) => css({
+export const image = (position: string, variant: Variant) => css({
   height: 350,
   img: {
     height: 350,
     objectFit: 'cover',
     objectPosition: position,
-    width: '100%',
+    width: variant === Variant.SIDE ? 'auto' : '100%',
+    '@media (max-width: 950px)': { width: '100%' }
   }
 });
 

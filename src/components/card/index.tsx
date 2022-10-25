@@ -18,7 +18,7 @@ export const Card = ({
   variant?: CardVariant;
 }>): JSX.Element => (
   <div css={variant === Variant.SIDE ? styles.side : styles.stack}>
-    <div css={styles.image(position)}>
+    <div css={styles.image(position, variant)}>
       <img src={image} />
     </div>
     <div css={styles.description}>
