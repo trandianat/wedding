@@ -72,19 +72,6 @@ export const faqTitle = css({
     '@media (min-width: 701px)': { textAlign: 'center' }
 });
 
-export const faqText = css({
-    display: 'grid',
-    gridColumnGap: 32,
-    gridRowGap: 16,
-    gridTemplateColumns: 'min-content auto',
-    div: { alignSelf: 'center' },
-    'div:nth-of-type(odd)': {
-        fontFamily: 'var(--serif)',
-        fontSize: '1.375rem',
-        textAlign: 'right'
-    }
-});
-
 export const registry = {
     display: 'flex',
     gap: 72,

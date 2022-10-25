@@ -6,8 +6,10 @@ import List from 'assets/icons/list';
 import { Background } from 'components/background';
 import { Divider } from 'components/divider';
 import { Footer } from 'components/footer';
+import { Grid } from 'components/grid';
 import { Link } from 'components/link';
 import * as styles from 'pages/before/logistics/styles';
+import { Fragment } from 'react';
 import { useData, useImages } from 'utils/hooks';
 import { Category, Variant } from 'utils/types';
 
@@ -127,20 +129,22 @@ export const Logistics = (): JSX.Element => {
               <Divider />
               <List />
             </div>
-            <div css={styles.faqText}>
-              <div>Attire</div>
-              <div>{data.attire}</div>
-              <div>Bar</div>
-              <div>{data.bar}</div>
-              <div>Kids</div>
-              <div>{data.kids}</div>
-              <div>Parking</div>
-              <div>
-                {data.parking} (<Link url={data.map}>map</Link>)
-              </div>
-              <div>Travel</div>
-              <div>{data.travel}</div>
-            </div>
+            <Grid
+              items={[
+                { category: 'Attire', description: data.attire },
+                { category: 'Bar', description: data.bar },
+                { category: 'Kids', description: data.kids },
+                { category: 'Parking', description: data.parking },
+                {
+                  category: 'Travel',
+                  description: (
+                    <Fragment>
+                      {data.parking} (<Link url={data.map}>map</Link>)
+                    </Fragment>
+                  ),
+                },
+              ]}
+            />
           </div>
         </Background>
         <Background variant={Variant.PRIMARY}>

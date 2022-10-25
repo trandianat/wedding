@@ -37,11 +37,11 @@ export const Header = (): JSX.Element => {
               </div>
             </Link>
           ))}
-          {when === When.BEFORE && (
+          {/* {when === When.BEFORE && (
             <Link className="rsvp" to="rsvp">
               <button>RSVP</button>
             </Link>
-          )}
+          )} */}
         </div>
       </nav>
       <Outlet />
