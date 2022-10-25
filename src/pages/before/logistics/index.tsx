@@ -134,15 +134,15 @@ export const Logistics = (): JSX.Element => {
                 { category: 'Attire', description: data.attire },
                 { category: 'Bar', description: data.bar },
                 { category: 'Kids', description: data.kids },
-                { category: 'Parking', description: data.parking },
                 {
-                  category: 'Travel',
+                  category: 'Parking',
                   description: (
                     <Fragment>
                       {data.parking} (<Link url={data.map}>map</Link>)
                     </Fragment>
                   ),
                 },
+                { category: 'Travel', description: data.travel },
               ]}
             />
           </div>
