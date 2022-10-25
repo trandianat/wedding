@@ -3,10 +3,12 @@ import { Fragment } from 'react';
 
 export const Grid = ({
   items,
+  spacing = 0,
 }: {
   items: Array<{ category: string; description: JSX.Element | string }>;
+  spacing?: number;
 }): JSX.Element => (
-  <div css={styles.grid}>
+  <div css={styles.grid(spacing)}>
     {items.map(item => (
       <Fragment>
         <div>{item.category}</div>

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-export const grid = css({
+export const grid = (spacing: number) => css({
     display: 'grid',
     gridColumnGap: 32,
     gridRowGap: 16,
@@ -9,7 +9,7 @@ export const grid = css({
     'div:nth-of-type(odd)': {
         fontFamily: 'var(--serif)',
         fontSize: '1.375rem',
-        letterSpacing: 1,
+        letterSpacing: spacing,
         textAlign: 'right'
     }
 });

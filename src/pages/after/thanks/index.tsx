@@ -58,7 +58,7 @@ export const Thanks = (): JSX.Element => {
       <Background variant={Variant.SECONDARY}>
         <h2>Our vendors</h2>
         <Divider />
-        <Grid items={vendors} />
+        <Grid items={vendors} spacing={1} />
       </Background>
     </main>
   );
