@@ -6,4 +6,5 @@ const Cake = (): JSX.Element => (
     />
   </svg>
 );
+
 export default Cake;
