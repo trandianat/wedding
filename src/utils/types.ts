@@ -1,5 +1,6 @@
 export enum Category {
     ACTIVITIES = 'ACTIVITIES',
+    AFTER = 'AFTER',
     FOOTER = 'FOOTER',
     LOGISTICS = 'LOGISTICS',
     PARTY = 'PARTY',

@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import * as styles from 'components/header/styles';
+import after from 'utils/after';
 import { When } from 'utils/types';
 
 export const Header = (): JSX.Element => {
@@ -16,10 +17,10 @@ export const Header = (): JSX.Element => {
       { name: 'OUR STORY', path: 'story' },
     ],
     [When.AFTER]: [
-      { name: 'THANK YOU', path: 'thanks' },
-      { name: 'PHOTOS', path: 'photos' },
+      { name: after ? 'THANK YOU' : 'AFTER THE WEDDING', path: 'thanks' },
     ],
   };
+  if (after) pages[When.AFTER].push({ name: 'PHOTOS', path: 'photos' });
   return (
     <Fragment>
       <nav css={styles.nav(before)}>
