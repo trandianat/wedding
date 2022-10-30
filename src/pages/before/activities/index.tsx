@@ -69,7 +69,7 @@ export const Activities = (): JSX.Element => (
           <Link url="https://labellewinery.com/shop">wine and gifts</Link> to
           take home
           <ul>
-            <li>Our favorites are the Malbec and Sangria Blanca</li>
+            <li>We recommend the Malbec and Sangria Blanca</li>
           </ul>
         </li>
         <li>
@@ -124,7 +124,7 @@ export const Activities = (): JSX.Element => (
       </p>
       <Divider />
       <p>
-        Saint Anselm College or "Hilltop" is where Brendan went to college,
+        Saint Anselm College or "The Hilltop" is where Brendan went to college,
         where he says he majored in "Budlight and skiing." Besides touring the
         beautiful campus, you can:
       </p>
