@@ -125,7 +125,7 @@ export const Activities = (): JSX.Element => (
       <Divider />
       <p>
         Saint Anselm College or "The Hilltop" is where Brendan went to college,
-        where he says he majored in "Budlight and skiing." Besides touring the
+        where he says he majored in "Bud Light and skiing." Besides touring the
         beautiful campus, you can:
       </p>
       <ul>

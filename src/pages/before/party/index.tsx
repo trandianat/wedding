@@ -8,7 +8,7 @@ import { Category, Variant } from 'utils/types';
 
 export const Party = (): JSX.Element => {
   const data = useData(Category.PARTY);
-  const [matronOfHonor, bestMan, officiant, flowerGirl] = useImages(
+  const [matronOfHonor, bestMan, officiant, flowerGirl, bouncer] = useImages(
     Category.PARTY
   );
   const [bonus, setBonus] = useState(false);
@@ -48,7 +48,7 @@ export const Party = (): JSX.Element => {
           <div css={styles.bonus}>
             {bonus && (
               <Card
-                image={flowerGirl}
+                image={bouncer}
                 name={data.bouncer}
                 role="BOUNCER"
                 variant={Variant.SIDE}
