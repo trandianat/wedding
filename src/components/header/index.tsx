@@ -38,11 +38,11 @@ export const Header = (): JSX.Element => {
               </div>
             </Link>
           ))}
-          {before && (
+          {/* {before && (
             <Link className="rsvp" to="rsvp">
               <button>RSVP</button>
             </Link>
-          )}
+          )} */}
         </div>
       </nav>
       <Outlet />

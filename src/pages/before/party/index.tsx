@@ -46,6 +46,20 @@ export const Party = (): JSX.Element => {
         </Background>
         <Background>
           <div css={styles.bonus}>
+            {bonus && (
+              <Card
+                image={flowerGirl}
+                name={data.bouncer}
+                role="BOUNCER"
+                variant={Variant.SIDE}
+              >
+                Margo is a dear friend to both Brendan and Diana Margo has a
+                lengthy history of dealing with intoxicated persons, aggressive
+                behavior, and noncompliance. THough not at liberty to dsicuss
+                which members of the group, let's just say she knows when
+                certain members of the party should call it a night.
+              </Card>
+            )}
             <button onClick={() => setBonus(!bonus)}>
               Bonus{' '}
               {bonus ? (
@@ -54,19 +68,6 @@ export const Party = (): JSX.Element => {
                 <Fragment>&darr;</Fragment>
               )}
             </button>
-            {bonus && (
-              <Card
-                image={flowerGirl}
-                name={data.bouncer}
-                role="BOUNCER"
-                variant={Variant.SIDE}
-              >
-                Margo has a lengthy history of dealing with intoxicated persons,
-                aggressive behavior, and noncompliance. THough not at liberty to
-                dsicuss which members of the group, let's just say she knows
-                when certain members of the party should call it a night.
-              </Card>
-            )}
           </div>
         </Background>
       </main>
