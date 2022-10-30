@@ -105,6 +105,28 @@ export type ModelContentConnection = {
   nextToken?: string | null,
 };
 
+export type ModelSubscriptionContentFilterInput = {
+  category?: ModelSubscriptionStringInput | null,
+  content?: ModelSubscriptionStringInput | null,
+  and?: Array< ModelSubscriptionContentFilterInput | null > | null,
+  or?: Array< ModelSubscriptionContentFilterInput | null > | null,
+};
+
+export type ModelSubscriptionStringInput = {
+  ne?: string | null,
+  eq?: string | null,
+  le?: string | null,
+  lt?: string | null,
+  ge?: string | null,
+  gt?: string | null,
+  contains?: string | null,
+  notContains?: string | null,
+  between?: Array< string | null > | null,
+  beginsWith?: string | null,
+  in?: Array< string | null > | null,
+  notIn?: Array< string | null > | null,
+};
+
 export type CreateContentMutationVariables = {
   input: CreateContentInput,
   condition?: ModelContentConditionInput | null,
@@ -189,6 +211,10 @@ export type ListContentsQuery = {
   } | null,
 };
 
+export type OnCreateContentSubscriptionVariables = {
+  filter?: ModelSubscriptionContentFilterInput | null,
+};
+
 export type OnCreateContentSubscription = {
   onCreateContent?:  {
     __typename: "Content",
@@ -200,6 +226,10 @@ export type OnCreateContentSubscription = {
   } | null,
 };
 
+export type OnUpdateContentSubscriptionVariables = {
+  filter?: ModelSubscriptionContentFilterInput | null,
+};
+
 export type OnUpdateContentSubscription = {
   onUpdateContent?:  {
     __typename: "Content",
@@ -209,6 +239,10 @@ export type OnUpdateContentSubscription = {
     createdAt: string,
     updatedAt: string,
   } | null,
+};
+
+export type OnDeleteContentSubscriptionVariables = {
+  filter?: ModelSubscriptionContentFilterInput | null,
 };
 
 export type OnDeleteContentSubscription = {

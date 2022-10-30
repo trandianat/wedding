@@ -3,8 +3,8 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateContent = /* GraphQL */ `
-  subscription OnCreateContent {
-    onCreateContent {
+  subscription OnCreateContent($filter: ModelSubscriptionContentFilterInput) {
+    onCreateContent(filter: $filter) {
       category
       content
       id
@@ -14,8 +14,8 @@ export const onCreateContent = /* GraphQL */ `
   }
 `;
 export const onUpdateContent = /* GraphQL */ `
-  subscription OnUpdateContent {
-    onUpdateContent {
+  subscription OnUpdateContent($filter: ModelSubscriptionContentFilterInput) {
+    onUpdateContent(filter: $filter) {
       category
       content
       id
@@ -25,8 +25,8 @@ export const onUpdateContent = /* GraphQL */ `
   }
 `;
 export const onDeleteContent = /* GraphQL */ `
-  subscription OnDeleteContent {
-    onDeleteContent {
+  subscription OnDeleteContent($filter: ModelSubscriptionContentFilterInput) {
+    onDeleteContent(filter: $filter) {
       category
       content
       id

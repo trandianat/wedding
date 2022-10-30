@@ -7,6 +7,7 @@ export const Header = (): JSX.Element => {
   const { pathname } = useLocation();
   const { '*': path } = useParams();
   const when = pathname.includes(When.BEFORE) ? When.BEFORE : When.AFTER;
+  const before = when === When.BEFORE;
   const pages = {
     [When.BEFORE]: [
       { name: 'LOGISTICS', path: 'logistics' },
@@ -21,7 +22,7 @@ export const Header = (): JSX.Element => {
   };
   return (
     <Fragment>
-      <nav css={styles.nav(when === When.BEFORE)}>
+      <nav css={styles.nav(before)}>
         <div className="entry">
           <div className="display" />
           <Link to="/">
@@ -37,11 +38,11 @@ export const Header = (): JSX.Element => {
               </div>
             </Link>
           ))}
-          {/* {when === When.BEFORE && (
+          {before && (
             <Link className="rsvp" to="rsvp">
               <button>RSVP</button>
             </Link>
-          )} */}
+          )}
         </div>
       </nav>
       <Outlet />
