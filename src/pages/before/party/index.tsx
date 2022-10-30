@@ -53,11 +53,7 @@ export const Party = (): JSX.Element => {
                 role="BOUNCER"
                 variant={Variant.SIDE}
               >
-                Margo is a dear friend to both Brendan and Diana Margo has a
-                lengthy history of dealing with intoxicated persons, aggressive
-                behavior, and noncompliance. THough not at liberty to dsicuss
-                which members of the group, let's just say she knows when
-                certain members of the party should call it a night.
+                {data.bouncerDescription}
               </Card>
             )}
             <button onClick={() => setBonus(!bonus)}>

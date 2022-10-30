@@ -13,9 +13,10 @@ export const stack = css({ ...common, flexDirection: 'column', width: 350 });
 
 export const side = css({
   ...common,
+  border: '1px solid var(--black)',
   flexDirection: 'column',
   '@media (min-width: 951px)': { flexDirection: 'row' },
-  '@media (max-width: 950px)': { border: '1px solid var(--black)', width: '75%' }
+  '@media (max-width: 950px)': { width: '75%' }
 });
 
 export const image = (position: string, side: boolean) => css({
