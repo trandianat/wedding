@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 export const story = {
-    'p:not(:last-child)': { marginBottom: 12 }
+    'p:not(:last-child)': { marginBottom: 16 }
 };
 
 export const beginning = css({

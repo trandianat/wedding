@@ -21,7 +21,7 @@ export const Header = (): JSX.Element => {
   };
   return (
     <Fragment>
-      <nav css={styles.nav}>
+      <nav css={styles.nav(when === When.BEFORE)}>
         <div className="entry">
           <div className="display" />
           <Link to="/">

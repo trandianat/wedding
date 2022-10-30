@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-export const nav = css({
+export const nav = (before: boolean) => css({
     alignItems: 'center',
     display: 'flex',
     justifyContent: 'space-between',
@@ -8,7 +8,7 @@ export const nav = css({
     padding: '12px 0',
     width: 800,
     a: { textDecoration: 'none', whiteSpace: 'nowrap', ':hover': { color: 'var(--brown)' } },
-    h1: { '::before': { content: '"B&D"' } },
+    h1: { fontFamily: 'var(--cursive)', '::before': { content: before ? '"B&D"' : '"Brendan & Diana"' } },
     '.entry': {
         alignItems: 'center',
         display: 'flex',
@@ -38,10 +38,11 @@ export const nav = css({
         padding: '12px 0 20px',
         width: 650,
         '.rsvp': { display: 'none' },
-        '@media (min-width: 350px)': { 'h1::before': { content: '"Brendan & Diana"' } },
+        '@media (min-width: 351px)': { 'h1::before': { content: '"Brendan & Diana"' } },
     },
     '@media (max-width: 700px)': { width: 'auto' },
     '@media (max-width: 600px)': {
         '.pages': { flexDirection: 'column', gap: 8 }
-    }
+    },
+    '@media (max-width: 350px)': { 'h1::before': { content: '"B&D"' } },
 });
