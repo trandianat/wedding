@@ -3,6 +3,7 @@ import { Divider } from 'components/divider';
 import { Footer } from 'components/footer';
 import { Grid } from 'components/grid';
 import { Link } from 'components/link';
+import * as styles from 'pages/after/thanks/styles';
 import { Fragment } from 'react';
 import after from 'utils/after';
 import { useImages } from 'utils/hooks';
@@ -53,22 +54,24 @@ export const Thanks = (): JSX.Element => {
     },
   ];
   return (
-    <main>
+    <main css={styles.thanks}>
       <Background variant={Variant.PRIMARY}>
         <h2>{after ? 'To our guests' : 'To be updated'}</h2>
         <Divider variant={Variant.SECONDARY} />
-        <p css={{ marginBottom: 16 }}>
+        <p>
           {after
             ? 'Thank you for being a part of our wedding! We are so grateful that you took the time to come to Bedford Village Inn to celebrate with us.'
             : 'Thank you for visiting and being a part of our big day. Check back here after the wedding for our thoughts and photos of the experience.'}
         </p>
-        <img css={{ width: '100%' }} src={engagement} />
+        <div css={styles.image}>
+          <img src={engagement} />
+        </div>
       </Background>
       {after && (
         <Background variant={Variant.SECONDARY}>
           <h2>Our vendors</h2>
           <Divider />
-          <p css={{ marginBottom: 16 }}>
+          <p>
             We also wouldn't have made it through the wedding day without our
             amazing team of vendors:
           </p>

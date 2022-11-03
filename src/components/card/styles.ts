@@ -20,7 +20,6 @@ export const side = css({
 });
 
 export const image = (position: string, side: boolean) => css({
-  height: side ? 300 :  350,
   img: {
     height: side ? 300 : 350,
     objectFit: 'cover',

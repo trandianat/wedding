@@ -150,12 +150,18 @@ export const Logistics = (): JSX.Element => {
         <Background variant={Variant.PRIMARY}>
           <div css={styles.registry}>
             <div>
-              <h2>No registry</h2>
+              <h2>Honeymoon registry</h2>
               <Divider variant={Variant.SECONDARY} />
               <p>
-                Please do not get us any gifts! Your presence at our wedding is
-                the greatest gift of all. Here's what you can do to make us the
-                happiest:
+                We have a{' '}
+                <Link
+                  className="secondary"
+                  url="https://www.zola.com/registry/tranmurphywedding/edit"
+                >
+                  honeymoon registry
+                </Link>{' '}
+                that you can contribute to, but no pressure at all! Here's what
+                else you can do to make us the happiest:
               </p>
               <ul>
                 <li>Write us a card</li>
