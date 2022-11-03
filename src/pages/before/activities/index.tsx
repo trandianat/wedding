@@ -16,7 +16,10 @@ export const Activities = (): JSX.Element => (
       </p>
       <Divider variant={Variant.SECONDARY} />
       <ul>
-        <li>Pool, hot tub, and gym available to those staying at the hotel</li>
+        <li>
+          Pool, hot tub, and gym available for guests staying at either the
+          Grand or the Inn
+        </li>
         <li>
           Several{' '}
           <Link

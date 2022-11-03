@@ -44,6 +44,9 @@ export const Logistics = (): JSX.Element => {
               <div css={styles.eventsSubtext}>
                 <p>Outdoor (on grass)</p>
                 <p>
+                  <em>Be seated by 4:45pm</em>
+                </p>
+                <p>
                   <em>No phones please</em>
                 </p>
               </div>
@@ -150,7 +153,7 @@ export const Logistics = (): JSX.Element => {
         <Background variant={Variant.PRIMARY}>
           <div css={styles.registry}>
             <div>
-              <h2>Honeymoon registry</h2>
+              <h2>Registry</h2>
               <Divider variant={Variant.SECONDARY} />
               <p>
                 We have a{' '}
