@@ -1,8 +1,9 @@
-import Cake from 'assets/icons/cake';
+import Balloon from 'assets/icons/balloon';
 import Ceremony from 'assets/icons/ceremony';
 import Champagne from 'assets/icons/champagne';
 import Gift from 'assets/icons/gift';
 import List from 'assets/icons/list';
+import Music from 'assets/icons/music';
 import { Background } from 'components/background';
 import { Divider } from 'components/divider';
 import { Footer } from 'components/footer';
@@ -61,7 +62,7 @@ export const Logistics = (): JSX.Element => {
               </div>
             </div>
             <div>
-              <Cake />
+              <Music />
               <h2>Reception</h2>
               <p>{data.receptionTime}</p>
               <p>{data.receptionLocation}</p>
@@ -69,10 +70,22 @@ export const Logistics = (): JSX.Element => {
                 <p>Indoor</p>
               </div>
             </div>
+            <div>
+              <Balloon />
+              <h2>After-Party</h2>
+              <p>11pm</p>
+              <p>Summit Suite</p>
+              <div css={styles.eventsSubtext}>
+                <p>Indoor</p>
+                <p>
+                  <em>Next to ceremony site</em>
+                </p>
+              </div>
+            </div>
           </div>
           <p css={styles.eventsFooter}>
-            In case of inclement weather, these events will all take place in
-            the {data.receptionLocation}.
+            In case of inclement weather, the ceremony and cocktail hour will
+            take place in the {data.receptionLocation}.
           </p>
         </Background>
         <Background>
@@ -159,12 +172,13 @@ export const Logistics = (): JSX.Element => {
                 We have a{' '}
                 <Link
                   className="secondary"
-                  url="https://www.zola.com/registry/tranmurphywedding/edit"
+                  url="https://www.zola.com/registry/tranmurphywedding"
                 >
-                  honeymoon registry
+                  honeymoon fund
                 </Link>{' '}
-                that you can contribute to, but no pressure at all! Here's what
-                else you can do to make us the happiest:
+                you can contribute to, but no pressure—your presence is the
+                greatest gift of all! Here's what else you can do to make us the
+                happiest:
               </p>
               <ul>
                 <li>Write us a card</li>

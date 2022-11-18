@@ -25,11 +25,14 @@ export const introText = css({
 
 export const events = css({
     display: 'flex',
-    gap: 24,
+    gap: 32,
     textAlign: 'center',
     div: {
         flex: 1,
-        h2: { padding: '24px 0 12px' },
+        h2: {
+            padding: '24px 0 12px',
+            '@media (min-width: 701px) and (max-width: 950px)': { fontSize: '1.375rem' }
+        },
         svg: { display: 'block', height: 100, margin: '0 auto' },
     },
     '@media (max-width: 700px)': { flexDirection: 'column', gap: 48 }
