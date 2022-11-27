@@ -67,10 +67,7 @@ export const faqTitle = css({
     flexBasis: 0,
     svg: {
         height: 135,
-        marginTop: 12,
-        '@media (max-width: 700px)': {
-            display: 'none'
-        }
+        '@media (max-width: 700px)': { display: 'none' }
     },
     '@media (min-width: 701px)': { textAlign: 'center' }
 });
@@ -78,9 +75,12 @@ export const faqTitle = css({
 export const registry = {
     display: 'flex',
     gap: 72,
-    svg: {
-        height: 175,
-        '@media (max-width: 700px)': { display: 'none' }
+    'div:last-child': {
+        alignSelf: 'center',
+        svg: {
+            height: 175,
+            '@media (max-width: 700px)': { display: 'none' }
+        },
     },
     '@media (max-width: 700px)': { gap: 0 }
 };

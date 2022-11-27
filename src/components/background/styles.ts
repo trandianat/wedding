@@ -1,7 +1,11 @@
+import { secondary as secondaryDivider } from 'components/divider/styles';
+
 export const primary = {
     backgroundColor: 'var(--green)',
     color: 'var(--white)',
     padding: '12px 0',
+    a: { color: 'var(--white)' },
+    '.divider': secondaryDivider
   };
 
   export const secondary = {

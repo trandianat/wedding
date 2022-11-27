@@ -46,16 +46,13 @@ a {
     letter-spacing: .25px;
 }
 
-a.secondary {
-    color: var(--white);
-}
-
 a:hover {
     text-decoration: none;
 }
 
 button {
     background-color: var(--green);
+    border: none;
     color: var(--white);
     cursor: pointer;
     font-family: var(--serif), Arial, Helvetica, sans-serif;

@@ -12,7 +12,7 @@ export const Story = (): JSX.Element => {
       <main css={styles.story}>
         <Background variant={Variant.PRIMARY}>
           <h2>The beginning</h2>
-          <Divider variant={Variant.SECONDARY} />
+          <Divider />
           <div css={styles.beginning}>
             <div>
               {data.beginning.map((paragraph: string) => (

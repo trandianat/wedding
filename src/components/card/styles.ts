@@ -1,10 +1,12 @@
 import { css } from '@emotion/react';
+import { primary } from 'components/divider/styles';
 
 const common = {
   border: '1px solid var(--white)',
   color: 'var(--black)',
   display: 'flex',
   height: 'min-content',
+  '.divider': primary,
   '@media (max-width: 950px)': { margin: '0 auto', width: '75%' },
   '@media (max-width: 700px)': { width: '100%' },
 };

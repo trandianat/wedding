@@ -41,13 +41,14 @@ export const useImages = (category: Category) => {
     // return images;
     const images: Record<Category, string[]> = {
         [Category.ACTIVITIES]: [],
-        [Category.AFTER]: ['engagement-2.jpg'],
         [Category.FOOTER]: [],
         [Category.LOGISTICS]: ['engagement-1.jpg'],
         [Category.PARTY]: ['party-1.jpg', 'party-2.jpg', 'party-3.jpeg', 'party-4.jpg', 'party-5.JPEG'],
+        [Category.PHOTOS]: ['photos-1.jpg'],
         [Category.RSVP]: [],
         [Category.STORY]: ['story-1.jpg', 'story-3.jpg'],
-        [Category.VENDORS]: [],
+        [Category.THANKS]: ['thanks-1.jpg', 'thanks-2.jpg'],
+        [Category.VENDORS]: ['vendors-1.jpg'],
     };
     return images[category].map(image => `https://images215425-main.s3.amazonaws.com/public/${category}/${image}`);
 };

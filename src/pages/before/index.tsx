@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import { Activities } from 'pages/before/activities';
 import { Logistics } from 'pages/before/logistics';
 import { Party } from 'pages/before/party';
-import { RSVP } from 'pages/before/rsvp';
 import { Story } from 'pages/before/story';
 
 export const Before = (): JSX.Element => (
@@ -13,7 +12,6 @@ export const Before = (): JSX.Element => (
       <Route element={<Logistics />} path="logistics" />
       <Route element={<Party />} path="party" />
       <Route element={<Story />} path="story" />
-      <Route element={<RSVP />} path="rsvp" />
     </Route>
   </Routes>
 );

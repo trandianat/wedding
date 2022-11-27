@@ -1,11 +1,12 @@
 export enum Category {
     ACTIVITIES = 'ACTIVITIES',
-    AFTER = 'AFTER',
     FOOTER = 'FOOTER',
     LOGISTICS = 'LOGISTICS',
     PARTY = 'PARTY',
+    PHOTOS = 'PHOTOS',
     RSVP = 'RSVP',
     STORY = 'STORY',
+    THANKS = 'THANKS',
     VENDORS = 'VENDORS',
 }
 
@@ -23,4 +24,3 @@ export enum When {
 
 export type BackgroundVariant = Variant.DEFAULT | Variant.PRIMARY | Variant.SECONDARY;
 export type CardVariant = Variant.DEFAULT | Variant.SIDE;
-export type DividerVariant = Variant.PRIMARY | Variant.SECONDARY;

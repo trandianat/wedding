@@ -164,16 +164,13 @@ export const Logistics = (): JSX.Element => {
           </div>
         </Background>
         <Background variant={Variant.PRIMARY}>
+          <h2>Registry</h2>
+          <Divider />
           <div css={styles.registry}>
             <div>
-              <h2>Registry</h2>
-              <Divider variant={Variant.SECONDARY} />
               <p>
                 We have a{' '}
-                <Link
-                  className="secondary"
-                  url="https://www.zola.com/registry/tranmurphywedding"
-                >
+                <Link url="https://www.zola.com/registry/tranmurphywedding">
                   honeymoon fund
                 </Link>{' '}
                 you can contribute to, but no pressure—your presence is the
@@ -192,6 +189,12 @@ export const Logistics = (): JSX.Element => {
                   families
                 </li>
                 <li>Take some flowers home with you</li>
+                <li>
+                  Add wedding photos to our{' '}
+                  <Link url="https://photos.app.goo.gl/U4whuybqKMs1Ut1J9">
+                    Google album
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
