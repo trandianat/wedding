@@ -188,7 +188,6 @@ export const Logistics = (): JSX.Element => {
                   Introduce yourself to someone new amongst our friends and
                   families
                 </li>
-                <li>Take some flowers home with you</li>
                 <li>
                   Add wedding photos to our{' '}
                   <Link url="https://photos.app.goo.gl/U4whuybqKMs1Ut1J9">
