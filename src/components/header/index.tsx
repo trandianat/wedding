@@ -10,14 +10,15 @@ import Nature from 'assets/icons/nature';
 import Photo from 'assets/icons/photo';
 import * as styles from 'components/header/styles';
 import { Link as LinkOut } from 'components/link';
-import { When } from 'utils/types';
+import { Category, When } from 'utils/types';
+import { useData } from 'utils/hooks';
 
 export const Header = (): JSX.Element => {
+  const data = useData(Category.HEADER);
   const { pathname } = useLocation();
   const { '*': path } = useParams();
   const when = pathname.includes(When.BEFORE) ? When.BEFORE : When.AFTER;
   const before = when === When.BEFORE;
-  const rsvp = false;
   const pages = {
     [When.BEFORE]: [
       { name: 'LOGISTICS', path: 'logistics', icon: <Map /> },
@@ -32,34 +33,36 @@ export const Header = (): JSX.Element => {
     ],
   };
   return (
-    <Fragment>
-      <nav css={styles.nav(before, rsvp)}>
-        <div className="entry">
-          <div className="line" />
-          <Link to="/">
-            <h1 />
-          </Link>
-          <div className="line" />
-        </div>
-        {before && rsvp && <button className="display">RSVP</button>}
-        <div className="pages">
-          {pages[when].map(page => (
-            <Link key={page.path} to={page.path}>
-              {page.icon}
-              <div {...(path === page.path && { className: 'active' })}>
-                {page.name}
-              </div>
+    data && (
+      <Fragment>
+        <nav css={styles.nav(before, data.rsvp)}>
+          <div className="entry">
+            <div className="line" />
+            <Link to="/">
+              <h1 />
             </Link>
-          ))}
-          {before && rsvp && (
-            <LinkOut url="https://www.zola.com/wedding/tranmurphywedding/rsvp">
-              <Envelope />
-              <div className="rsvp">RSVP</div>
-            </LinkOut>
-          )}
-        </div>
-      </nav>
-      <Outlet />
-    </Fragment>
+            <div className="line" />
+          </div>
+          {before && data.rsvp && <button className="display">RSVP</button>}
+          <div className="pages">
+            {pages[when].map(page => (
+              <Link key={page.path} to={page.path}>
+                {page.icon}
+                <div {...(path === page.path && { className: 'active' })}>
+                  {page.name}
+                </div>
+              </Link>
+            ))}
+            {before && data.rsvp && (
+              <LinkOut url={data.rsvpLink}>
+                <Envelope />
+                <div className="rsvp">RSVP</div>
+              </LinkOut>
+            )}
+          </div>
+        </nav>
+        <Outlet />
+      </Fragment>
+    )
   );
 };

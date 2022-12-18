@@ -5,6 +5,7 @@ input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONL
 enum Category {
   ACTIVITIES
   FOOTER
+  HEADER
   LOGISTICS
   PARTY
   RSVP

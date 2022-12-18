@@ -42,6 +42,7 @@ export const useImages = (category: Category) => {
     const images: Record<Category, string[]> = {
         [Category.ACTIVITIES]: [],
         [Category.FOOTER]: [],
+        [Category.HEADER]: [],
         [Category.LOGISTICS]: ['engagement-1.jpg'],
         [Category.PARTY]: ['party-1.jpg', 'party-2.jpg', 'party-3.jpeg', 'party-4.jpg', 'party-5.JPEG'],
         [Category.PHOTOS]: ['photos-1.jpg'],
