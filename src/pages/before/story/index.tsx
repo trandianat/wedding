@@ -21,10 +21,7 @@ export const Story = (): JSX.Element => {
             </div>
             <div css={styles.polaroid}>
               <img src={halloween} />
-              <p>
-                Used laundry hampers to dress up as our favorite beers for
-                Halloween at the Hurleys' in 2017
-              </p>
+              <p>{data.caption}</p>
             </div>
           </div>
         </Background>

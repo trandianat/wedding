@@ -45,7 +45,7 @@ export const Logistics = (): JSX.Element => {
               <div css={styles.eventsSubtext}>
                 <p>Outdoor (on grass)</p>
                 <p>
-                  <em>Be seated by 4:45pm</em>
+                  <em>Be seated by {data.seatedTime}</em>
                 </p>
                 <p>
                   <em>No phones please</em>
@@ -186,12 +186,9 @@ export const Logistics = (): JSX.Element => {
           <div css={styles.registry}>
             <div>
               <p>
-                We have a{' '}
-                <Link url="https://www.zola.com/registry/tranmurphywedding">
-                  honeymoon fund
-                </Link>{' '}
-                you can contribute to, but no pressure—your presence is the
-                greatest gift of all! Here's what else you can do to make us the
+                We have a <Link url={data.registry}>honeymoon fund</Link> you
+                can contribute to, but no pressure—your presence is the greatest
+                gift of all! Here's what else you can do to make us the
                 happiest:
               </p>
               <ul>
@@ -207,9 +204,7 @@ export const Logistics = (): JSX.Element => {
                 </li>
                 <li>
                   Add wedding photos to our{' '}
-                  <Link url="https://photos.app.goo.gl/U4whuybqKMs1Ut1J9">
-                    Google album
-                  </Link>
+                  <Link url={data.album}>Google album</Link>
                 </li>
               </ul>
             </div>
