@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import Book from 'assets/icons/book';
 import Camera from 'assets/icons/camera';
@@ -10,15 +10,17 @@ import Nature from 'assets/icons/nature';
 import Photo from 'assets/icons/photo';
 import * as styles from 'components/header/styles';
 import { Link as LinkOut } from 'components/link';
-import { Category, When } from 'utils/types';
 import { useData } from 'utils/hooks';
+import { Category, When } from 'utils/types';
 
 export const Header = (): JSX.Element => {
   const data = useData(Category.HEADER);
   const { pathname } = useLocation();
   const { '*': path } = useParams();
+  const [scroll, setScroll] = useState(false);
   const when = pathname.includes(When.BEFORE) ? When.BEFORE : When.AFTER;
   const before = when === When.BEFORE;
+
   const pages = {
     [When.BEFORE]: [
       { name: 'LOGISTICS', path: 'logistics', icon: <Map /> },
@@ -32,6 +34,17 @@ export const Header = (): JSX.Element => {
       { name: 'VENDORS', path: 'vendors', icon: <Flower /> },
     ],
   };
+
+  useEffect(() => {
+    window.onscroll = () => {
+      if (document.documentElement.scrollTop > window.innerHeight) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+  }, []);
+
   return (
     data && (
       <Fragment>
@@ -62,6 +75,14 @@ export const Header = (): JSX.Element => {
           </div>
         </nav>
         <Outlet />
+        {scroll && (
+          <a
+            css={styles.scroll}
+            onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}
+          >
+            &uarr;
+          </a>
+        )}
       </Fragment>
     )
   );

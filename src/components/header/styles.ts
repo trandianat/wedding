@@ -79,3 +79,20 @@ export const nav = (before: boolean, rsvp: boolean) => css({
     '@media (max-width: 700px)': { width: 'auto' },
     '@media (max-width: 350px)': { 'h1::before': { content: '"B&D"' } },
 });
+
+export const scroll = css({
+    backgroundColor: 'var(--white)',
+    border: '1px solid var(--green)',
+    borderRadius: 24,
+    bottom: 16,
+    cursor: 'pointer',
+    fontSize: 24,
+    padding: '8px 16px',
+    position: 'fixed',
+    right: 16,
+    ':hover': {
+        backgroundColor: 'var(--dark-green)',
+        border: '1px solid var(--white)',
+        color: 'var(--white)'
+    }
+});
