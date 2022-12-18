@@ -25,12 +25,14 @@ export const polaroid = css({
         objectFit: 'cover',
         objectPosition: 'top',
         width: 325,
+        '@media (max-width: 450px)': { width: '100%' },
     },
     p: {
         color: 'var(--black)',
         fontSize: '.875rem',
         lineHeight: 1.2,
         width: 325,
+        '@media (max-width: 450px)': { width: '100%' },
     }
 });
 

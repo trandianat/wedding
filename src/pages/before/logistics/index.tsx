@@ -1,8 +1,9 @@
-import Cake from 'assets/icons/cake';
+import Balloon from 'assets/icons/balloon';
 import Ceremony from 'assets/icons/ceremony';
 import Champagne from 'assets/icons/champagne';
 import Gift from 'assets/icons/gift';
 import List from 'assets/icons/list';
+import Music from 'assets/icons/music';
 import { Background } from 'components/background';
 import { Divider } from 'components/divider';
 import { Footer } from 'components/footer';
@@ -44,6 +45,9 @@ export const Logistics = (): JSX.Element => {
               <div css={styles.eventsSubtext}>
                 <p>Outdoor (on grass)</p>
                 <p>
+                  <em>Be seated by 4:45pm</em>
+                </p>
+                <p>
                   <em>No phones please</em>
                 </p>
               </div>
@@ -58,7 +62,7 @@ export const Logistics = (): JSX.Element => {
               </div>
             </div>
             <div>
-              <Cake />
+              <Music />
               <h2>Reception</h2>
               <p>{data.receptionTime}</p>
               <p>{data.receptionLocation}</p>
@@ -66,10 +70,22 @@ export const Logistics = (): JSX.Element => {
                 <p>Indoor</p>
               </div>
             </div>
+            <div>
+              <Balloon />
+              <h2>After-Party</h2>
+              <p>{data.afterPartyTime}</p>
+              <p>{data.afterPartyLocation}</p>
+              <div css={styles.eventsSubtext}>
+                <p>Indoor</p>
+                <p>
+                  <em>Next to ceremony site</em>
+                </p>
+              </div>
+            </div>
           </div>
           <p css={styles.eventsFooter}>
-            In case of inclement weather, these events will all take place in
-            the {data.receptionLocation}.
+            In case of inclement weather, the ceremony and cocktail hour will
+            take place in the {data.receptionLocation}.
           </p>
         </Background>
         <Background>
@@ -77,7 +93,7 @@ export const Logistics = (): JSX.Element => {
             <div css={styles.hotelOnSite}>
               <h2>On-site hotels</h2>
               <Divider />
-              <p>Rooms are available at:</p>
+              <p>Rooms are available on site at:</p>
               <ul>
                 <li>
                   <Link url={data.primaryHotelLink}>
@@ -115,10 +131,27 @@ export const Logistics = (): JSX.Element => {
               </p>
             </div>
             <div css={styles.hotelDivider} />
-            <div css={styles.hotelAlternatives}>
-              <h2>Alternatives</h2>
+            <div css={styles.hotelOffSite}>
+              <h2>Off-site hotel</h2>
               <Divider />
-              <p>{data.alternatives}</p>
+              <div css={styles.hotelParagraphs}>
+                <p>
+                  There is also a room block at{' '}
+                  <Link url={data.tertiaryHotelLink}>{data.tertiaryHotel}</Link>
+                  , which is a 10-minute drive away from {data.venue}. Check-in
+                  is after {data.checkIn} and check-out by {data.checkOut}.
+                </p>
+                <p>
+                  To book over the phone, call{' '}
+                  <Link url={`tel:${data.tertiaryHotelPhone}`}>
+                    {data.tertiaryHotelPhoneFormatted}
+                  </Link>{' '}
+                  and mention group code{' '}
+                  <strong>{data.tertiaryHotelCode}</strong> or{' '}
+                  <strong>{data.tertiaryHotelCodeFull}</strong>.
+                </p>
+                <p>{data.transportation}</p>
+              </div>
             </div>
           </div>
         </Background>
@@ -148,13 +181,17 @@ export const Logistics = (): JSX.Element => {
           </div>
         </Background>
         <Background variant={Variant.PRIMARY}>
+          <h2>Registry</h2>
+          <Divider />
           <div css={styles.registry}>
             <div>
-              <h2>No registry</h2>
-              <Divider variant={Variant.SECONDARY} />
               <p>
-                Please do not get us any gifts! Your presence at our wedding is
-                the greatest gift of all. Here's what you can do to make us the
+                We have a{' '}
+                <Link url="https://www.zola.com/registry/tranmurphywedding">
+                  honeymoon fund
+                </Link>{' '}
+                you can contribute to, but no pressure—your presence is the
+                greatest gift of all! Here's what else you can do to make us the
                 happiest:
               </p>
               <ul>
@@ -168,7 +205,12 @@ export const Logistics = (): JSX.Element => {
                   Introduce yourself to someone new amongst our friends and
                   families
                 </li>
-                <li>Take some flowers home with you</li>
+                <li>
+                  Add wedding photos to our{' '}
+                  <Link url="https://photos.app.goo.gl/U4whuybqKMs1Ut1J9">
+                    Google album
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>

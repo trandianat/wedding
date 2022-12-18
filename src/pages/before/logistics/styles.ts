@@ -25,11 +25,14 @@ export const introText = css({
 
 export const events = css({
     display: 'flex',
-    gap: 24,
+    gap: 32,
     textAlign: 'center',
     div: {
         flex: 1,
-        h2: { padding: '24px 0 12px' },
+        h2: {
+            padding: '24px 0 12px',
+            '@media (min-width: 701px) and (max-width: 950px)': { fontSize: '1.375rem' }
+        },
         svg: { display: 'block', height: 100, margin: '0 auto' },
     },
     '@media (max-width: 700px)': { flexDirection: 'column', gap: 48 }
@@ -47,7 +50,9 @@ export const hotel = css({
 
 export const hotelOnSite = { flex: 2 };
 
-export const hotelAlternatives = { flex: 1 };
+export const hotelOffSite = { flex: 1 };
+
+export const hotelParagraphs = css({ display: 'flex', flexDirection: 'column', gap: 16 });
 
 export const hotelDivider = { backgroundColor: 'var(--brown)', width: 1 };
 
@@ -64,10 +69,7 @@ export const faqTitle = css({
     flexBasis: 0,
     svg: {
         height: 135,
-        marginTop: 12,
-        '@media (max-width: 700px)': {
-            display: 'none'
-        }
+        '@media (max-width: 700px)': { display: 'none' }
     },
     '@media (min-width: 701px)': { textAlign: 'center' }
 });
@@ -75,9 +77,12 @@ export const faqTitle = css({
 export const registry = {
     display: 'flex',
     gap: 72,
-    svg: {
-        height: 175,
-        '@media (max-width: 700px)': { display: 'none' }
+    'div:last-child': {
+        alignSelf: 'center',
+        svg: {
+            height: 175,
+            '@media (max-width: 700px)': { display: 'none' }
+        },
     },
     '@media (max-width: 700px)': { gap: 0 }
 };

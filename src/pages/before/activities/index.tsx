@@ -8,34 +8,32 @@ export const Activities = (): JSX.Element => (
   <main css={styles.activities}>
     <Background variant={Variant.PRIMARY}>
       <h2>Bedford Village Inn</h2>
-      <Link className="secondary" url="https://goo.gl/maps/TfpqEhDx2zUJB54Y7">
+      <Link url="https://goo.gl/maps/TfpqEhDx2zUJB54Y7">
         2 Olde Bedford Way, Bedford, NH 03110
       </Link>
       <p>
         <i>Where our wedding will take place</i>
       </p>
-      <Divider variant={Variant.SECONDARY} />
+      <Divider />
       <ul>
-        <li>Pool, hot tub, and gym available to those staying at the hotel</li>
+        <li>
+          Pool, hot tub, and gym available for guests staying at either the
+          Grand or the Inn
+        </li>
         <li>
           Several{' '}
-          <Link
-            className="secondary"
-            url="https://www.bedfordvillageinn.com/dining"
-          >
+          <Link url="https://www.bedfordvillageinn.com/dining">
             dining options
           </Link>{' '}
           for breakfast, lunch, and dinner
         </li>
         <li>
           Facials, massages, nail services, etc. at{' '}
-          <Link className="secondary" url="http://www.luxebvi.com">
-            Luxe Salon & Spa
-          </Link>
+          <Link url="http://www.luxebvi.com">Luxe Salon & Spa</Link>
         </li>
         <li>
           Shop for clothes and accessories at{' '}
-          <Link className="secondary" url="https://arnaldojoseph.com/boutique">
+          <Link url="https://arnaldojoseph.com/boutique">
             Arnaldo Joseph Boutique
           </Link>
         </li>
@@ -69,7 +67,7 @@ export const Activities = (): JSX.Element => (
           <Link url="https://labellewinery.com/shop">wine and gifts</Link> to
           take home
           <ul>
-            <li>Our favorites are the Malbec and Sangria Blanca</li>
+            <li>We recommend the Malbec and Sangria Blanca</li>
           </ul>
         </li>
         <li>
@@ -124,8 +122,8 @@ export const Activities = (): JSX.Element => (
       </p>
       <Divider />
       <p>
-        Saint Anselm College or "Hilltop" is where Brendan went to college,
-        where he says he majored in "Budlight and skiing." Besides touring the
+        Saint Anselm College or "The Hilltop" is where Brendan went to college,
+        where he says he majored in "Bud Light and skiing." Besides touring the
         beautiful campus, you can:
       </p>
       <ul>
@@ -153,20 +151,18 @@ export const Activities = (): JSX.Element => (
     </Background>
     <Background variant={Variant.PRIMARY}>
       <h2>Bass Pro Shops</h2>
-      <Link className="secondary" url="https://goo.gl/maps/BWJAZhWCZN5RqotJ8">
+      <Link url="https://goo.gl/maps/BWJAZhWCZN5RqotJ8">
         2 Commerce Dr, Hooksett, NH 03106
       </Link>
       <p>
         <i>15-minute drive from Bedford Village Inn</i>
       </p>
-      <Divider variant={Variant.SECONDARY} />
+      <Divider />
       <p>
         Even if you're not into outdoor activities, visiting{' '}
-        <Link className="secondary" url="https://www.basspro.com/shop/en">
-          Bass Pro Shops
-        </Link>{' '}
-        is quite an experience. Not only are there tons of equipment and gear
-        you can get for various outdoor activities, but there's also incredible
+        <Link url="https://www.basspro.com/shop/en">Bass Pro Shops</Link> is
+        quite an experience. Not only are there tons of equipment and gear you
+        can get for various outdoor activities, but there's also incredible
         decorations and fun, random snacks.
       </p>
     </Background>
