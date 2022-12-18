@@ -73,8 +73,8 @@ export const Logistics = (): JSX.Element => {
             <div>
               <Balloon />
               <h2>After-Party</h2>
-              <p>11pm</p>
-              <p>Summit Suite</p>
+              <p>{data.afterPartyTime}</p>
+              <p>{data.afterPartyLocation}</p>
               <div css={styles.eventsSubtext}>
                 <p>Indoor</p>
                 <p>
@@ -93,7 +93,7 @@ export const Logistics = (): JSX.Element => {
             <div css={styles.hotelOnSite}>
               <h2>On-site hotels</h2>
               <Divider />
-              <p>Rooms are available at:</p>
+              <p>Rooms are available on site at:</p>
               <ul>
                 <li>
                   <Link url={data.primaryHotelLink}>
@@ -131,10 +131,27 @@ export const Logistics = (): JSX.Element => {
               </p>
             </div>
             <div css={styles.hotelDivider} />
-            <div css={styles.hotelAlternatives}>
-              <h2>Alternatives</h2>
+            <div css={styles.hotelOffSite}>
+              <h2>Off-site hotel</h2>
               <Divider />
-              <p>{data.alternatives}</p>
+              <div css={styles.hotelParagraphs}>
+                <p>
+                  There is also a room block at{' '}
+                  <Link url={data.tertiaryHotelLink}>{data.tertiaryHotel}</Link>
+                  , which is a 10-minute drive away from {data.venue}. Check-in
+                  is after {data.checkIn} and check-out by {data.checkOut}.
+                </p>
+                <p>
+                  To book over the phone, call{' '}
+                  <Link url={`tel:${data.tertiaryHotelPhone}`}>
+                    {data.tertiaryHotelPhoneFormatted}
+                  </Link>{' '}
+                  and mention group code{' '}
+                  <strong>{data.tertiaryHotelCode}</strong> or{' '}
+                  <strong>{data.tertiaryHotelCodeFull}</strong>.
+                </p>
+                <p>{data.transportation}</p>
+              </div>
             </div>
           </div>
         </Background>

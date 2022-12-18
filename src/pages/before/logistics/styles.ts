@@ -50,7 +50,9 @@ export const hotel = css({
 
 export const hotelOnSite = { flex: 2 };
 
-export const hotelAlternatives = { flex: 1 };
+export const hotelOffSite = { flex: 1 };
+
+export const hotelParagraphs = css({ display: 'flex', flexDirection: 'column', gap: 16 });
 
 export const hotelDivider = { backgroundColor: 'var(--brown)', width: 1 };
 
