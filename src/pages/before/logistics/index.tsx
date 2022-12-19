@@ -119,7 +119,8 @@ export const Logistics = (): JSX.Element => {
                 </li>
               </ul>
               <p>
-                If you would prefer to book over the phone, call{' '}
+                Please book as soon as possible as availability may run out. If
+                you would prefer to book over the phone, call{' '}
                 <Link url={`tel:${data.phone}`}>{data.formattedPhone}</Link> and
                 mention group code <strong>{data.primaryHotelCode}</strong> for
                 the {data.primaryHotel} or{' '}
@@ -140,6 +141,8 @@ export const Logistics = (): JSX.Element => {
                   <Link url={data.tertiaryHotelLink}>{data.tertiaryHotel}</Link>
                   , which is a 10-minute drive away from {data.venue}. Check-in
                   is after {data.checkIn} and check-out by {data.checkOut}.
+                  Rooms at this hotel must be booked by{' '}
+                  {data.tertiaryHotelDeadline}.
                 </p>
                 <p>
                   To book over the phone, call{' '}
