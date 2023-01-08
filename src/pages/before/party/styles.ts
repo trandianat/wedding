@@ -7,6 +7,7 @@ export const bonus = css({
     gap: 36,
     button: {
         backgroundColor: 'var(--green)',
+        border: '2px solid var(--green)',
         borderRadius: 24,
         color: 'var(--white)',
         fontFamily: 'var(--sans)',

@@ -16,7 +16,7 @@ import { Category, Variant } from 'utils/types';
 
 export const Logistics = (): JSX.Element => {
   const data = useData(Category.LOGISTICS);
-  const [engagement] = useImages(Category.LOGISTICS);
+  const [engagement, inn, grand] = useImages(Category.LOGISTICS);
   return (
     data && (
       <main>
@@ -93,42 +93,55 @@ export const Logistics = (): JSX.Element => {
             <div css={styles.hotelOnSite}>
               <h2>On-site hotels</h2>
               <Divider />
-              <p>Rooms are available on site at:</p>
-              <ul>
-                <li>
+              <div css={styles.hotelOnSiteDetails}>
+                <div>
+                  <p className="hotel">The {data.primaryHotel}</p>
+                  <Link url={inn}>
+                    <img src={inn} />
+                  </Link>
+                  <p>
+                    Available for <b>one</b> night
+                  </p>
+                  <p>
+                    {data.weekDay}, {data.month} {data.day}, {data.year}
+                  </p>
+                  <p>Starts at $349 per night</p>
+                  <p>
+                    Group code: <b>{data.primaryHotelCode}</b>
+                  </p>
                   <Link url={data.primaryHotelLink}>
-                    The {data.primaryHotel}
+                    <button>BOOK THE INN</button>
                   </Link>
-                  , in the same building where the reception will be
-                  <ul>
-                    {data.primaryHotelDetails.map((item: string) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </li>
-                <li>
+                </div>
+                <div>
+                  <p className="hotel">The {data.secondaryHotel}</p>
+                  <Link url={grand}>
+                    <img src={grand} />
+                  </Link>
+                  <p>
+                    Available for <b>two</b> nights
+                  </p>
+                  <p>
+                    Fri & Sat, {data.month} {data.day - 1}—{data.day},{' '}
+                    {data.year}
+                  </p>
+                  <p>Starts at $359 per night</p>
+                  <p>
+                    Group code: <b>{data.secondaryHotelCode}</b>
+                  </p>
                   <Link url={data.secondaryHotelLink}>
-                    The {data.secondaryHotel}
+                    <button>BOOK THE GRAND</button>
                   </Link>
-                  , about a two-minute walk away from the {data.primaryHotel}
-                  <ul>
-                    {data.secondaryHotelDetails.map((item: string) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </li>
-              </ul>
+                </div>
+              </div>
               <p>
-                Please book as soon as possible as availability may run out. If
-                you would prefer to book over the phone, call{' '}
+                Please book as soon as possible as availability may run out. To
+                book over the phone, call{' '}
                 <Link url={`tel:${data.phone}`}>{data.formattedPhone}</Link> and
-                mention group code <strong>{data.primaryHotelCode}</strong> for
-                the {data.primaryHotel} or{' '}
-                <strong>{data.secondaryHotelCode}</strong> for the{' '}
-                {data.secondaryHotel}; you can also request complimentary
-                shuttle service to and from {data.airport} with 24-hours notice.
-                Check-in is after {data.checkIn} and check-out by{' '}
-                {data.checkOut}.
+                mention the group codes above; you can also request
+                complimentary shuttle service to and from {data.airport} with
+                24-hours notice. Check-in is after {data.checkIn} and check-out
+                by {data.checkOut}.
               </p>
             </div>
             <div css={styles.hotelDivider} />
@@ -138,12 +151,17 @@ export const Logistics = (): JSX.Element => {
               <div css={styles.hotelParagraphs}>
                 <p>
                   There is also a room block at{' '}
-                  <Link url={data.tertiaryHotelLink}>{data.tertiaryHotel}</Link>
-                  , which is a 10-minute drive away from {data.venue}. Check-in
-                  is after {data.checkIn} and check-out by {data.checkOut}.
-                  Rooms at this hotel must be booked by{' '}
+                  <Link url="https://www.hilton.com/en/hotels/mhtbfhx-hampton-suites-manchester-bedford">
+                    {data.tertiaryHotel}
+                  </Link>{' '}
+                  starting at $189 per night and a 10-minute drive from{' '}
+                  {data.venue}. Check-in is after {data.checkIn} and check-out
+                  by {data.checkOut}. Rooms at this hotel must be booked by{' '}
                   {data.tertiaryHotelDeadline}.
                 </p>
+                <Link url={data.tertiaryHotelLink}>
+                  <button>BOOK HAMPTON INN</button>
+                </Link>
                 <p>
                   To book over the phone, call{' '}
                   <Link url={`tel:${data.tertiaryHotelPhone}`}>

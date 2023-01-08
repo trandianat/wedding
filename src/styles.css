@@ -22,9 +22,6 @@ html {
     --gray: #C7C7C7;
     --green: #11302A;
     --white: #FFF;
-    --mobile: 480px;
-    --tablet: 768px;
-    --desktop: 1024px;
     --cursive: 'Parisienne';
     --sans: 'Karla';
     --serif: 'EB Garamond';
@@ -52,17 +49,19 @@ a:hover {
 
 button {
     background-color: var(--green);
-    border: none;
+    border: 2px solid var(--green);
     color: var(--white);
     cursor: pointer;
-    font-family: var(--serif), Arial, Helvetica, sans-serif;
+    font-family: var(--sans), Arial, Helvetica, sans-serif;
     font-size: 1rem;
     letter-spacing: 2px;
     padding: 12px 18px;
 }
 
 button:hover {
-    background-color: var(--dark-green);
+    background-color: var(--white);
+    border: 2px solid var(--green);
+    color: var(--green);
 }
 
 h1, h2, h3, h4, h5, h6 {

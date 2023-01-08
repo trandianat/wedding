@@ -45,10 +45,21 @@ export const eventsFooter = css({ fontSize: '.875rem', paddingTop: 28, textAlign
 export const hotel = css({
     display: 'flex',
     gap: 32,
+    button: { '@media (min-width: 451px) and (max-width: 950px)': { fontSize: '.875rem', padding: '12px 14px' } },
     '@media (max-width: 700px)': { flexDirection: 'column', gap: 18 }
 });
 
 export const hotelOnSite = { flex: 2 };
+
+export const hotelOnSiteDetails = css({
+    display: 'flex',
+    gap: 24,
+    margin: '16px 0',
+    button: { marginTop: 12 },
+    div: { flex: 1, img: { height: 150, margin: '8px 0', objectFit: 'cover', width: '100%' } },
+    '.hotel': { fontSize: '1.25rem' },
+    '@media (max-width: 450px)': { flexDirection: 'column' }
+});
 
 export const hotelOffSite = { flex: 1 };
 

@@ -10,6 +10,7 @@ export const nav = (before: boolean, rsvp: boolean) => css({
     a: { textDecoration: 'none', whiteSpace: 'nowrap', ':hover': { color: 'var(--dark-green)' } },
     h1: { fontFamily: 'var(--cursive)', '::before': { content: before ? '"B&D"' : '"Brendan & Diana"' } },
     '.display': {
+        fontFamily: 'var(--serif), Arial, Helvetica, sans-serif',
         marginBottom: 16,
         width: '50%',
         '@media (min-width: 401px)': { display: 'none' },
@@ -52,14 +53,15 @@ export const nav = (before: boolean, rsvp: boolean) => css({
             svg: { display: 'none' },
             '.rsvp': {
                 backgroundColor: 'var(--green)',
+                border: '2px solid var(--green)',
                 color: 'var(--white)',
                 fontFamily: 'var(--serif), Arial, Helvetica, sans-serif',
                 letterSpacing: 2,
                 padding: '12px 18px',
                 ':hover': {
-                    backgroundColor: 'var(--dark-green)',
-                    border: 'none',
-                    color: 'var(--white)'
+                    backgroundColor: 'var(--white)',
+                    border: '2px solid var(--green)',
+                    color: 'var(--green)'
                 }
             }
         },
