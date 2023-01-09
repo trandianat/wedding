@@ -45,18 +45,30 @@ export const eventsFooter = css({ fontSize: '.875rem', paddingTop: 28, textAlign
 export const hotel = css({
     display: 'flex',
     gap: 32,
-    button: { '@media (min-width: 451px) and (max-width: 950px)': { fontSize: '.875rem', padding: '12px 14px' } },
+    button: { '@media (min-width: 451px) and (max-width: 950px)': { fontSize: '.875rem', padding: 12 } },
     '@media (max-width: 700px)': { flexDirection: 'column', gap: 18 }
 });
 
-export const hotelOnSite = { flex: 2 };
+export const hotelOnSite = {
+    flex: 2,
+    '> p': { marginTop: 16 },
+    '@media (min-width: 451px)': { hr: { display: 'none' } }
+};
 
 export const hotelOnSiteDetails = css({
     display: 'flex',
     gap: 24,
-    margin: '16px 0',
     button: { marginTop: 12 },
-    div: { flex: 1, img: { height: 150, margin: '8px 0', objectFit: 'cover', width: '100%' } },
+    div: {
+        flex: 1,
+        img: {
+            height: 150,
+            margin: '8px 0',
+            objectFit: 'cover',
+            width: '100%',
+            '@media (max-width: 950px)': { height: 200 }
+        }
+    },
     '.hotel': { fontSize: '1.25rem' },
     '@media (max-width: 450px)': { flexDirection: 'column' }
 });
