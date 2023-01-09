@@ -119,11 +119,10 @@ export const Logistics = (): JSX.Element => {
                     <img src={grand} />
                   </Link>
                   <p>
-                    Available for <b>two</b> nights
+                    Available for <b>one</b> night
                   </p>
                   <p>
-                    Fri & Sat, {data.month} {data.day - 1}—{data.day},{' '}
-                    {data.year}
+                    {data.weekDay}, {data.month} {data.day}, {data.year}
                   </p>
                   <p>Starts at {data.secondaryHotelPrice} per night</p>
                   <p>
@@ -152,10 +151,7 @@ export const Logistics = (): JSX.Element => {
               <Divider />
               <div css={styles.hotelParagraphs}>
                 <p>
-                  There is also a room block at{' '}
-                  <Link url={data.tertiaryHotelInfoLink}>
-                    {data.tertiaryHotel}
-                  </Link>{' '}
+                  There is also a room block at <b>{data.tertiaryHotel}</b>{' '}
                   starting at {data.tertiaryHotelPrice} per night and a
                   10-minute drive from {data.venue}. Check-in is after{' '}
                   {data.checkIn} and check-out by {data.checkOut}. Rooms at this
