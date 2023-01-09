@@ -10,7 +10,7 @@ export const Photos = (): JSX.Element => {
   const [look] = useImages(Category.PHOTOS);
   return (
     <main css={styles.photos}>
-      <Background variant={Variant.PRIMARY}>
+      <Background variant={Variant.SECONDARY}>
         <h2>Photos</h2>
         <Divider />
         <p>

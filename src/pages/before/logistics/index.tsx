@@ -105,12 +105,12 @@ export const Logistics = (): JSX.Element => {
                   <p>
                     {data.weekDay}, {data.month} {data.day}, {data.year}
                   </p>
-                  <p>Starts at $349 per night</p>
+                  <p>Starts at {data.primaryHotelPrice} per night</p>
                   <p>
                     Group code: <b>{data.primaryHotelCode}</b>
                   </p>
                   <Link url={data.primaryHotelLink}>
-                    <button>BOOK THE INN</button>
+                    <button>BOOK THE {data.primaryHotel.toUpperCase()}</button>
                   </Link>
                 </div>
                 <div>
@@ -125,12 +125,14 @@ export const Logistics = (): JSX.Element => {
                     Fri & Sat, {data.month} {data.day - 1}—{data.day},{' '}
                     {data.year}
                   </p>
-                  <p>Starts at $359 per night</p>
+                  <p>Starts at {data.secondaryHotelPrice} per night</p>
                   <p>
                     Group code: <b>{data.secondaryHotelCode}</b>
                   </p>
                   <Link url={data.secondaryHotelLink}>
-                    <button>BOOK THE GRAND</button>
+                    <button>
+                      BOOK THE {data.secondaryHotel.toUpperCase()}
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -151,16 +153,16 @@ export const Logistics = (): JSX.Element => {
               <div css={styles.hotelParagraphs}>
                 <p>
                   There is also a room block at{' '}
-                  <Link url="https://www.hilton.com/en/hotels/mhtbfhx-hampton-suites-manchester-bedford">
+                  <Link url={data.tertiaryHotelInfoLink}>
                     {data.tertiaryHotel}
                   </Link>{' '}
-                  starting at $189 per night and a 10-minute drive from{' '}
-                  {data.venue}. Check-in is after {data.checkIn} and check-out
-                  by {data.checkOut}. Rooms at this hotel must be booked by{' '}
-                  {data.tertiaryHotelDeadline}.
+                  starting at {data.tertiaryHotelPrice} per night and a
+                  10-minute drive from {data.venue}. Check-in is after{' '}
+                  {data.checkIn} and check-out by {data.checkOut}. Rooms at this
+                  hotel must be booked by {data.tertiaryHotelDeadline}.
                 </p>
                 <Link url={data.tertiaryHotelLink}>
-                  <button>BOOK HAMPTON INN</button>
+                  <button>BOOK {data.tertiaryHotelShort.toUpperCase()}</button>
                 </Link>
                 <p>
                   To book over the phone, call{' '}
