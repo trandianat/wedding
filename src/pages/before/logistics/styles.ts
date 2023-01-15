@@ -49,10 +49,18 @@ export const hotel = css({
     '@media (max-width: 700px)': { flexDirection: 'column', gap: 18 }
 });
 
-export const hotelOnSite = {
-    flex: 2,
-    '> p': { marginTop: 16 },
-    '@media (min-width: 451px)': { hr: { display: 'none' } }
+export const hotelOnSite = { flex: 2 };
+
+export const hotelOnSiteBody = css({
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 16
+});
+
+export const hotelOnSiteWarning = {
+    backgroundColor: 'var(--beige)',
+    border: '1px solid var(--dark-green)',
+    padding: '16px 24px'
 };
 
 export const hotelOnSiteDetails = css({
@@ -75,7 +83,7 @@ export const hotelOnSiteDetails = css({
 
 export const hotelOffSite = { flex: 1 };
 
-export const hotelParagraphs = css({ display: 'flex', flexDirection: 'column', gap: 16 });
+export const hotelOffSiteBody = css({ display: 'flex', flexDirection: 'column', gap: 16 });
 
 export const hotelDivider = { backgroundColor: 'var(--brown)', width: 1 };
 

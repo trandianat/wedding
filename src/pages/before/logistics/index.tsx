@@ -93,63 +93,72 @@ export const Logistics = (): JSX.Element => {
             <div css={styles.hotelOnSite}>
               <h2>On-site hotels</h2>
               <Divider />
-              <div css={styles.hotelOnSiteDetails}>
-                <div>
-                  <p className="hotel">The {data.primaryHotel}</p>
-                  <Link url={inn}>
-                    <img src={inn} />
-                  </Link>
-                  <p>
-                    Available for <b>one</b> night
-                  </p>
-                  <p>
-                    {data.weekDay}, {data.month} {data.day}, {data.year}
-                  </p>
-                  <p>Starts at {data.primaryHotelPrice} per night</p>
-                  <p>
-                    Group code: <b>{data.primaryHotelCode}</b>
-                  </p>
-                  <Link url={data.primaryHotelLink}>
-                    <button>BOOK THE {data.primaryHotel.toUpperCase()}</button>
-                  </Link>
+              <div css={styles.hotelOnSiteBody}>
+                <p css={styles.hotelOnSiteWarning}>
+                  The {data.primaryHotel} and the {data.secondaryHotel} are now
+                  fully booked, but you can check the booking links in case
+                  there are any cancelations.
+                </p>
+                <div css={styles.hotelOnSiteDetails}>
+                  <div>
+                    <p className="hotel">The {data.primaryHotel}</p>
+                    <Link url={inn}>
+                      <img src={inn} />
+                    </Link>
+                    <p>
+                      Available for <b>one</b> night
+                    </p>
+                    <p>
+                      {data.weekDay}, {data.month} {data.day}, {data.year}
+                    </p>
+                    <p>Starts at {data.primaryHotelPrice} per night</p>
+                    <p>
+                      Group code: <b>{data.primaryHotelCode}</b>
+                    </p>
+                    <Link url={data.primaryHotelLink}>
+                      <button>
+                        BOOK THE {data.primaryHotel.toUpperCase()}
+                      </button>
+                    </Link>
+                  </div>
+                  <div>
+                    <p className="hotel">The {data.secondaryHotel}</p>
+                    <Link url={grand}>
+                      <img src={grand} />
+                    </Link>
+                    <p>
+                      Available for <b>two</b> nights
+                    </p>
+                    <p>
+                      Fri & Sat, {data.month} {data.day - 1}—{data.day},{' '}
+                      {data.year}
+                    </p>
+                    <p>Starts at {data.secondaryHotelPrice} per night</p>
+                    <p>
+                      Group code: <b>{data.secondaryHotelCode}</b>
+                    </p>
+                    <Link url={data.secondaryHotelLink}>
+                      <button>
+                        BOOK THE {data.secondaryHotel.toUpperCase()}
+                      </button>
+                    </Link>
+                  </div>
                 </div>
-                <div>
-                  <p className="hotel">The {data.secondaryHotel}</p>
-                  <Link url={grand}>
-                    <img src={grand} />
-                  </Link>
-                  <p>
-                    Available for <b>one</b> night
-                  </p>
-                  <p>
-                    {data.weekDay}, {data.month} {data.day}, {data.year}
-                  </p>
-                  <p>Starts at {data.secondaryHotelPrice} per night</p>
-                  <p>
-                    Group code: <b>{data.secondaryHotelCode}</b>
-                  </p>
-                  <Link url={data.secondaryHotelLink}>
-                    <button>
-                      BOOK THE {data.secondaryHotel.toUpperCase()}
-                    </button>
-                  </Link>
-                </div>
+                <p>
+                  To book over the phone, call{' '}
+                  <Link url={`tel:${data.phone}`}>{data.formattedPhone}</Link>{' '}
+                  and mention the group codes above; you can also request
+                  complimentary shuttle service to and from {data.airport} with
+                  24-hours notice. Check-in is after {data.checkIn} and
+                  check-out by {data.checkOut}.
+                </p>
               </div>
-              <p>
-                Please book as soon as possible as availability may run out. To
-                book over the phone, call{' '}
-                <Link url={`tel:${data.phone}`}>{data.formattedPhone}</Link> and
-                mention the group codes above; you can also request
-                complimentary shuttle service to and from {data.airport} with
-                24-hours notice. Check-in is after {data.checkIn} and check-out
-                by {data.checkOut}.
-              </p>
             </div>
             <div css={styles.hotelDivider} />
             <div css={styles.hotelOffSite}>
               <h2>Off-site hotel</h2>
               <Divider />
-              <div css={styles.hotelParagraphs}>
+              <div css={styles.hotelOffSiteBody}>
                 <p>
                   There is also a room block at <b>{data.tertiaryHotel}</b>{' '}
                   starting at {data.tertiaryHotelPrice} per night and a
