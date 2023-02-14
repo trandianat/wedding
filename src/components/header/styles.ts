@@ -10,9 +10,9 @@ export const nav = (before: boolean, rsvp: boolean) => css({
     a: { textDecoration: 'none', whiteSpace: 'nowrap', ':hover': { color: 'var(--dark-green)' } },
     h1: { fontFamily: 'var(--cursive)', '::before': { content: before ? '"B&D"' : '"Brendan & Diana"' } },
     '.display': {
-        fontFamily: 'var(--serif), Arial, Helvetica, sans-serif',
         marginBottom: 16,
         width: '50%',
+        button: { fontFamily: 'var(--serif), Arial, Helvetica, sans-serif', width: '100%' } ,
         '@media (min-width: 401px)': { display: 'none' },
         '@media (max-width: 250px)': { width: '75%' }
     },
