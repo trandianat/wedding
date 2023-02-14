@@ -29,7 +29,7 @@ export const nav = (before: boolean, rsvp: boolean) => css({
     },
     '.pages': {
         display: 'flex',
-        gap: 36,
+        gap: 48,
         a: {
             display: 'flex',
             flexDirection: 'column',
@@ -48,6 +48,7 @@ export const nav = (before: boolean, rsvp: boolean) => css({
             }
         },
         '.active': { fontWeight: 'bold' },
+        '&.before': { gap: 32 },
         '@media (min-width: 951px)': {
             alignItems: 'center',
             svg: { display: 'none' },
@@ -66,10 +67,10 @@ export const nav = (before: boolean, rsvp: boolean) => css({
             }
         },
         '@media (max-width: 950px)': { a: { fontSize: 12, maxWidth: 64 } },
-        '@media (max-width: 600px)': { gap: 24 },
-        '@media (max-width: 450px)': { gap: 12 },
+        '@media (max-width: 600px)': { '&.before': { gap: 24 } },
+        '@media (max-width: 475px)': { '&.before': { gap: 12 } },
         '@media (max-width: 400px)': { ...before && rsvp && { 'a:last-child': { display: 'none' } } },
-        '@media (max-width: 350px)': { flexDirection: 'column', gap: 18 }
+        '@media (max-width: 350px)': { flexDirection: 'column', gap: 18 },
     },
     '@media (max-width: 950px)': {
         flexDirection: 'column',

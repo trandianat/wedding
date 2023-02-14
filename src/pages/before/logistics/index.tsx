@@ -96,8 +96,9 @@ export const Logistics = (): JSX.Element => {
               <div css={styles.hotelOnSiteBody}>
                 <p css={styles.hotelOnSiteWarning}>
                   The {data.primaryHotel} and the {data.secondaryHotel} are now
-                  fully booked, but you can check the booking links in case
-                  there are any cancelations.
+                  fully booked, but you can check the{' '}
+                  <Link url={data.venueLink}>{data.venue}</Link> website or the
+                  booking links below in case there are any cancelations.
                 </p>
                 <div css={styles.hotelOnSiteDetails}>
                   <div>

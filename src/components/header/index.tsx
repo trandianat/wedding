@@ -57,7 +57,7 @@ export const Header = (): JSX.Element => {
             <div className="line" />
           </div>
           {before && data.rsvp && <button className="display">RSVP</button>}
-          <div className="pages">
+          <div className={`pages${before ? ' before' : ''}`}>
             {pages[when].map(page => (
               <Link key={page.path} to={page.path}>
                 {page.icon}
