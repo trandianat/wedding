@@ -195,6 +195,7 @@ export const Logistics = (): JSX.Element => {
               items={[
                 { category: 'Attire', description: data.attire },
                 { category: 'Bar', description: data.bar },
+                { category: 'Bean?', description: data.bean },
                 { category: 'Kids', description: data.kids },
                 {
                   category: 'Parking',

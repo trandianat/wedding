@@ -98,7 +98,8 @@ export const faqs = css({
 export const faqTitle = css({
     flexBasis: 0,
     svg: {
-        height: 135,
+        height: 175,
+        '@media (max-width: 950px)': { height: 150 },
         '@media (max-width: 700px)': { display: 'none' }
     },
     '@media (min-width: 701px)': { textAlign: 'center' }

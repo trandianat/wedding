@@ -12,7 +12,7 @@ export const nav = css({
         letterSpacing: 1,
         justifyContent: 'center',
         textDecoration: 'none',
-        div: { fontSize: '2rem' },
+        div: { fontSize: '2rem', padding: 24, textAlign: 'center' },
     },
     '@media (max-width: 1000px)': { flexDirection: 'column' },
 });
@@ -59,5 +59,5 @@ export const logo = css({
         width: 110,
         div: { span: { fontSize: '2rem', lineHeight: '2rem', top: 'calc(50% - 1rem)' }}
     },
-    '@media (max-width: 1000px) and (max-height: 450px)': { display: 'none' }
+    '@media (max-width: 1000px) and (max-height: 500px)': { display: 'none' }
 });
