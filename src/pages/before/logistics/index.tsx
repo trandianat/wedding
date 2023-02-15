@@ -102,7 +102,7 @@ export const Logistics = (): JSX.Element => {
                 </p>
                 <div css={styles.hotelOnSiteDetails}>
                   <div>
-                    <p className="hotel">The {data.primaryHotel}</p>
+                    <h3>The {data.primaryHotel}</h3>
                     <Link url={inn}>
                       <img src={inn} />
                     </Link>
@@ -123,7 +123,7 @@ export const Logistics = (): JSX.Element => {
                     </Link>
                   </div>
                   <div>
-                    <p className="hotel">The {data.secondaryHotel}</p>
+                    <h3>The {data.secondaryHotel}</h3>
                     <Link url={grand}>
                       <img src={grand} />
                     </Link>

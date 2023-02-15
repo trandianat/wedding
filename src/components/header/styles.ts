@@ -10,11 +10,11 @@ export const nav = (before: boolean, rsvp: boolean) => css({
     a: { textDecoration: 'none', whiteSpace: 'nowrap', ':hover': { color: 'var(--dark-green)' } },
     h1: { fontFamily: 'var(--cursive)', '::before': { content: before ? '"B&D"' : '"Brendan & Diana"' } },
     '.display': {
-        marginBottom: 16,
+        marginBottom: 8,
         width: '50%',
         button: { fontFamily: 'var(--serif), Arial, Helvetica, sans-serif', width: '100%' } ,
         '@media (min-width: 401px)': { display: 'none' },
-        '@media (max-width: 250px)': { width: '75%' }
+        '@media (max-width: 200px)': { width: '75%' }
     },
     '.entry': {
         alignItems: 'center',
@@ -66,16 +66,15 @@ export const nav = (before: boolean, rsvp: boolean) => css({
                 }
             }
         },
-        '@media (max-width: 950px)': { a: { fontSize: 12, maxWidth: 64 } },
-        '@media (max-width: 600px)': { '&.before': { gap: 24 } },
-        '@media (max-width: 475px)': { '&.before': { gap: 12 } },
+        '@media (max-width: 950px)': { padding: '0 24px', a: { fontSize: 12, maxWidth: 64 } },
+        '@media (max-width: 450px)': { '&.before': { gap: 24 } },
         '@media (max-width: 400px)': { ...before && rsvp && { 'a:last-child': { display: 'none' } } },
         '@media (max-width: 350px)': { flexDirection: 'column', gap: 18 },
     },
     '@media (max-width: 950px)': {
         flexDirection: 'column',
         gap: 12,
-        padding: '12px 0 20px',
+        padding: '12px 0 18px',
         width: 650,
         '@media (min-width: 351px)': { 'h1::before': { content: '"Brendan & Diana"' } },
     },

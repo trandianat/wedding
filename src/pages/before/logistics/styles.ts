@@ -77,7 +77,6 @@ export const hotelOnSiteDetails = css({
             '@media (max-width: 950px)': { height: 200 }
         }
     },
-    '.hotel': { fontSize: '1.25rem' },
     '@media (max-width: 450px)': { flexDirection: 'column' }
 });
 
