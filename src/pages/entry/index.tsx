@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as styles from 'pages/entry/styles';
 
 export const Entry = (): JSX.Element => (
@@ -21,6 +21,5 @@ export const Entry = (): JSX.Element => (
         </div>
       </Link>
     </nav>
-    <Outlet />
   </Fragment>
 );
