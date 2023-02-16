@@ -18,18 +18,19 @@ export const side = css({
   border: '1px solid var(--black)',
   flexDirection: 'column',
   '@media (min-width: 951px)': { flexDirection: 'row' },
-  '@media (max-width: 950px)': { width: '75%' }
+  '@media (max-width: 950px)': { width: '75%' },
 });
 
-export const image = (position: string, side: boolean) => css({
-  img: {
-    height: side ? 300 : 350,
-    objectFit: 'cover',
-    objectPosition: position,
-    width: side ? 350 : '100%',
-    '@media (max-width: 950px)': { width: '100%' }
-  }
-});
+export const image = (position: string, side: boolean) =>
+  css({
+    img: {
+      height: side ? 300 : 350,
+      objectFit: 'cover',
+      objectPosition: position,
+      width: side ? 350 : '100%',
+      '@media (max-width: 950px)': { width: '100%' },
+    },
+  });
 
 export const description = { backgroundColor: 'var(--white)', padding: 24 };
 
