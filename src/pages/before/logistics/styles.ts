@@ -38,6 +38,32 @@ export const events = css({
     '@media (max-width: 700px)': { flexDirection: 'column', gap: 48 }
 });
 
+export const eventsLocation = (left: number) => css({
+    position: 'relative',
+    p: { textDecoration: 'underline dotted' },
+    '.map': { display: 'none' },
+    ...left && { ':hover': {
+        p: { textDecoration: 'none' },
+        '.map': {
+            backgroundColor: 'var(--white)',
+            boxShadow: '1px 1px 2px var(--gray)',
+            color: 'var(--black)',
+            display: 'block',
+            left: -left + 24,
+            padding: 16,
+            position: 'absolute',
+            top: 32,
+            width: window.innerWidth - 80,
+            zIndex: 1,
+            img: { width: '100%' },
+            '@media (min-width: 1200px)': {
+                left: -left + 100,
+                width: window.innerWidth - 232
+            }
+        }
+    } }
+});
+
 export const eventsSubtext = { fontSize: '.875rem', paddingTop: 12 };
 
 export const eventsFooter = css({ fontSize: '.875rem', paddingTop: 28, textAlign: 'center' });

@@ -10,13 +10,20 @@ import { Footer } from 'components/footer';
 import { Grid } from 'components/grid';
 import { Link } from 'components/link';
 import * as styles from 'pages/before/logistics/styles';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { useData, useImages } from 'utils/hooks';
 import { Category, Variant } from 'utils/types';
 
 export const Logistics = (): JSX.Element => {
   const data = useData(Category.LOGISTICS);
-  const [engagement, inn, grand] = useImages(Category.LOGISTICS);
+  const [engagement, inn, grand, ceremony, cocktail, reception, afterParty] =
+    useImages(Category.LOGISTICS);
+  const [left, setLeft] = useState(0);
+
+  const onHover = (id: string) =>
+    setLeft(document.getElementById(id)?.getBoundingClientRect().left ?? 0);
+  const onExit = () => setLeft(0);
+
   return (
     data && (
       <main>
@@ -41,7 +48,17 @@ export const Logistics = (): JSX.Element => {
               <Ceremony />
               <h2>Ceremony</h2>
               <p>{data.ceremonyTime}</p>
-              <p>{data.ceremonyLocation}</p>
+              <div css={styles.eventsLocation(left)} id="tooltip-ceremony">
+                <p
+                  onMouseEnter={() => onHover('tooltip-ceremony')}
+                  onMouseLeave={onExit}
+                >
+                  {data.ceremonyLocation}
+                </p>
+                <div className="map">
+                  <img src={ceremony} />
+                </div>
+              </div>
               <div css={styles.eventsSubtext}>
                 <p>Outdoor (on grass)</p>
                 <p>
@@ -56,7 +73,17 @@ export const Logistics = (): JSX.Element => {
               <Champagne />
               <h2>Cocktail Hour</h2>
               <p>{data.cocktailTime}</p>
-              <p>{data.cocktailLocation}</p>
+              <div css={styles.eventsLocation(left)} id="tooltip-cocktail">
+                <p
+                  onMouseEnter={() => onHover('tooltip-cocktail')}
+                  onMouseLeave={onExit}
+                >
+                  {data.cocktailLocation}
+                </p>
+                <div className="map">
+                  <img src={cocktail} />
+                </div>
+              </div>
               <div css={styles.eventsSubtext}>
                 <p>Outdoor (on grass)</p>
               </div>
@@ -65,7 +92,17 @@ export const Logistics = (): JSX.Element => {
               <Music />
               <h2>Reception</h2>
               <p>{data.receptionTime}</p>
-              <p>{data.receptionLocation}</p>
+              <div css={styles.eventsLocation(left)} id="tooltip-reception">
+                <p
+                  onMouseEnter={() => onHover('tooltip-reception')}
+                  onMouseLeave={onExit}
+                >
+                  {data.receptionLocation}
+                </p>
+                <div className="map">
+                  <img src={reception} />
+                </div>
+              </div>
               <div css={styles.eventsSubtext}>
                 <p>Indoor</p>
               </div>
@@ -74,7 +111,17 @@ export const Logistics = (): JSX.Element => {
               <Balloon />
               <h2>After-Party</h2>
               <p>{data.afterPartyTime}</p>
-              <p>{data.afterPartyLocation}</p>
+              <div css={styles.eventsLocation(left)} id="tooltip-after-party">
+                <p
+                  onMouseEnter={() => onHover('tooltip-after-party')}
+                  onMouseLeave={onExit}
+                >
+                  {data.afterPartyLocation}
+                </p>
+                <div className="map">
+                  <img src={afterParty} />
+                </div>
+              </div>
               <div css={styles.eventsSubtext}>
                 <p>Indoor</p>
                 <p>
@@ -195,7 +242,7 @@ export const Logistics = (): JSX.Element => {
               items={[
                 { category: 'Attire', description: data.attire },
                 { category: 'Bar', description: data.bar },
-                { category: 'Bean?', description: data.bean },
+                { category: 'Bean', description: data.bean },
                 { category: 'Kids', description: data.kids },
                 {
                   category: 'Parking',
