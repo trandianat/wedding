@@ -59,6 +59,11 @@ export const eventsLocation = (left: number) => css({
             '@media (min-width: 1200px)': {
                 left: -left + 100,
                 width: window.innerWidth - 232
+            },
+            '@media (max-width: 700px)': {
+                left: -left + 12,
+                padding: 8,
+                width: window.innerWidth - 40
             }
         }
     } }
