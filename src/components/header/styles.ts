@@ -82,7 +82,7 @@ export const nav = (before: boolean, rsvp: boolean) =>
       },
       '@media (max-width: 950px)': {
         padding: '0 24px',
-        a: { fontSize: 12, maxWidth: 64 },
+        a: { fontSize: '.75rem', maxWidth: 64 },
       },
       '@media (max-width: 450px)': { '&.before': { gap: 24 } },
       '@media (max-width: 400px)': {
@@ -109,7 +109,7 @@ export const scroll = css({
   borderRadius: 24,
   bottom: 16,
   cursor: 'pointer',
-  fontSize: 24,
+  fontSize: '1.5rem',
   padding: '8px 16px',
   position: 'fixed',
   right: 16,
