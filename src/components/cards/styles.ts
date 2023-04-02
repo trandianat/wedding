@@ -21,7 +21,7 @@ export const container = css({
       img: {
         height: 300,
         width: 350,
-        '@media (max-width: 950px)': { width: '100%' },
+        '@media (max-width: 950px)': { height: 350, width: '100%' },
       },
       '@media (max-width: 950px)': { flexDirection: 'column', width: '75%' },
       '@media (max-width: 700px)': { width: '100%' },

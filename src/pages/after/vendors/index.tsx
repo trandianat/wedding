@@ -24,15 +24,29 @@ export const Vendors = (): JSX.Element => {
         <Link url="https://klenoxphoto.com">K. Lenox Photography</Link>
       ),
     },
+    {
+      category: 'Room block',
+      description: (
+        <Link url="https://www.hilton.com/en/hotels/mhtbfhx-hampton-suites-manchester-bedford">
+          Hampton Inn & Suites Manchester-Bedford
+        </Link>
+      ),
+    },
   ];
   if (after)
     vendors.push(
       ...[
         {
+          category: 'Bus',
+          description: (
+            <Link url="http://blacktielimo.com">Black Tie Limousine</Link>
+          ),
+        },
+        {
           category: 'DJ',
           description: (
             <Fragment>
-              Joe Bermudez of{' '}
+              <Link url="http://joebermudez.com">Joe Bermudez</Link> of{' '}
               <Link url="https://617weddings.com">617 Weddings</Link>
             </Fragment>
           ),
@@ -47,6 +61,28 @@ export const Vendors = (): JSX.Element => {
           category: 'Hair and makeup',
           description: (
             <Link url="http://www.luxebvi.com">Luxe Salon & Spa</Link>
+          ),
+        },
+        {
+          category: 'Photo booth',
+          description: (
+            <Link url="https://photoboothplanet.com">Photo Booth Planet</Link>
+          ),
+        },
+        {
+          category: 'Tailor',
+          description: (
+            <Link url="https://www.yelenacouture.com">
+              Yelena Couture Tailor
+            </Link>
+          ),
+        },
+        {
+          category: 'Videographer',
+          description: (
+            <Link url="https://www.hindsightweddingfilms.net">
+              Hindsight Wedding Films
+            </Link>
           ),
         },
         {

@@ -12,6 +12,7 @@ export const primary = {
 export const secondary = {
   backgroundColor: 'var(--beige)',
   padding: '48px 0',
+  '.card': { border: '1px solid var(--white)', color: 'var(--black)' },
   '@media (max-width: 450px)': { padding: '32px 0' },
 };
 

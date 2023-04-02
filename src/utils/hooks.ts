@@ -57,7 +57,7 @@ export const useImages = (category: Category) => {
       'party-2.jpg',
       'party-3.jpeg',
       'party-4.jpg',
-      'party-5.JPEG',
+      'party-6.jpg',
     ],
     [Category.PHOTOS]: ['photos-1.jpg'],
     [Category.RSVP]: [],
