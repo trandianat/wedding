@@ -1,6 +1,6 @@
-import { API, Storage } from 'aws-amplify';
-import { listContents } from 'graphql/queries';
+import { API } from 'aws-amplify';
 import { useEffect, useState } from 'react';
+import { listContents } from 'graphql/queries';
 import { Category } from 'utils/types';
 
 export const useData = (category: Category) => {

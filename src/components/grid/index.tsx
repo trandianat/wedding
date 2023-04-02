@@ -1,5 +1,5 @@
-import * as styles from 'components/grid/styles';
 import { Fragment } from 'react';
+import * as styles from 'components/grid/styles';
 
 export const Grid = ({
   items,

@@ -5,6 +5,7 @@ export const primary = {
   color: 'var(--white)',
   padding: '12px 0',
   a: { color: 'var(--white)' },
+  '.card': { border: '1px solid var(--white)', color: 'var(--black)' },
   '.divider': secondaryDivider,
 };
 
@@ -16,6 +17,7 @@ export const secondary = {
 
 export const tertiary = {
   padding: '48px 0',
+  '.card': { border: '1px solid var(--black)' },
   '@media (max-width: 450px)': { padding: '32px 0' },
 };
 

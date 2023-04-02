@@ -1,7 +1,6 @@
+import React from 'react';
 import * as styles from 'components/card/styles';
 import { Divider } from 'components/divider';
-import React from 'react';
-import { CardVariant, Variant } from 'utils/types';
 
 export const Card = ({
   children,
@@ -9,17 +8,15 @@ export const Card = ({
   name,
   position = 'center',
   role,
-  variant = Variant.DEFAULT,
 }: React.PropsWithChildren<{
   image: string;
   name: string;
   position?: string;
   role: string;
-  variant?: CardVariant;
 }>): JSX.Element => (
-  <div css={variant === Variant.SIDE ? styles.side : styles.stack}>
-    <div css={styles.image(position, variant === Variant.SIDE)}>
-      <img src={image} />
+  <div className="card" css={styles.card}>
+    <div>
+      <img css={styles.image(position)} src={image} />
     </div>
     <div css={styles.description}>
       <p css={styles.role}>{role}</p>

@@ -1,8 +1,8 @@
+import { Fragment, useState } from 'react';
 import { Background } from 'components/background';
 import { Card } from 'components/card';
 import { Cards } from 'components/cards';
 import * as styles from 'pages/before/party/styles';
-import { Fragment, useState } from 'react';
 import { useData, useImages } from 'utils/hooks';
 import { Category, Variant } from 'utils/types';
 
@@ -47,14 +47,11 @@ export const Party = (): JSX.Element => {
         <Background>
           <div css={styles.bonus}>
             {bonus && (
-              <Card
-                image={bouncer}
-                name={data.bouncer}
-                role="BOUNCER"
-                variant={Variant.SIDE}
-              >
-                {data.bouncerDescription}
-              </Card>
+              <Cards variant={Variant.SIDE}>
+                <Card image={bouncer} name={data.bouncer} role="BOUNCER">
+                  {data.bouncerDescription}
+                </Card>
+              </Cards>
             )}
             <button onClick={() => setBonus(!bonus)}>
               Bonus{' '}

@@ -18,7 +18,6 @@ export const bonus = css({
       backgroundColor: 'var(--white)',
       border: '2px solid var(--green)',
       color: 'var(--green)',
-      fontWeight: 'bold',
     },
   },
 });

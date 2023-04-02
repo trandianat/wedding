@@ -1,10 +1,10 @@
+import { Fragment } from 'react';
 import { Background } from 'components/background';
 import { Divider } from 'components/divider';
 import { Footer } from 'components/footer';
 import { Grid } from 'components/grid';
 import { Link } from 'components/link';
 import * as styles from 'pages/after/vendors/styles';
-import { Fragment } from 'react';
 import after from 'utils/after';
 import { useImages } from 'utils/hooks';
 import { Category, Variant } from 'utils/types';
