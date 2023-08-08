@@ -12,9 +12,9 @@ Amplify.configure(awsconfig);
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route element={<Entry />} path="/" />
-      <Route element={<Before />} path="/before/*" />
       <Route element={<After />} path="/after/*" />
+      <Route element={<Before />} path="/before/*" />
+      <Route element={<Entry />} path="*" />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
