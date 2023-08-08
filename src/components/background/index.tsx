@@ -1,7 +1,7 @@
 import * as styles from 'components/background/styles';
 import { BackgroundVariant, Variant } from 'utils/types';
 
-export const background: Record<
+const background: Record<
   string,
   { backgroundColor?: string; color?: string; padding: string }
 > = {

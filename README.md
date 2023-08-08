@@ -12,7 +12,7 @@
         - Polyfilling provides modern functionality on older browsers that do not natively support it
 8. `@babel/preset-react`: compiles React code into valid JavaScript or ES5
 9. `babel-loader`: Webpack helper that transforms or transpiles JavaScript dependencies with Babel, i.e., transforms `import` statements into `require`
-10. `style-loader`: adds styles to the DOM by injecting a style tag inside the bundles HTML file
+10. `style-loader`: adds styles to the DOM by injecting a style tag inside the bundled HTML file
 11. `css-loader`: enables CSS imports
 12. ~~`sass-loader`: enables SCSS imports~~
 13. ~~`node-sass`: compiles SCSS into CSS~~
