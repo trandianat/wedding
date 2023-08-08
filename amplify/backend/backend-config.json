@@ -6,12 +6,12 @@
         "authConfig": {
           "additionalAuthenticationProviders": [],
           "defaultAuthentication": {
+            "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDate": "2024-04-01T22:34:00.580Z",
               "apiKeyExpirationDays": 365,
+              "apiKeyExpirationDate": "2024-08-07T20:22:43.603Z",
               "description": ""
-            },
-            "authenticationType": "API_KEY"
+            }
           }
         }
       },
