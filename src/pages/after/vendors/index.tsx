@@ -31,7 +31,12 @@ export const Vendors = (): JSX.Element => {
       ...[
         {
           category: 'Bus',
-          description: <Link url={data.busLink}>{data.bus}</Link>,
+          description: (
+            <Fragment>
+              <Link url={data.busLink}>{data.bus}</Link>/
+              <Link url={data.alternateBusLink}>{data.alternateBus}</Link>
+            </Fragment>
+          ),
         },
         {
           category: 'DJ',

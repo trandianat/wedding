@@ -14,8 +14,10 @@ export enum Category {
   HEADER = "HEADER",
   LOGISTICS = "LOGISTICS",
   PARTY = "PARTY",
+  PHOTOS = "PHOTOS",
   RSVP = "RSVP",
   STORY = "STORY",
+  THANKS = "THANKS",
   VENDORS = "VENDORS",
 }
 

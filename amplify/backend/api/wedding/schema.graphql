@@ -8,8 +8,10 @@ enum Category {
   HEADER
   LOGISTICS
   PARTY
+  PHOTOS
   RSVP
   STORY
+  THANKS
   VENDORS
 }
 
