@@ -1,4 +1,8 @@
 # wedding
+I created [thebeanwedding.com](https://www.thebeanwedding.com) for my wedding guests to get all the information they would need for my wedding. The entry page splits between pre- and post-wedding. Pre-wedding includes logistics, local things to do, the wedding party, the story of me and my husband's relationship, and a link to RSVP. Post-wedding includes a thank-you, photos, and a list of vendors.
+
+The website was built with React, TypeScript, and Webpack. The assets and minified bundles live in S3 and the data is stored in DynamoDB. I wanted to keep information about my wedding out of version control, so a GraphQL query is called on each page that pulls the relevant data from DynamoDB. Builds and deployments are automatic upon each push to this repository via AWS Amplify.
+
 ## Dependencies
 1. `webpack`: bundles into minified files that are quick to serve
 2. `webpack-cli`: enables running Webpack from the command line
@@ -67,8 +71,11 @@
 	- `JSX.Element` is `ReactElement`
     - `ReactNode` is type returned by class component render
 
-## CSS
+## HTML & CSS
 - Path should start with `/` when referenced in HTML
 	- Otherwise, "Cannot GET" or "Refused to apply style because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled"
 - Scale resolution based on screen size
     - `<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">`
+- Adjust link preview on macOS
+	- `<meta property="og:title" content="Title" />`
+	- `<meta property="og:image" content="URL" />`
