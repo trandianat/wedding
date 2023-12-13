@@ -10,6 +10,7 @@ export const getContent = /* GraphQL */ `
       id
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -26,8 +27,10 @@ export const listContents = /* GraphQL */ `
         id
         createdAt
         updatedAt
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;

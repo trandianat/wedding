@@ -13,6 +13,7 @@ export const createContent = /* GraphQL */ `
       id
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -27,6 +28,7 @@ export const updateContent = /* GraphQL */ `
       id
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -41,6 +43,7 @@ export const deleteContent = /* GraphQL */ `
       id
       createdAt
       updatedAt
+      __typename
     }
   }
 `;

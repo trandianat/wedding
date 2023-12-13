@@ -10,6 +10,7 @@ export const onCreateContent = /* GraphQL */ `
       id
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -21,6 +22,7 @@ export const onUpdateContent = /* GraphQL */ `
       id
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -32,6 +34,7 @@ export const onDeleteContent = /* GraphQL */ `
       id
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
