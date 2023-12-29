@@ -11,7 +11,7 @@ import { Category, Variant } from 'utils/types';
 
 export const Vendors = (): JSX.Element => {
   const data = useData(Category.VENDORS) ?? {};
-  const [engagement] = useImages(Category.VENDORS);
+  const [firstLook] = useImages(Category.VENDORS);
   const vendors = [
     {
       category: 'Venue',
@@ -95,7 +95,7 @@ export const Vendors = (): JSX.Element => {
             </p>
           )}
           <Grid items={vendors} spacing={1} />
-          <img src={engagement} />
+          <img src={firstLook} />
         </Background>
         <Footer />
       </main>
