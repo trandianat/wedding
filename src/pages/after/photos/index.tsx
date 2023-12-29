@@ -8,19 +8,34 @@ import { Category, Variant } from 'utils/types';
 
 export const Photos = (): JSX.Element => {
   const data = useData(Category.PHOTOS);
-  const [look] = useImages(Category.PHOTOS);
+  const [official, guest, photoBooth] = useImages(Category.PHOTOS);
   return (
     data && (
       <main css={styles.photos}>
         <Background variant={Variant.SECONDARY}>
           <h2>Photos</h2>
           <Divider />
-          <p>
-            Stay tuned for photos of the wedding. If you have any photos that
-            you would like to share, please email or text them to us or upload
-            them to our <Link url={data.guestAlbumLink}>Google album</Link>.
-          </p>
-          <img src={look} />
+          <div className="body">
+            <Link url={data.officialAlbumLink}>
+              <img src={official} />
+              <h3>Official photos</h3>
+              <p>
+                Taken by <span>{data.photographer}</span>
+              </p>
+            </Link>
+            <Link url={data.guestAlbumLink}>
+              <img src={guest} />
+              <h3>Guest photos</h3>
+              <p>Feel free to upload photos from our wedding</p>
+            </Link>
+            <Link url={data.photoBoothLink}>
+              <img src={photoBooth} />
+              <h3>Photo booth</h3>
+              <p>
+                Password: <span>{data.photoBoothPassword}</span>
+              </p>
+            </Link>
+          </div>
         </Background>
         <Footer />
       </main>

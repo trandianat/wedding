@@ -71,10 +71,14 @@ export const nav = (before: boolean) =>
       },
       '@media (max-width: 950px)': {
         padding: '0 24px',
-        a: { fontSize: '.75rem', maxWidth: 64 },
+        a: { fontSize: '.75rem', width: 64 },
       },
-      '@media (max-width: 450px)': { gap: 24 },
-      '@media (max-width: 400px)': { flexDirection: 'column', gap: 18 },
+      '@media (max-width: 475px)': { gap: 24 },
+      '@media (max-width: 400px)': { gap: 12 },
+      '@media (max-width: 360px)': {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+      },
     },
     '@media (max-width: 950px)': {
       flexDirection: 'column',
