@@ -7,7 +7,7 @@ import Heart from 'assets/icons/heart';
 import Map from 'assets/icons/map';
 import Nature from 'assets/icons/nature';
 import Photo from 'assets/icons/photo';
-// import Video from 'assets/icons/video';
+import Video from 'assets/icons/video';
 import * as styles from 'components/header/styles';
 import { useData } from 'utils/hooks';
 import { Category, When } from 'utils/types';
@@ -30,7 +30,7 @@ export const Header = (): JSX.Element => {
     [When.AFTER]: [
       { name: 'THANK YOU', path: 'thanks', icon: <Heart /> },
       { name: 'PHOTOS', path: 'photos', icon: <Camera /> },
-      // { name: 'VIDEO', path: 'video', icon: <Video /> },
+      { name: 'VIDEO', path: 'video', icon: <Video /> },
       { name: 'VENDORS', path: 'vendors', icon: <Flower /> },
     ],
   };
