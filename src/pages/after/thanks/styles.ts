@@ -1,6 +1,10 @@
 import { css } from '@emotion/react';
 
-export const thanks = { p: { marginBottom: 24 } };
+export const thanks = css({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 16,
+});
 
 export const images = css({
   display: 'flex',

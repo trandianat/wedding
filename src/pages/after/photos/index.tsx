@@ -11,11 +11,11 @@ export const Photos = (): JSX.Element => {
   const [official, guest, photoBooth] = useImages(Category.PHOTOS);
   return (
     data && (
-      <main css={styles.photos}>
+      <main>
         <Background variant={Variant.SECONDARY}>
           <h2>Photos</h2>
           <Divider />
-          <div className="body">
+          <div css={styles.photos}>
             <Link url={data.officialAlbumLink}>
               <img src={official} />
               <h3>Official photos</h3>
