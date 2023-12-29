@@ -60,10 +60,10 @@ export const useImages = (category: Category) => {
       'party-6.jpg',
     ],
     [Category.PHOTOS]: ['photos-1.jpg'],
-    [Category.RSVP]: [],
     [Category.STORY]: ['story-1.jpg', 'story-3.jpg'],
     [Category.THANKS]: ['thanks-1.jpg', 'thanks-2.jpg'],
     [Category.VENDORS]: ['vendors-1.jpg'],
+    [Category.VIDEO]: [],
   };
   return images[category].map(
     image =>

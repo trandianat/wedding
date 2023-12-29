@@ -9,9 +9,9 @@ enum Category {
   LOGISTICS
   PARTY
   PHOTOS
-  RSVP
   STORY
   THANKS
+  VIDEO
   VENDORS
 }
 

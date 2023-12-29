@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-export const nav = (before: boolean, rsvp: boolean) =>
+export const nav = (before: boolean) =>
   css({
     alignItems: 'center',
     display: 'flex',
@@ -16,16 +16,6 @@ export const nav = (before: boolean, rsvp: boolean) =>
     h1: {
       fontFamily: 'var(--cursive)',
       '::before': { content: before ? '"B&D"' : '"Brendan & Diana"' },
-    },
-    '.display': {
-      marginBottom: 8,
-      width: '50%',
-      button: {
-        fontFamily: 'var(--serif), Arial, Helvetica, sans-serif',
-        width: '100%',
-      },
-      '@media (min-width: 401px)': { display: 'none' },
-      '@media (max-width: 200px)': { width: '75%' },
     },
     '.entry': {
       alignItems: 'center',
@@ -62,7 +52,6 @@ export const nav = (before: boolean, rsvp: boolean) =>
         },
       },
       '.active': { fontWeight: 'bold' },
-      '&.before': { gap: 32 },
       '@media (min-width: 951px)': {
         alignItems: 'center',
         svg: { display: 'none' },
@@ -84,11 +73,8 @@ export const nav = (before: boolean, rsvp: boolean) =>
         padding: '0 24px',
         a: { fontSize: '.75rem', maxWidth: 64 },
       },
-      '@media (max-width: 450px)': { '&.before': { gap: 24 } },
-      '@media (max-width: 400px)': {
-        ...(before && rsvp && { 'a:last-child': { display: 'none' } }),
-      },
-      '@media (max-width: 350px)': { flexDirection: 'column', gap: 18 },
+      '@media (max-width: 450px)': { gap: 24 },
+      '@media (max-width: 400px)': { flexDirection: 'column', gap: 18 },
     },
     '@media (max-width: 950px)': {
       flexDirection: 'column',

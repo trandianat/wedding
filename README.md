@@ -1,5 +1,5 @@
 # wedding
-I created [thebeanwedding.com](https://www.thebeanwedding.com) for my wedding guests to get all the information they would need for my wedding. The entry page splits between pre- and post-wedding. Pre-wedding includes logistics, local things to do, the wedding party, the story of me and my husband's relationship, and a link to RSVP. Post-wedding includes a thank-you, photos, and a list of vendors.
+I created [thebeanwedding.com](https://www.thebeanwedding.com) for my wedding guests to get all the information they would need for my wedding. The entry page splits between pre- and post-wedding. Pre-wedding includes logistics, local things to do, the wedding party, and the story of me and my husband's relationship. Post-wedding includes a thank-you, photos, and a list of vendors.
 
 The website was built with React, TypeScript, and Webpack. The assets and minified bundles live in S3 and the data is stored in DynamoDB. I wanted to keep information about my wedding out of version control, so a GraphQL query is called on each page that pulls the relevant data from DynamoDB. Builds and deployments are automatic upon each push to this repository via AWS Amplify.
 

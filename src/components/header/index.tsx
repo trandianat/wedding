@@ -2,14 +2,13 @@ import { Fragment, useEffect, useState } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import Book from 'assets/icons/book';
 import Camera from 'assets/icons/camera';
-import Envelope from 'assets/icons/envelope';
 import Flower from 'assets/icons/flower';
 import Heart from 'assets/icons/heart';
 import Map from 'assets/icons/map';
 import Nature from 'assets/icons/nature';
 import Photo from 'assets/icons/photo';
+// import Video from 'assets/icons/video';
 import * as styles from 'components/header/styles';
-import { Link as LinkOut } from 'components/link';
 import { useData } from 'utils/hooks';
 import { Category, When } from 'utils/types';
 
@@ -31,6 +30,7 @@ export const Header = (): JSX.Element => {
     [When.AFTER]: [
       { name: 'THANK YOU', path: 'thanks', icon: <Heart /> },
       { name: 'PHOTOS', path: 'photos', icon: <Camera /> },
+      // { name: 'VIDEO', path: 'video', icon: <Video /> },
       { name: 'VENDORS', path: 'vendors', icon: <Flower /> },
     ],
   };
@@ -48,7 +48,7 @@ export const Header = (): JSX.Element => {
   return (
     data && (
       <Fragment>
-        <nav css={styles.nav(before, data.rsvp)}>
+        <nav css={styles.nav(before)}>
           <div className="entry">
             <div className="line" />
             <Link to="/">
@@ -56,13 +56,6 @@ export const Header = (): JSX.Element => {
             </Link>
             <div className="line" />
           </div>
-          {before && data.rsvp && (
-            <div className="display">
-              <LinkOut url={data.rsvpLink}>
-                <button>RSVP</button>
-              </LinkOut>
-            </div>
-          )}
           <div className={`pages${before ? ' before' : ''}`}>
             {pages[when].map(page => (
               <Link key={page.path} to={page.path}>
@@ -72,12 +65,6 @@ export const Header = (): JSX.Element => {
                 </div>
               </Link>
             ))}
-            {before && data.rsvp && (
-              <LinkOut url={data.rsvpLink}>
-                <Envelope />
-                <div className="rsvp">RSVP</div>
-              </LinkOut>
-            )}
           </div>
         </nav>
         <Outlet />

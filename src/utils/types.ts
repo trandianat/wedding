@@ -5,10 +5,10 @@ export enum Category {
   LOGISTICS = 'LOGISTICS',
   PARTY = 'PARTY',
   PHOTOS = 'PHOTOS',
-  RSVP = 'RSVP',
   STORY = 'STORY',
   THANKS = 'THANKS',
   VENDORS = 'VENDORS',
+  VIDEO = 'VIDEO',
 }
 
 export enum Variant {
