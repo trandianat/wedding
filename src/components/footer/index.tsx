@@ -17,7 +17,7 @@ export const Footer = (): JSX.Element => {
           </p>
         ) : (
           <p>
-            Engagement photos by{' '}
+            Wedding photos by{' '}
             <Link url={data.photographerLink}>{data.photographer}</Link>
           </p>
         )}
