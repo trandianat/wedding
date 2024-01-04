@@ -31,9 +31,7 @@ export const Photos = (): JSX.Element => {
             <Link url={data.photoBoothLink}>
               <img src={photoBooth} />
               <h3>Photo booth</h3>
-              <p>
-                Password: <span>{data.photoBoothPassword}</span>
-              </p>
+              <p>The password was mailed with your thank-you card</p>
             </Link>
           </div>
         </Background>
