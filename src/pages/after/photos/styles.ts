@@ -16,7 +16,7 @@ export const photos = css({
     padding: 16,
     textDecoration: 'none',
     h3: { fontFamily: 'var(--serif-italic)' },
-    img: { width: '100%' },
+    img: { objectFit: 'cover', width: '100%' },
     p: { lineHeight: 1.375 },
     span: { fontWeight: 500 },
     ':hover': { boxShadow: '0 4px 8px -2px var(--dark-gray)' },
