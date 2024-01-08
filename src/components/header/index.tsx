@@ -70,6 +70,7 @@ export const Header = (): JSX.Element => {
         <Outlet />
         {scroll && (
           <a
+            aria-label="Back to top"
             css={styles.scroll}
             onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}
           >

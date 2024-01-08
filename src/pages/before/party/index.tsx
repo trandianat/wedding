@@ -58,7 +58,7 @@ export const Party = (): JSX.Element => {
                 </Card>
               </Cards>
             )}
-            <button onClick={() => setBonus(!bonus)}>
+            <button onClick={() => setBonus(bonus => !bonus)}>
               Bonus{' '}
               {bonus ? (
                 <Fragment>&uarr;</Fragment>
